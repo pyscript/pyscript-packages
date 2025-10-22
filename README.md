@@ -24,33 +24,39 @@ Each package has a page for it. The url for such page will be via the
 
 This page will display three possible states:
 
-1. Red (this package is not supported by PyScript). In this case, 
-2. Amber (the status of this package is unknown or pending).
-3. Green (this package is supported by PyScript).
+1. Red (this package is not supported by PyScript). Information about why this
+   package isn't supported by PyScript will be displayed.
+2. Amber (the status of this package is unknown or pending). The website will
+   automatically try to serve a simple terminal based project using this package,
+   so importing the package can be attempted. A form will be displayed to allow
+   folks to submit a report about the status of the package.
+3. Green (this package is supported by PyScript). Any information about special
+   cases for this package will also be displayed.
 
 ## Developer Setup
 
 This is a very simple Django based website.
 
-0. Clone the repository, and change into the resulting directory:
+1. Fork the project found at: https://github.com/pyscript/pyscript-packages
+2. Clone *your* fork of the repository, and change into the resulting directory:
 ```sh
-$ git clone ....
+$ git clone git@github.com:<YOUR_USERNAME>/pyscript-packages.git
 $ cd pyscript-packages
 ```
-1. Create a virtual environment, and activate it:
+3. Create a virtual environment, and activate it:
 ```sh
 $ python -mvenv env
 $ source env/bin/activate
 ```
-2. With the virtual environment active, install the dependencies:
+4. With the virtual environment active, install the dependencies:
 ```sh
 $ pip install -r requirements.txt
 ```
-3. Run the test suite (to ensure everything is working as expected):
+5. Run the test suite (to ensure everything is working as expected):
 ```sh
 $ ./manage.py test
 ```
-4. Start a development server, and try the site locally (http://localhost:8000/):
+6. Start a development server, and try the site locally (http://localhost:8000/):
 ```sh
 $ ./manage.py runserver
 ```
