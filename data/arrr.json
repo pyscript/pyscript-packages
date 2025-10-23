@@ -1,6 +1,6 @@
 {
     "status": "green",
-    "notes": "# Hello World\nThis is a sample package.",
+    "notes": "The arrr package has been tested with both Pyodide and Micropython environments and is confirmed to work seamlessly in both. It provides robust Piratical capabilities that are optimized for in-browser execution. 🏴‍☠️",
     "updated_by": "Nicholas H.Tollervey",
     "updated_at": "2025-10-23T12:00:00Z"
 }

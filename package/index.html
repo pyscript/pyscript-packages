@@ -4,14 +4,30 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>📦 PyScript Package Tracker</title>
+        <link rel="stylesheet" href="../styles.css" />
         <link rel="stylesheet" href="https://pyscript.net/releases/2025.10.2/core.css" />
         <script type="module" src="https://pyscript.net/releases/2025.10.2/core.js"></script>
     </head>
     <body>
-        <h1><a href="/">PyScript Package Tracker 📦</a></h1>
-        <script type="mpy" src="./main.py"></script>
-        <div id="app">
-            <p>Loading...</p>
-        </div>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="/">📦 PyScript<span class="brand-accent">Packages</span></a>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <div class="container">
+                <script type="mpy" src="./main.py"></script>
+                <div id="app" class="app-content">
+                    <p class="loading-text">Loading package information...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>Maintained by the PyScript community · <a href="https://github.com/pyscript/pyscript-packages" target="_blank">GitHub</a></p>
+            </div>
+        </footer>
     </body>
 </html>

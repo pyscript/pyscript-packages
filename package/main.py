@@ -138,22 +138,30 @@ async def main():
         }
     
 
+    status_values = {
+        "red": "❌ Red - Not Supported",
+        "amber": "⚠️ Amber - Partial Support / Unknown",
+        "green": "✅ Green - Supported",
+    }
+
 
     status = package_data.get("status", "amber")
+    status_content = status_values[status]
     notes_markdown = package_data.get("notes", "")
     notes_html = from_markdown(notes_markdown)
 
-    target.innerHTML = f"""
+    result = f"""
     <h2>Package: {package_name}</h2>
-    <h3>Status: {status.upper()}</h3>
+    <h3>Status: {status_content}</h3>
     {metadata}
     <div>{notes_html}</div>
     """
+
     if status == "amber":
-        target.innerHTML += """
-        <hr>
-        <h3>Submit Feedback</h3>
-        <p>GOOGLE FORM EMBED HERE</p>
+        result += f"""
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDhXu0h0BjTsMgjnvfW5P1YKnytOKxYrtC41o6fXizYkgnng/viewform?embedded=true" width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         """
-    
+
+    target.innerHTML = result
+
 await main()
