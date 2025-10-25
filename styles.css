@@ -9,6 +9,110 @@
   --glass: rgba(255,255,255,0.03);
 }
 
+/* Light theme */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#ffffff;
+    --card:#ffffff;
+    --muted:#2d3748;
+    --accent:#6b4ce6;
+    --accent-2:#0077b6;
+    --white:#1a202c;
+    --glass: rgba(0,0,0,0.02);
+  }
+  body{
+    background: #f7fafc !important;
+  }
+  .hero-inner{
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.05);
+    border: none;
+  }
+  .card{
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .card h3{
+    color:#1a202c;
+  }
+  .card:hover{
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .app-content{
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .site-header{
+    border-bottom:1px solid #e2e8f0;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+  }
+  .site-footer{
+    border-top:1px solid #e2e8f0;
+  }
+  .search-controls input[type="text"]{
+    border:1px solid #cbd5e0;
+    background:#ffffff;
+    color:#1a202c;
+  }
+  .search-controls input::placeholder{
+    color:#1a202c !important;
+    opacity:0.6 !important;
+  }
+  .search-controls input:focus{
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(107,76,230,0.1);
+  }
+  .app-content pre{
+    background:#f7fafc;
+    border:1px solid #e2e8f0;
+  }
+  .app-content code{
+    background:#edf2f7;
+    color:#6b4ce6;
+  }
+  .app-content th, .app-content td{
+    border-bottom:1px solid #e2e8f0;
+  }
+  .btn{
+    box-shadow: 0 2px 8px rgba(107,76,230,0.25);
+    color:#ffffff !important;
+  }
+  .btn:hover{
+    box-shadow:0 8px 20px rgba(107,76,230,0.35);
+  }
+  .btn:active{
+    box-shadow:0 4px 12px rgba(107,76,230,0.3);
+  }
+  .btn::before{
+    background:rgba(255,255,255,0.4);
+  }
+  .brand-accent{
+    color:var(--accent);
+  }
+  .hero-title{
+    color:#1a202c;
+  }
+  .hero-sub{
+    color:#2d3748;
+  }
+  .hint{
+    color:#2d3748;
+  }
+  .loading-text::before{
+    border:3px solid rgba(107,76,230,0.2);
+    border-top-color:var(--accent);
+  }
+  .footer-inner{
+    color:#2d3748;
+  }
+  .footer-inner a{
+    color:#2d3748;
+  }
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
