@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tomli-w (1.2.0)`\n* `latest`: `tomli-w (1.2.0)`\n* `0.29.0`: `tomli-w (1.2.0)`\n* `0.28.3`: `tomli-w (1.2.0)`\n* `0.28.2`: `tomli-w (1.2.0)`\n* `0.28.1`: `tomli-w (1.2.0)`\n* `0.28.0`: `tomli-w (1.2.0)`\n* `0.27.7`: `tomli-w (1.2.0)`\n* `0.27.6`: `tomli-w (1.2.0)`\n* `0.27.5`: `tomli-w (1.2.0)`\n* `0.27.4`: `tomli-w (1.2.0)`\n* `0.27.3`: `tomli-w (1.2.0)`\n* `0.27.2`: `tomli-w (1.2.0)`\n* `0.27.1`: `tomli-w (1.2.0)`\n* `0.27.0`: `tomli-w (1.2.0)`",
+    "supported_versions": {
+        "latest": "1.2.0",
+        "stable": "1.2.0",
+        "0.28.3": "1.2.0",
+        "0.28.2": "1.2.0",
+        "0.28.1": "1.2.0",
+        "0.28.0": "1.2.0",
+        "0.27.7": "1.2.0",
+        "0.27.6": "1.2.0",
+        "0.27.5": "1.2.0",
+        "0.27.4": "1.2.0",
+        "0.27.3": "1.2.0",
+        "0.27.2": "1.2.0",
+        "0.27.1": "1.2.0",
+        "0.27.0": "1.2.0",
+        "0.29.0": "1.2.0"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "A lil' TOML writer"
+}

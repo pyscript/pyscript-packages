@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `optlang (1.8.3)`\n* `latest`: `optlang (1.8.3)`\n* `0.29.0`: `optlang (1.8.3)`\n* `0.28.3`: `optlang (1.8.3)`\n* `0.28.2`: `optlang (1.8.3)`\n* `0.28.1`: `optlang (1.8.3)`\n* `0.28.0`: `optlang (1.8.3)`\n* `0.27.7`: `optlang (1.8.3)`\n* `0.27.6`: `optlang (1.8.3)`\n* `0.27.5`: `optlang (1.8.3)`\n* `0.27.4`: `optlang (1.8.3)`\n* `0.27.3`: `optlang (1.8.3)`\n* `0.27.2`: `optlang (1.8.3)`\n* `0.27.1`: `optlang (1.8.3)`\n* `0.27.0`: `optlang (1.8.3)`",
+    "supported_versions": {
+        "latest": "1.8.3",
+        "stable": "1.8.3",
+        "0.28.3": "1.8.3",
+        "0.28.2": "1.8.3",
+        "0.28.1": "1.8.3",
+        "0.28.0": "1.8.3",
+        "0.27.7": "1.8.3",
+        "0.27.6": "1.8.3",
+        "0.27.5": "1.8.3",
+        "0.27.4": "1.8.3",
+        "0.27.3": "1.8.3",
+        "0.27.2": "1.8.3",
+        "0.27.1": "1.8.3",
+        "0.27.0": "1.8.3",
+        "0.29.0": "1.8.3"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Formulate optimization problems using sympy expressions and solve them using interfaces to third-party optimization software (e.g. GLPK)."
+}

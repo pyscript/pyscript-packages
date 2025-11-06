@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `rateslib (2.0.1)`\n* `latest`: `rateslib (2.0.1)`\n* `0.29.0`: `rateslib (2.1.1)`\n* `0.28.3`: `rateslib (2.0.1)`\n* `0.28.2`: `rateslib (2.0.1)`\n* `0.28.1`: `rateslib (2.0.1)`\n* `0.28.0`: `rateslib (2.0.1)`\n* `0.27.7`: `rateslib (2.0.1)`\n* `0.27.6`: `rateslib (2.0.1)`\n* `0.27.5`: `rateslib (2.0.1)`\n* `0.27.4`: `rateslib (2.0.1)`\n* `0.27.3`: `rateslib (2.0.1)`\n* `0.27.2`: `rateslib (2.0.1)`\n* `0.27.1`: `rateslib (2.0.1)`\n* `0.27.0`: `rateslib (2.0.1)`",
+    "supported_versions": {
+        "latest": "2.0.1",
+        "stable": "2.0.1",
+        "0.28.3": "2.0.1",
+        "0.28.2": "2.0.1",
+        "0.28.1": "2.0.1",
+        "0.28.0": "2.0.1",
+        "0.27.7": "2.0.1",
+        "0.27.6": "2.0.1",
+        "0.27.5": "2.0.1",
+        "0.27.4": "2.0.1",
+        "0.27.3": "2.0.1",
+        "0.27.2": "2.0.1",
+        "0.27.1": "2.0.1",
+        "0.27.0": "2.0.1",
+        "0.29.0": "2.1.1"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "A fixed income library for trading interest rates"
+}

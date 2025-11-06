@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `river (0.22.0)`\n* `latest`: `river (0.22.0)`\n* `0.29.0`: `river (0.22.0)`\n* `0.28.3`: `river (0.22.0)`\n* `0.28.2`: `river (0.22.0)`\n* `0.28.1`: `river (0.22.0)`\n* `0.28.0`: `river (0.22.0)`\n* `0.27.7`: `river (0.22.0)`\n* `0.27.6`: `river (0.22.0)`\n* `0.27.5`: `river (0.22.0)`\n* `0.27.4`: `river (0.22.0)`\n* `0.27.3`: `river (0.22.0)`\n* `0.27.2`: `river (0.22.0)`\n* `0.27.1`: `river (0.22.0)`\n* `0.27.0`: `river (0.22.0)`",
+    "supported_versions": {
+        "latest": "0.22.0",
+        "stable": "0.22.0",
+        "0.28.3": "0.22.0",
+        "0.28.2": "0.22.0",
+        "0.28.1": "0.22.0",
+        "0.28.0": "0.22.0",
+        "0.27.7": "0.22.0",
+        "0.27.6": "0.22.0",
+        "0.27.5": "0.22.0",
+        "0.27.4": "0.22.0",
+        "0.27.3": "0.22.0",
+        "0.27.2": "0.22.0",
+        "0.27.1": "0.22.0",
+        "0.27.0": "0.22.0",
+        "0.29.0": "0.22.0"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Online machine learning in Python"
+}

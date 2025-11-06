@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `cramjam (2.10.0rc1)`\n* `latest`: `cramjam (2.10.0rc1)`\n* `0.29.0`: `cramjam (2.10.0rc1)`\n* `0.28.3`: `cramjam (2.10.0rc1)`\n* `0.28.2`: `cramjam (2.10.0rc1)`\n* `0.28.1`: `cramjam (2.10.0rc1)`\n* `0.28.0`: `cramjam (2.10.0rc1)`\n* `0.27.7`: `cramjam (2.10.0rc1)`\n* `0.27.6`: `cramjam (2.10.0rc1)`\n* `0.27.5`: `cramjam (2.10.0rc1)`\n* `0.27.4`: `cramjam (2.10.0rc1)`\n* `0.27.3`: `cramjam (2.10.0rc1)`\n* `0.27.2`: `cramjam (2.10.0rc1)`\n* `0.27.1`: `cramjam (2.10.0rc1)`\n* `0.27.0`: `cramjam (2.10.0rc1)`",
+    "supported_versions": {
+        "latest": "2.10.0rc1",
+        "stable": "2.10.0rc1",
+        "0.28.3": "2.10.0rc1",
+        "0.28.2": "2.10.0rc1",
+        "0.28.1": "2.10.0rc1",
+        "0.28.0": "2.10.0rc1",
+        "0.27.7": "2.10.0rc1",
+        "0.27.6": "2.10.0rc1",
+        "0.27.5": "2.10.0rc1",
+        "0.27.4": "2.10.0rc1",
+        "0.27.3": "2.10.0rc1",
+        "0.27.2": "2.10.0rc1",
+        "0.27.1": "2.10.0rc1",
+        "0.27.0": "2.10.0rc1",
+        "0.29.0": "2.10.0rc1"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Thin Python bindings to de/compression algorithms in Rust"
+}

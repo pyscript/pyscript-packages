@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pkgconfig (1.5.5)`\n* `latest`: `pkgconfig (1.5.5)`\n* `0.29.0`: `pkgconfig (1.5.5)`\n* `0.28.3`: `pkgconfig (1.5.5)`\n* `0.28.2`: `pkgconfig (1.5.5)`\n* `0.28.1`: `pkgconfig (1.5.5)`\n* `0.28.0`: `pkgconfig (1.5.5)`\n* `0.27.7`: `pkgconfig (1.5.5)`\n* `0.27.6`: `pkgconfig (1.5.5)`\n* `0.27.5`: `pkgconfig (1.5.5)`\n* `0.27.4`: `pkgconfig (1.5.5)`\n* `0.27.3`: `pkgconfig (1.5.5)`\n* `0.27.2`: `pkgconfig (1.5.5)`\n* `0.27.1`: `pkgconfig (1.5.5)`\n* `0.27.0`: `pkgconfig (1.5.5)`",
+    "supported_versions": {
+        "latest": "1.5.5",
+        "stable": "1.5.5",
+        "0.28.3": "1.5.5",
+        "0.28.2": "1.5.5",
+        "0.28.1": "1.5.5",
+        "0.28.0": "1.5.5",
+        "0.27.7": "1.5.5",
+        "0.27.6": "1.5.5",
+        "0.27.5": "1.5.5",
+        "0.27.4": "1.5.5",
+        "0.27.3": "1.5.5",
+        "0.27.2": "1.5.5",
+        "0.27.1": "1.5.5",
+        "0.27.0": "1.5.5",
+        "0.29.0": "1.5.5"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Interface Python with pkg-config"
+}

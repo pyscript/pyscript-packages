@@ -1,0 +1,8 @@
+{
+    "status": "red",
+    "notes": "This package is not currently supported in Pyodide.",
+    "supported_versions": {},
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T12:36:40.981047+00:00",
+    "summary": "Async client for aws services using botocore and aiohttp"
+}

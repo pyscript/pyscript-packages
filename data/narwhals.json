@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `narwhals (1.46.0)`\n* `latest`: `narwhals (1.46.0)`\n* `0.29.0`: `narwhals (1.46.0)`\n* `0.28.3`: `narwhals (1.46.0)`\n* `0.28.2`: `narwhals (1.46.0)`\n* `0.28.1`: `narwhals (1.46.0)`\n* `0.28.0`: `narwhals (1.46.0)`\n* `0.27.7`: `narwhals (1.46.0)`\n* `0.27.6`: `narwhals (1.46.0)`\n* `0.27.5`: `narwhals (1.46.0)`\n* `0.27.4`: `narwhals (1.46.0)`\n* `0.27.3`: `narwhals (1.46.0)`\n* `0.27.2`: `narwhals (1.46.0)`\n* `0.27.1`: `narwhals (1.46.0)`\n* `0.27.0`: `narwhals (1.46.0)`",
+    "supported_versions": {
+        "latest": "1.46.0",
+        "stable": "1.46.0",
+        "0.28.3": "1.46.0",
+        "0.28.2": "1.46.0",
+        "0.28.1": "1.46.0",
+        "0.28.0": "1.46.0",
+        "0.27.7": "1.46.0",
+        "0.27.6": "1.46.0",
+        "0.27.5": "1.46.0",
+        "0.27.4": "1.46.0",
+        "0.27.3": "1.46.0",
+        "0.27.2": "1.46.0",
+        "0.27.1": "1.46.0",
+        "0.27.0": "1.46.0",
+        "0.29.0": "1.46.0"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Extremely lightweight compatibility layer between dataframe libraries"
+}

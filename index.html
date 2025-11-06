@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>📦 PyScript Package Tracker</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.10.3/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2025.10.3/core.js"></script>
     </head>
     <body>
+        <script type="mpy" src="./home.py"></script>
         <header class="site-header">
             <div class="container header-inner">
                 <a class="brand" href="/">📦 PyScript<span class="brand-accent">Packages</span></a>
@@ -33,17 +36,32 @@
 
             <section class="features container">
                 <article class="card">
-                    <h3>✨ Curated</h3>
+                    <h3>✅ Curated</h3>
                     <p>PyScript-friendly packages so you can trust they'll behave in-browser.</p>
                 </article>
                 <article class="card">
-                    <h3>🧠 Informed</h3>
+                    <h3>🔍 Informed</h3>
                     <p>See package metadata, feedback and notes to avoid gotchas and issues.</p>
                 </article>
                 <article class="card">
                     <h3>🤝 Community-first</h3>
                     <p>Community-maintained suggestions and issue links when available.</p>
                 </article>
+            </section>
+
+            <section class="popular-packages container">
+                <h2 class="section-title">📊 Popular Python Packages</h2>
+                <p class="section-subtitle">Check PyScript support status for the 100 most downloaded packages on PyPI.</p>
+                
+                <div class="status-key">
+                    <span class="key-item"><span class="status-badge green">✅</span> Supported</span>
+                    <span class="key-item"><span class="status-badge amber">⚠️</span> Partial/Unknown</span>
+                    <span class="key-item"><span class="status-badge red">❌</span> Not Supported</span>
+                </div>
+                
+                <div class="package-grid" id="top100">
+                    
+                </div>
             </section>
         </main>
 

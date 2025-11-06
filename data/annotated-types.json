@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `annotated-types (0.7.0)`\n* `latest`: `annotated-types (0.7.0)`\n* `0.29.0`: `annotated-types (0.7.0)`\n* `0.28.3`: `annotated-types (0.7.0)`\n* `0.28.2`: `annotated-types (0.7.0)`\n* `0.28.1`: `annotated-types (0.7.0)`\n* `0.28.0`: `annotated-types (0.7.0)`\n* `0.27.7`: `annotated-types (0.7.0)`\n* `0.27.6`: `annotated-types (0.7.0)`\n* `0.27.5`: `annotated-types (0.7.0)`\n* `0.27.4`: `annotated-types (0.7.0)`\n* `0.27.3`: `annotated-types (0.7.0)`\n* `0.27.2`: `annotated-types (0.7.0)`\n* `0.27.1`: `annotated-types (0.7.0)`\n* `0.27.0`: `annotated-types (0.7.0)`",
+    "supported_versions": {
+        "latest": "0.7.0",
+        "stable": "0.7.0",
+        "0.28.3": "0.7.0",
+        "0.28.2": "0.7.0",
+        "0.28.1": "0.7.0",
+        "0.28.0": "0.7.0",
+        "0.27.7": "0.7.0",
+        "0.27.6": "0.7.0",
+        "0.27.5": "0.7.0",
+        "0.27.4": "0.7.0",
+        "0.27.3": "0.7.0",
+        "0.27.2": "0.7.0",
+        "0.27.1": "0.7.0",
+        "0.27.0": "0.7.0",
+        "0.29.0": "0.7.0"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Reusable constraint types to use with typing.Annotated"
+}

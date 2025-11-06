@@ -19,9 +19,10 @@ The static JSON data files in this website are of the form:
     "updated_at": "ISO 8601 timestamp of when this file was last updated."
 }
 """
-from pyscript import fetch, js_import
-from pyscript.web import page
+from pyscript import fetch, js_import, when
+from pyscript.web import page, h3, script, iframe, p
 import js
+import asyncio
 
 
 marked = None
@@ -47,7 +48,7 @@ def get_package_name():
     url_params = js.URLSearchParams.new(query_string)
     package_name = url_params.get("package")
     if package_name:
-        return package_name
+        return package_name.strip()
     return None
 
 
@@ -92,76 +93,100 @@ async def main():
     """
     Main function to handle the package support check.
     """
-    target = page["#app"]
     await load_js_modules()
+    target = page["#app"][0]
+    loading_text = page["#loading-text"][0]
+    metadata_target = page["#metadata"][0]
+    smoketest_target = page["#smoketest"][0]
+    feedback_target = page["#feedback"][0]
     package_name = get_package_name()
     if not package_name:
-        target.innerHTML = "<h2>No package specified.</h2>"
+        target.innerHTML = "<h2>🤷 No package specified.</h2>"
         return
-
     pypi_metadata = await fetch_pypi_metadata(package_name)
     if not pypi_metadata:
-        target.innerHTML = f"<h2>Package '{package_name}' not found on PyPI.</h2>"
+        target.innerHTML = f"<h2>🤷 Package '{package_name}' not found on PyPI.</h2>"
         return
+    # Remove the loading text.
+    loading_text.remove()
     
-    # Extract relevant metadata
+    # Extract relevant metadata from PYPI.
     package_info = pypi_metadata.get("info", {})
     package_author = package_info.get("author", "unknown")
-    package_author_email = package_info.get("author_email", "unknown")
-    package_classifiers = package_info.get("classifiers", [])
-    package_description = package_info.get("description", "No description available.")
-    package_urls = package_info.get("project_urls", {})
     package_summary = package_info.get("summary", "No summary available.")
-    package_version = package_info.get("version", "unknown")
 
-    urls = "<br/>".join(f'<a href="{url}" target="_blank">{name}</a>' for name, url in package_urls.items())
-
-    metadata = f"""
-    <h2>{package_name} ({package_version})</h2>
-    <p><strong>Author:</strong> {package_author} ({package_author_email})</p>
-    <p><strong>Summary:</strong> {package_summary}</p>
-    <p><details><summary><strong>Description:</strong></summary> {from_markdown(package_description)}</details></p>
-    <p><details><summary><strong>Classifiers:</strong></summary> {'<br/>'.join(package_classifiers)}</details></p>
-    <p><strong>Project URLs:</strong> {urls}</p>
-    <hr>
-    """
-
-
+    # Try to extract package support data and work out the status.
     package_data = await fetch_package_data(package_name)
     if not package_data:
         # Default to amber status if no data file exists
         package_data = {
             "status": "amber",
-            "notes": "No support data available. Please help us improve this by submitting feedback below.",
+            "notes": "No support data available. Please help us improve this by running some tests and submitting feedback. 🤗",
             "updated_by": "N/A",
             "updated_at": "N/A",
         }
-    
-
     status_values = {
         "red": "❌ Red - Not Supported",
         "amber": "⚠️ Amber - Partial Support / Unknown",
         "green": "✅ Green - Supported",
     }
-
-
     status = package_data.get("status", "amber")
     status_content = status_values[status]
     notes_markdown = package_data.get("notes", "")
     notes_html = from_markdown(notes_markdown)
 
-    result = f"""
-    <h2>Package: {package_name}</h2>
-    <h3>Status: {status_content}</h3>
-    {metadata}
+    # Assemble the final HTML result.
+
+    metadata_target.innerHTML = f"""
+    <h2><a href="https://pypi.org/project/{package_name}/" target="_blank">{package_name}</a></h2>
+    <h3>{status_content}</h3>
+    <p><strong>Author:</strong> {package_author}</p>
+    <p><strong>Summary:</strong> {package_summary}</p>
+    <p><a href="https://pypi.org/project/{package_name}/" target="_blank">PyPI page</a> 📦 | <a href="https://pypistats.org/packages/{package_name}" target="_blank">PyPI stats</a> 📈</p>
+    <hr />
     <div>{notes_html}</div>
     """
 
     if status == "amber":
-        result += f"""
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDhXu0h0BjTsMgjnvfW5P1YKnytOKxYrtC41o6fXizYkgnng/viewform?embedded=true" width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        """
+        # We can try a simple Pyodide import test for amber packages.
+        # Add a simple script to attempt the import.
+        # Note: This is a very basic test and may not cover all cases.
+        smoketest_target.append(h3(f"🔬 Pyodide <code>import {package_name}</code> check"))
+        smoketest_target.append(p("The script below will attempt to import the package in Pyodide. If successful, you'll see a confirmation message. If there are issues, error messages will appear in the output."))
+        smoketest_target.append(p("You can then add your own code to test the package further!"))
+        smoketest_target.append(p("Mouseover the editor, then press the ▶️ Run button to execute the test script. This may take a few seconds as Pyodide loads the package."))
+        code = f"""# Simple Pyodide import test for the {package_name} package.
+import micropip
+# Install the package via micropip.
+await micropip.install("{package_name}")
+# Now try to import it!
+import {package_name}
+# If we reach this point, the import was successful.
+print("✅ Successfully imported {package_name}!")
+# If there was an error, it will be shown below in red.
+# Now add some code of your own to exercise and test the package!
+# Re-run the code and tell us what you find in the feedback form below. 💐
+"""
+        editor = script(code, type="py-editor", id="test-script")
+        editor.setAttribute("config", '{"packages": ["micropip"]}')
+        smoketest_target.append(editor)
+        # Add a Google form for user feedback.
+        example_description = js.encodeURIComponent(f"""I attempted to import the `{package_name}` package in Pyodide. I used the following code:
 
-    target.innerHTML = result
+```
+{code.strip()}
+```
+
+Here's a paste of the output:
+
+<YOUR OUTPUT HERE>
+
+My experience was: 
+
+<DESCRIBE YOUR EXPERIENCE HERE>
+""")
+        feedback_target.append(h3("📝 Feedback"))
+        feedback_target.append(p("Please help us improve the package support data by providing your feedback via this form. Let us know if the package worked, any issues you encountered, and any additional notes you'd like to share. Feel free to paste your code snippets or any error messages. Thank you! 🙏"))
+        feedback_target.append(iframe(src=f"https://docs.google.com/forms/d/e/1FAIpQLSdDhXu0h0BjTsMgjnvfW5P1YKnytOKxYrtC41o6fXizYkgnng/viewform?embedded=true&entry.1624544771={package_name}&entry.902804967={example_description}", width="100%", height="1100", frameborder="0", marginheight="0", marginwidth="0", id="feedback-form"))
 
 await main()

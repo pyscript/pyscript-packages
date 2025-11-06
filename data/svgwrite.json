@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `svgwrite (1.4.3)`\n* `latest`: `svgwrite (1.4.3)`\n* `0.29.0`: `svgwrite (1.4.3)`\n* `0.28.3`: `svgwrite (1.4.3)`\n* `0.28.2`: `svgwrite (1.4.3)`\n* `0.28.1`: `svgwrite (1.4.3)`\n* `0.28.0`: `svgwrite (1.4.3)`\n* `0.27.7`: `svgwrite (1.4.3)`\n* `0.27.6`: `svgwrite (1.4.3)`\n* `0.27.5`: `svgwrite (1.4.3)`\n* `0.27.4`: `svgwrite (1.4.3)`\n* `0.27.3`: `svgwrite (1.4.3)`\n* `0.27.2`: `svgwrite (1.4.3)`\n* `0.27.1`: `svgwrite (1.4.3)`\n* `0.27.0`: `svgwrite (1.4.3)`",
+    "supported_versions": {
+        "latest": "1.4.3",
+        "stable": "1.4.3",
+        "0.28.3": "1.4.3",
+        "0.28.2": "1.4.3",
+        "0.28.1": "1.4.3",
+        "0.28.0": "1.4.3",
+        "0.27.7": "1.4.3",
+        "0.27.6": "1.4.3",
+        "0.27.5": "1.4.3",
+        "0.27.4": "1.4.3",
+        "0.27.3": "1.4.3",
+        "0.27.2": "1.4.3",
+        "0.27.1": "1.4.3",
+        "0.27.0": "1.4.3",
+        "0.29.0": "1.4.3"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "A Python library to create SVG drawings."
+}

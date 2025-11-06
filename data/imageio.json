@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `imageio (2.37.0)`\n* `latest`: `imageio (2.37.0)`\n* `0.29.0`: `imageio (2.37.0)`\n* `0.28.3`: `imageio (2.37.0)`\n* `0.28.2`: `imageio (2.37.0)`\n* `0.28.1`: `imageio (2.37.0)`\n* `0.28.0`: `imageio (2.37.0)`\n* `0.27.7`: `imageio (2.37.0)`\n* `0.27.6`: `imageio (2.37.0)`\n* `0.27.5`: `imageio (2.37.0)`\n* `0.27.4`: `imageio (2.37.0)`\n* `0.27.3`: `imageio (2.37.0)`\n* `0.27.2`: `imageio (2.37.0)`\n* `0.27.1`: `imageio (2.37.0)`\n* `0.27.0`: `imageio (2.37.0)`",
+    "supported_versions": {
+        "latest": "2.37.0",
+        "stable": "2.37.0",
+        "0.28.3": "2.37.0",
+        "0.28.2": "2.37.0",
+        "0.28.1": "2.37.0",
+        "0.28.0": "2.37.0",
+        "0.27.7": "2.37.0",
+        "0.27.6": "2.37.0",
+        "0.27.5": "2.37.0",
+        "0.27.4": "2.37.0",
+        "0.27.3": "2.37.0",
+        "0.27.2": "2.37.0",
+        "0.27.1": "2.37.0",
+        "0.27.0": "2.37.0",
+        "0.29.0": "2.37.0"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Read and write images and video across all major formats. Supports scientific and volumetric data."
+}

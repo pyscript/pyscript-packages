@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pcodec (0.3.3)`\n* `latest`: `pcodec (0.3.3)`\n* `0.29.0`: `pcodec (0.3.3)`\n* `0.28.3`: `pcodec (0.3.3)`\n* `0.28.2`: `pcodec (0.3.3)`\n* `0.28.1`: `pcodec (0.3.3)`\n* `0.28.0`: `pcodec (0.3.3)`\n* `0.27.7`: `pcodec (0.3.3)`\n* `0.27.6`: `pcodec (0.3.3)`\n* `0.27.5`: `pcodec (0.3.3)`\n* `0.27.4`: `pcodec (0.3.3)`\n* `0.27.3`: `pcodec (0.3.3)`\n* `0.27.2`: `pcodec (0.3.3)`\n* `0.27.1`: `pcodec (0.3.3)`\n* `0.27.0`: `pcodec (0.3.3)`",
+    "supported_versions": {
+        "latest": "0.3.3",
+        "stable": "0.3.3",
+        "0.28.3": "0.3.3",
+        "0.28.2": "0.3.3",
+        "0.28.1": "0.3.3",
+        "0.28.0": "0.3.3",
+        "0.27.7": "0.3.3",
+        "0.27.6": "0.3.3",
+        "0.27.5": "0.3.3",
+        "0.27.4": "0.3.3",
+        "0.27.3": "0.3.3",
+        "0.27.2": "0.3.3",
+        "0.27.1": "0.3.3",
+        "0.27.0": "0.3.3",
+        "0.29.0": "0.3.3"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Good compression for numerical sequences"
+}

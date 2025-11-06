@@ -26,7 +26,7 @@ This page will display three possible states:
 1. Red (this package is not supported by PyScript). Information about why this
    package isn't supported by PyScript will be displayed.
 2. Amber (the status of this package is unknown or pending). The website will
-   automatically try to serve a simple terminal based project using this package,
+   automatically try to serve a simple PyScript based project using this package,
    so importing the package can be attempted. A form will be displayed to allow
    folks to submit a report about the status of the package.
 3. Green (this package is supported by PyScript). Any information about special

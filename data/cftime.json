@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `cftime (1.6.4.post1)`\n* `latest`: `cftime (1.6.4.post1)`\n* `0.29.0`: `cftime (1.6.4.post1)`\n* `0.28.3`: `cftime (1.6.4.post1)`\n* `0.28.2`: `cftime (1.6.4.post1)`\n* `0.28.1`: `cftime (1.6.4.post1)`\n* `0.28.0`: `cftime (1.6.4.post1)`\n* `0.27.7`: `cftime (1.6.4.post1)`\n* `0.27.6`: `cftime (1.6.4.post1)`\n* `0.27.5`: `cftime (1.6.4.post1)`\n* `0.27.4`: `cftime (1.6.4.post1)`\n* `0.27.3`: `cftime (1.6.4.post1)`\n* `0.27.2`: `cftime (1.6.4.post1)`\n* `0.27.1`: `cftime (1.6.4.post1)`\n* `0.27.0`: `cftime (1.6.4.post1)`",
+    "supported_versions": {
+        "latest": "1.6.4.post1",
+        "stable": "1.6.4.post1",
+        "0.28.3": "1.6.4.post1",
+        "0.28.2": "1.6.4.post1",
+        "0.28.1": "1.6.4.post1",
+        "0.28.0": "1.6.4.post1",
+        "0.27.7": "1.6.4.post1",
+        "0.27.6": "1.6.4.post1",
+        "0.27.5": "1.6.4.post1",
+        "0.27.4": "1.6.4.post1",
+        "0.27.3": "1.6.4.post1",
+        "0.27.2": "1.6.4.post1",
+        "0.27.1": "1.6.4.post1",
+        "0.27.0": "1.6.4.post1",
+        "0.29.0": "1.6.4.post1"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Time-handling functionality from netcdf4-python"
+}

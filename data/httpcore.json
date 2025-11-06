@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `httpcore (1.0.7)`\n* `latest`: `httpcore (1.0.7)`\n* `0.29.0`: `httpcore (1.0.7)`\n* `0.28.3`: `httpcore (1.0.7)`\n* `0.28.2`: `httpcore (1.0.7)`\n* `0.28.1`: `httpcore (1.0.7)`\n* `0.28.0`: `httpcore (1.0.7)`\n* `0.27.7`: `httpcore (1.0.7)`\n* `0.27.6`: `httpcore (1.0.7)`\n* `0.27.5`: `httpcore (1.0.7)`\n* `0.27.4`: `httpcore (1.0.7)`\n* `0.27.3`: `httpcore (1.0.7)`\n* `0.27.2`: `httpcore (1.0.7)`\n* `0.27.1`: `httpcore (1.0.7)`\n* `0.27.0`: `httpcore (1.0.7)`",
+    "supported_versions": {
+        "latest": "1.0.7",
+        "stable": "1.0.7",
+        "0.28.3": "1.0.7",
+        "0.28.2": "1.0.7",
+        "0.28.1": "1.0.7",
+        "0.28.0": "1.0.7",
+        "0.27.7": "1.0.7",
+        "0.27.6": "1.0.7",
+        "0.27.5": "1.0.7",
+        "0.27.4": "1.0.7",
+        "0.27.3": "1.0.7",
+        "0.27.2": "1.0.7",
+        "0.27.1": "1.0.7",
+        "0.27.0": "1.0.7",
+        "0.29.0": "1.0.7"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "A minimal low-level HTTP client."
+}

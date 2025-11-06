@@ -1,0 +1,605 @@
+{
+    "last_updated": "2025-11-01 07:34:07",
+    "packages": [
+        {
+            "package_name": "boto3",
+            "downloads": 1452829479,
+            "status": "red",
+            "summary": "The AWS SDK for Python"
+        },
+        {
+            "package_name": "urllib3",
+            "downloads": 1168251588,
+            "status": "green",
+            "summary": "HTTP library with thread-safe connection pooling, file post, and more."
+        },
+        {
+            "package_name": "botocore",
+            "downloads": 1065776884,
+            "status": "red",
+            "summary": "Low-level, data-driven core of boto 3."
+        },
+        {
+            "package_name": "requests",
+            "downloads": 1055327819,
+            "status": "green",
+            "summary": "Python HTTP for Humans."
+        },
+        {
+            "package_name": "certifi",
+            "downloads": 1048229881,
+            "status": "green",
+            "summary": "Python package for providing Mozilla's CA Bundle."
+        },
+        {
+            "package_name": "charset-normalizer",
+            "downloads": 999167796,
+            "status": "green",
+            "summary": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+        },
+        {
+            "package_name": "idna",
+            "downloads": 993879252,
+            "status": "green",
+            "summary": "Internationalized Domain Names in Applications (IDNA)"
+        },
+        {
+            "package_name": "typing-extensions",
+            "downloads": 992728016,
+            "status": "green",
+            "summary": "Backported and Experimental Type Hints for Python 3.9+"
+        },
+        {
+            "package_name": "aiobotocore",
+            "downloads": 895931528,
+            "status": "red",
+            "summary": "Async client for aws services using botocore and aiohttp"
+        },
+        {
+            "package_name": "setuptools",
+            "downloads": 830575444,
+            "status": "green",
+            "summary": "Easily download, build, install, upgrade, and uninstall Python packages"
+        },
+        {
+            "package_name": "python-dateutil",
+            "downloads": 786572386,
+            "status": "green",
+            "summary": "Extensions to the standard Python datetime module"
+        },
+        {
+            "package_name": "grpcio-status",
+            "downloads": 776825532,
+            "status": "amber",
+            "summary": "Status proto mapping for gRPC"
+        },
+        {
+            "package_name": "packaging",
+            "downloads": 746576039,
+            "status": "green",
+            "summary": "Core utilities for Python packages"
+        },
+        {
+            "package_name": "six",
+            "downloads": 742901509,
+            "status": "green",
+            "summary": "Python 2 and 3 compatibility utilities"
+        },
+        {
+            "package_name": "s3transfer",
+            "downloads": 636058537,
+            "status": "amber",
+            "summary": "An Amazon S3 Transfer Manager"
+        },
+        {
+            "package_name": "numpy",
+            "downloads": 603389302,
+            "status": "green",
+            "summary": "Fundamental package for array computing in Python"
+        },
+        {
+            "package_name": "cryptography",
+            "downloads": 593195093,
+            "status": "green",
+            "summary": "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
+        },
+        {
+            "package_name": "pyyaml",
+            "downloads": 592246845,
+            "status": "green",
+            "summary": "YAML parser and emitter for Python"
+        },
+        {
+            "package_name": "s3fs",
+            "downloads": 577870758,
+            "status": "amber",
+            "summary": "Convenient Filesystem interface over S3"
+        },
+        {
+            "package_name": "pydantic",
+            "downloads": 545536205,
+            "status": "green",
+            "summary": "Data validation using Python type hints"
+        },
+        {
+            "package_name": "cffi",
+            "downloads": 528045545,
+            "status": "green",
+            "summary": "Foreign Function Interface for Python calling C code."
+        },
+        {
+            "package_name": "pycparser",
+            "downloads": 490524594,
+            "status": "green",
+            "summary": "C parser in Python"
+        },
+        {
+            "package_name": "pandas",
+            "downloads": 488404185,
+            "status": "green",
+            "summary": "Powerful data structures for data analysis, time series, and statistics"
+        },
+        {
+            "package_name": "fsspec",
+            "downloads": 474499665,
+            "status": "green",
+            "summary": "File-system specification"
+        },
+        {
+            "package_name": "click",
+            "downloads": 471525365,
+            "status": "green",
+            "summary": "Composable command line interface toolkit"
+        },
+        {
+            "package_name": "attrs",
+            "downloads": 451433111,
+            "status": "green",
+            "summary": "Classes Without Boilerplate"
+        },
+        {
+            "package_name": "pydantic-core",
+            "downloads": 438959282,
+            "status": "amber",
+            "summary": "Core functionality for Pydantic validation and serialization"
+        },
+        {
+            "package_name": "pip",
+            "downloads": 436844893,
+            "status": "amber",
+            "summary": "The PyPA recommended tool for installing Python packages."
+        },
+        {
+            "package_name": "protobuf",
+            "downloads": 421454804,
+            "status": "green",
+            "summary": "No summary available."
+        },
+        {
+            "package_name": "markupsafe",
+            "downloads": 408100875,
+            "status": "amber",
+            "summary": "Safely add untrusted strings to HTML/XML markup."
+        },
+        {
+            "package_name": "jmespath",
+            "downloads": 396748602,
+            "status": "amber",
+            "summary": "JSON Matching Expressions"
+        },
+        {
+            "package_name": "platformdirs",
+            "downloads": 386977561,
+            "status": "green",
+            "summary": "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
+        },
+        {
+            "package_name": "rsa",
+            "downloads": 386498570,
+            "status": "amber",
+            "summary": "Pure-Python RSA implementation"
+        },
+        {
+            "package_name": "h11",
+            "downloads": 386403807,
+            "status": "green",
+            "summary": "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
+        },
+        {
+            "package_name": "pytz",
+            "downloads": 382099345,
+            "status": "green",
+            "summary": "World timezone definitions, modern and historical"
+        },
+        {
+            "package_name": "anyio",
+            "downloads": 381820440,
+            "status": "green",
+            "summary": "High-level concurrency and networking framework on top of asyncio or Trio"
+        },
+        {
+            "package_name": "pygments",
+            "downloads": 378953112,
+            "status": "amber",
+            "summary": "Pygments is a syntax highlighting package written in Python."
+        },
+        {
+            "package_name": "sniffio",
+            "downloads": 374340454,
+            "status": "green",
+            "summary": "Sniff out which async library your code is running under"
+        },
+        {
+            "package_name": "jinja2",
+            "downloads": 368674977,
+            "status": "amber",
+            "summary": "A very fast and expressive template engine."
+        },
+        {
+            "package_name": "annotated-types",
+            "downloads": 364216837,
+            "status": "green",
+            "summary": "Reusable constraint types to use with typing.Annotated"
+        },
+        {
+            "package_name": "importlib-metadata",
+            "downloads": 363826951,
+            "status": "amber",
+            "summary": "Read metadata from Python packages"
+        },
+        {
+            "package_name": "pluggy",
+            "downloads": 347666621,
+            "status": "green",
+            "summary": "plugin and hook calling mechanisms for python"
+        },
+        {
+            "package_name": "pyasn1",
+            "downloads": 347281745,
+            "status": "amber",
+            "summary": "Pure-Python implementation of ASN.1 types and DER/BER/CER codecs (X.208)"
+        },
+        {
+            "package_name": "zipp",
+            "downloads": 335636021,
+            "status": "amber",
+            "summary": "Backport of pathlib-compatible object wrapper for zip files"
+        },
+        {
+            "package_name": "cachetools",
+            "downloads": 330436528,
+            "status": "green",
+            "summary": "Extensible memoizing collections and decorators"
+        },
+        {
+            "package_name": "filelock",
+            "downloads": 322057862,
+            "status": "amber",
+            "summary": "A platform independent file lock."
+        },
+        {
+            "package_name": "wheel",
+            "downloads": 315874883,
+            "status": "amber",
+            "summary": "A built-package format for Python"
+        },
+        {
+            "package_name": "tzdata",
+            "downloads": 308627533,
+            "status": "green",
+            "summary": "Provider of IANA time zone data"
+        },
+        {
+            "package_name": "google-api-core",
+            "downloads": 305477511,
+            "status": "amber",
+            "summary": "Google API client core library"
+        },
+        {
+            "package_name": "colorama",
+            "downloads": 302010400,
+            "status": "amber",
+            "summary": "Cross-platform colored terminal text."
+        },
+        {
+            "package_name": "typing-inspection",
+            "downloads": 299790260,
+            "status": "amber",
+            "summary": "Runtime typing introspection tools"
+        },
+        {
+            "package_name": "aiohttp",
+            "downloads": 299445105,
+            "status": "green",
+            "summary": "Async http client/server framework (asyncio)"
+        },
+        {
+            "package_name": "awscli",
+            "downloads": 296648047,
+            "status": "amber",
+            "summary": "Universal Command Line Environment for AWS."
+        },
+        {
+            "package_name": "httpx",
+            "downloads": 294420463,
+            "status": "green",
+            "summary": "The next generation HTTP client."
+        },
+        {
+            "package_name": "yarl",
+            "downloads": 292245055,
+            "status": "green",
+            "summary": "Yet another URL library"
+        },
+        {
+            "package_name": "multidict",
+            "downloads": 291699061,
+            "status": "green",
+            "summary": "multidict implementation"
+        },
+        {
+            "package_name": "google-auth",
+            "downloads": 290475864,
+            "status": "amber",
+            "summary": "Google Authentication Library"
+        },
+        {
+            "package_name": "httpcore",
+            "downloads": 288084087,
+            "status": "green",
+            "summary": "A minimal low-level HTTP client."
+        },
+        {
+            "package_name": "pyasn1-modules",
+            "downloads": 279107161,
+            "status": "amber",
+            "summary": "A collection of ASN.1-based protocols modules"
+        },
+        {
+            "package_name": "pytest",
+            "downloads": 275578168,
+            "status": "green",
+            "summary": "pytest: simple powerful testing with Python"
+        },
+        {
+            "package_name": "frozenlist",
+            "downloads": 271598710,
+            "status": "green",
+            "summary": "A list-like structure which implements collections.abc.MutableSequence"
+        },
+        {
+            "package_name": "pyjwt",
+            "downloads": 268680912,
+            "status": "amber",
+            "summary": "JSON Web Token implementation in Python"
+        },
+        {
+            "package_name": "jsonschema",
+            "downloads": 268643330,
+            "status": "green",
+            "summary": "An implementation of JSON Schema validation for Python"
+        },
+        {
+            "package_name": "rich",
+            "downloads": 267613136,
+            "status": "green",
+            "summary": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+        },
+        {
+            "package_name": "googleapis-common-protos",
+            "downloads": 267163800,
+            "status": "amber",
+            "summary": "Common protobufs used in Google APIs"
+        },
+        {
+            "package_name": "virtualenv",
+            "downloads": 264770794,
+            "status": "amber",
+            "summary": "Virtual Python Environment builder"
+        },
+        {
+            "package_name": "aiosignal",
+            "downloads": 263087380,
+            "status": "green",
+            "summary": "aiosignal: a list of registered asynchronous callbacks"
+        },
+        {
+            "package_name": "propcache",
+            "downloads": 261009672,
+            "status": "green",
+            "summary": "Accelerated property cache"
+        },
+        {
+            "package_name": "iniconfig",
+            "downloads": 260660124,
+            "status": "green",
+            "summary": "brain-dead simple config-ini parsing"
+        },
+        {
+            "package_name": "wrapt",
+            "downloads": 257515261,
+            "status": "green",
+            "summary": "Module for decorators, wrappers and monkey patching."
+        },
+        {
+            "package_name": "tqdm",
+            "downloads": 254126250,
+            "status": "green",
+            "summary": "Fast, Extensible Progress Meter"
+        },
+        {
+            "package_name": "python-dotenv",
+            "downloads": 253708774,
+            "status": "amber",
+            "summary": "Read key-value pairs from a .env file and set them as environment variables"
+        },
+        {
+            "package_name": "pyarrow",
+            "downloads": 253232741,
+            "status": "amber",
+            "summary": "Python library for Apache Arrow"
+        },
+        {
+            "package_name": "markdown-it-py",
+            "downloads": 251443264,
+            "status": "amber",
+            "summary": "Python port of markdown-it. Markdown parsing, done right!"
+        },
+        {
+            "package_name": "tomli",
+            "downloads": 243633800,
+            "status": "green",
+            "summary": "A lil' TOML parser"
+        },
+        {
+            "package_name": "requests-oauthlib",
+            "downloads": 242366933,
+            "status": "amber",
+            "summary": "OAuthlib authentication support for Requests."
+        },
+        {
+            "package_name": "mdurl",
+            "downloads": 241803146,
+            "status": "amber",
+            "summary": "Markdown URL utilities"
+        },
+        {
+            "package_name": "sqlalchemy",
+            "downloads": 241274029,
+            "status": "green",
+            "summary": "Database Abstraction Library"
+        },
+        {
+            "package_name": "greenlet",
+            "downloads": 239043319,
+            "status": "amber",
+            "summary": "Lightweight in-process concurrent programming"
+        },
+        {
+            "package_name": "aiohappyeyeballs",
+            "downloads": 232331455,
+            "status": "green",
+            "summary": "Happy Eyeballs for asyncio"
+        },
+        {
+            "package_name": "pillow",
+            "downloads": 231880243,
+            "status": "amber",
+            "summary": "Python Imaging Library (fork)"
+        },
+        {
+            "package_name": "grpcio",
+            "downloads": 231606452,
+            "status": "amber",
+            "summary": "HTTP/2-based RPC framework"
+        },
+        {
+            "package_name": "pathspec",
+            "downloads": 231492436,
+            "status": "amber",
+            "summary": "Utility library for gitignore style pattern matching of file paths."
+        },
+        {
+            "package_name": "rpds-py",
+            "downloads": 231267702,
+            "status": "green",
+            "summary": "Python bindings to Rust's persistent data structures (rpds)"
+        },
+        {
+            "package_name": "psutil",
+            "downloads": 229581650,
+            "status": "amber",
+            "summary": "Cross-platform lib for process and system monitoring."
+        },
+        {
+            "package_name": "openpyxl",
+            "downloads": 228941626,
+            "status": "amber",
+            "summary": "A Python library to read/write Excel 2010 xlsx/xlsm files"
+        },
+        {
+            "package_name": "et-xmlfile",
+            "downloads": 227522764,
+            "status": "amber",
+            "summary": "An implementation of lxml.xmlfile for the standard library"
+        },
+        {
+            "package_name": "pyparsing",
+            "downloads": 226895945,
+            "status": "green",
+            "summary": "pyparsing - Classes and methods to define and execute parsing grammars"
+        },
+        {
+            "package_name": "scipy",
+            "downloads": 226870057,
+            "status": "green",
+            "summary": "Fundamental algorithms for scientific computing in Python"
+        },
+        {
+            "package_name": "lxml",
+            "downloads": 224041829,
+            "status": "green",
+            "summary": "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
+        },
+        {
+            "package_name": "referencing",
+            "downloads": 223894386,
+            "status": "green",
+            "summary": "JSON Referencing + Python"
+        },
+        {
+            "package_name": "jsonschema-specifications",
+            "downloads": 222331615,
+            "status": "amber",
+            "summary": "The JSON Schema meta-schemas and vocabularies, exposed as a Registry"
+        },
+        {
+            "package_name": "beautifulsoup4",
+            "downloads": 222163877,
+            "status": "green",
+            "summary": "Screen-scraping library"
+        },
+        {
+            "package_name": "soupsieve",
+            "downloads": 220165531,
+            "status": "green",
+            "summary": "A modern CSS selector implementation for Beautiful Soup."
+        },
+        {
+            "package_name": "tomlkit",
+            "downloads": 211162790,
+            "status": "amber",
+            "summary": "Style preserving TOML library"
+        },
+        {
+            "package_name": "oauthlib",
+            "downloads": 210755569,
+            "status": "amber",
+            "summary": "A generic, spec-compliant, thorough implementation of the OAuth request-signing logic"
+        },
+        {
+            "package_name": "starlette",
+            "downloads": 210031787,
+            "status": "green",
+            "summary": "The little ASGI library that shines."
+        },
+        {
+            "package_name": "uvicorn",
+            "downloads": 209622234,
+            "status": "amber",
+            "summary": "The lightning-fast ASGI server."
+        },
+        {
+            "package_name": "snowflake-connector-python",
+            "downloads": 203111712,
+            "status": "amber",
+            "summary": "Snowflake Connector for Python"
+        },
+        {
+            "package_name": "fastapi",
+            "downloads": 195257040,
+            "status": "green",
+            "summary": "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+        }
+    ]
+}

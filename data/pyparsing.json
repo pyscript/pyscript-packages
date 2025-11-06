@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pyparsing (3.2.1)`\n* `latest`: `pyparsing (3.2.1)`\n* `0.29.0`: `pyparsing (3.2.1)`\n* `0.28.3`: `pyparsing (3.2.1)`\n* `0.28.2`: `pyparsing (3.2.1)`\n* `0.28.1`: `pyparsing (3.2.1)`\n* `0.28.0`: `pyparsing (3.2.1)`\n* `0.27.7`: `pyparsing (3.2.1)`\n* `0.27.6`: `pyparsing (3.2.1)`\n* `0.27.5`: `pyparsing (3.2.1)`\n* `0.27.4`: `pyparsing (3.2.1)`\n* `0.27.3`: `pyparsing (3.2.1)`\n* `0.27.2`: `pyparsing (3.2.1)`\n* `0.27.1`: `pyparsing (3.2.1)`\n* `0.27.0`: `pyparsing (3.2.1)`",
+    "supported_versions": {
+        "latest": "3.2.1",
+        "stable": "3.2.1",
+        "0.28.3": "3.2.1",
+        "0.28.2": "3.2.1",
+        "0.28.1": "3.2.1",
+        "0.28.0": "3.2.1",
+        "0.27.7": "3.2.1",
+        "0.27.6": "3.2.1",
+        "0.27.5": "3.2.1",
+        "0.27.4": "3.2.1",
+        "0.27.3": "3.2.1",
+        "0.27.2": "3.2.1",
+        "0.27.1": "3.2.1",
+        "0.27.0": "3.2.1",
+        "0.29.0": "3.2.1"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "pyparsing - Classes and methods to define and execute parsing grammars"
+}

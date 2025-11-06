@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `h3 (4.2.2)`\n* `latest`: `h3 (4.2.2)`\n* `0.29.0`: `h3 (4.2.2)`\n* `0.28.3`: `h3 (4.2.2)`\n* `0.28.2`: `h3 (4.2.2)`\n* `0.28.1`: `h3 (4.2.2)`\n* `0.28.0`: `h3 (4.2.2)`\n* `0.27.7`: `h3 (4.2.2)`\n* `0.27.6`: `h3 (4.2.2)`\n* `0.27.5`: `h3 (4.2.2)`\n* `0.27.4`: `h3 (4.2.2)`\n* `0.27.3`: `h3 (4.2.2)`\n* `0.27.2`: `h3 (4.2.2)`\n* `0.27.1`: `h3 (4.2.2)`\n* `0.27.0`: `h3 (4.2.2)`",
+    "supported_versions": {
+        "latest": "4.2.2",
+        "stable": "4.2.2",
+        "0.28.3": "4.2.2",
+        "0.28.2": "4.2.2",
+        "0.28.1": "4.2.2",
+        "0.28.0": "4.2.2",
+        "0.27.7": "4.2.2",
+        "0.27.6": "4.2.2",
+        "0.27.5": "4.2.2",
+        "0.27.4": "4.2.2",
+        "0.27.3": "4.2.2",
+        "0.27.2": "4.2.2",
+        "0.27.1": "4.2.2",
+        "0.27.0": "4.2.2",
+        "0.29.0": "4.2.2"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Uber's hierarchical hexagonal geospatial indexing system"
+}

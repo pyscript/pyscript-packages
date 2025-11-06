@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `logbook (1.8.0)`\n* `latest`: `logbook (1.8.0)`\n* `0.29.0`: `logbook (1.8.0)`\n* `0.28.3`: `logbook (1.8.0)`\n* `0.28.2`: `logbook (1.8.0)`\n* `0.28.1`: `logbook (1.8.0)`\n* `0.28.0`: `logbook (1.8.0)`\n* `0.27.7`: `logbook (1.8.0)`\n* `0.27.6`: `logbook (1.8.0)`\n* `0.27.5`: `logbook (1.8.0)`\n* `0.27.4`: `logbook (1.8.0)`\n* `0.27.3`: `logbook (1.8.0)`\n* `0.27.2`: `logbook (1.8.0)`\n* `0.27.1`: `logbook (1.8.0)`\n* `0.27.0`: `logbook (1.8.0)`",
+    "supported_versions": {
+        "latest": "1.8.0",
+        "stable": "1.8.0",
+        "0.28.3": "1.8.0",
+        "0.28.2": "1.8.0",
+        "0.28.1": "1.8.0",
+        "0.28.0": "1.8.0",
+        "0.27.7": "1.8.0",
+        "0.27.6": "1.8.0",
+        "0.27.5": "1.8.0",
+        "0.27.4": "1.8.0",
+        "0.27.3": "1.8.0",
+        "0.27.2": "1.8.0",
+        "0.27.1": "1.8.0",
+        "0.27.0": "1.8.0",
+        "0.29.0": "1.8.0"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "A logging replacement for Python"
+}

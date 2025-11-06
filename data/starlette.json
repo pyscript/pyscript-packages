@@ -1,0 +1,10 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `0.29.0`: `starlette (0.47.2)`",
+    "supported_versions": {
+        "0.29.0": "0.47.2"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "The little ASGI library that shines."
+}

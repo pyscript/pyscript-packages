@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `packaging (24.2)`\n* `latest`: `packaging (24.2)`\n* `0.29.0`: `packaging (24.2)`\n* `0.28.3`: `packaging (24.2)`\n* `0.28.2`: `packaging (24.2)`\n* `0.28.1`: `packaging (24.2)`\n* `0.28.0`: `packaging (24.2)`\n* `0.27.7`: `packaging (24.2)`\n* `0.27.6`: `packaging (24.2)`\n* `0.27.5`: `packaging (24.2)`\n* `0.27.4`: `packaging (24.2)`\n* `0.27.3`: `packaging (24.2)`\n* `0.27.2`: `packaging (24.2)`\n* `0.27.1`: `packaging (24.2)`\n* `0.27.0`: `packaging (24.2)`",
+    "supported_versions": {
+        "latest": "24.2",
+        "stable": "24.2",
+        "0.28.3": "24.2",
+        "0.28.2": "24.2",
+        "0.28.1": "24.2",
+        "0.28.0": "24.2",
+        "0.27.7": "24.2",
+        "0.27.6": "24.2",
+        "0.27.5": "24.2",
+        "0.27.4": "24.2",
+        "0.27.3": "24.2",
+        "0.27.2": "24.2",
+        "0.27.1": "24.2",
+        "0.27.0": "24.2",
+        "0.29.0": "24.2"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-06T13:22:33.970121+00:00",
+    "summary": "Core utilities for Python packages"
+}
