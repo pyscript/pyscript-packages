@@ -56,7 +56,23 @@ for package_name, data in packages.items():
         # Some packages have an empty string or Noneas summary.
         summary = "No summary available."
     pyodide_versions = [f"`{version}`" for version in data.keys()]
-    notes = f"""This package is officially supported in Pyodide.
+    notes = f"""This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).
+
+To use it in PyScript simply add it to the `packages` section of your TOML configuration like this:
+
+```
+packages = ["{package_name}" ]
+```
+
+Or if you're using a JSON configuration, like this:
+
+```
+{{
+    packages: ["{package_name}"]
+ }}
+```
+
+Read more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).
 
 Specifically, the following versions of the package are available for the following Pyodide releases:
 

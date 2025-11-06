@@ -70,8 +70,8 @@
         {
             "package_name": "grpcio-status",
             "downloads": 776825532,
-            "status": "amber",
-            "summary": "Status proto mapping for gRPC"
+            "status": "red",
+            "summary": "Reference package for GRPC Python status proto mapping."
         },
         {
             "package_name": "packaging",
