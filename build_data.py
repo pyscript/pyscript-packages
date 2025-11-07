@@ -18,14 +18,10 @@ import requests
 import json
 import datetime
 
-# Grab the data
-response = requests.get("https://raw.githubusercontent.com/pyscript/polyscript/refs/heads/main/esm/interpreter/pyodide_graph.js")
+# Grab the raw JSON data
+response = requests.get("https://raw.githubusercontent.com/pyscript/polyscript/refs/heads/main/rollup/pyodide_graph.json")
 response.raise_for_status()
-data = response.text
-
-# Extract the JSON part
-raw_json = data.replace("export default ", "")  # remove 'export ' prefix
-package_data = json.loads(raw_json.replace("'", '"'))
+package_data = response.json()
 
 
 # To hold the per-package data to later be turned into JSON files.
