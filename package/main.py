@@ -160,7 +160,7 @@ import micropip
 # Install the package via micropip.
 await micropip.install("{package_name}")
 # Now try to import it!
-import {package_name}
+import {package_name.replace("-", "_")}
 # If we reach this point, the import was successful.
 print("✅ Successfully imported {package_name}!")
 # If there was an error, it will be shown below in red.
