@@ -17,6 +17,10 @@ support status, and use that to override the Pyodide data where appropriate.
 import requests
 import json
 import datetime
+import csv
+import os
+from io import StringIO
+
 
 # Grab the raw JSON data
 response = requests.get("https://raw.githubusercontent.com/pyscript/polyscript/refs/heads/main/rollup/pyodide_graph.json")
@@ -135,3 +139,69 @@ for entry in top100:
 with open("top_100_pypi_packages.json", "w") as f:
     json.dump(summary, f, indent=4)
 print("Generated top_100_pypi_packages.json")
+
+
+# Final step: Gather community sourced package status updates from
+# the Google Sheets document and use those to override the generated
+# data above.
+# Discover when the script was last run to avoid overwriting newer data.
+print("Processing community contributed package status updates...")
+if os.path.exists("last_run.json"):
+    with open("last_run.json", "r") as f:
+        last_run_data = json.load(f)
+    last_run_time = datetime.datetime.fromisoformat(last_run_data.get("last_run"))
+else:
+    last_run_time = datetime.datetime(2025, 1, 1, tzinfo=datetime.timezone.utc)
+
+CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRcJ_Co69zrLdxbOi7b5zlO7fuqooypL5ejpVPe59YC1CPXHWA-MpLhJBpGJ44FkM0ewmwMo7yq27Z/pub?output=csv"
+response = requests.get(CSV_URL)
+response.raise_for_status()
+csv_file = StringIO(response.text)
+reader = csv.DictReader(csv_file)
+for row in reader:
+    timestamp = datetime.datetime.strptime(row.get("Timestamp"), "%d/%m/%Y %H:%M:%S").replace(tzinfo=datetime.timezone.utc)
+    if timestamp <= last_run_time:
+        # This update is older than the last run of the script, so skip it.
+        continue
+    package_name = row.get("Package name (e.g. pandas, numba, my-cool-lib)")
+    print(f"Processing community update for package: {package_name}")
+    status = row.get("Suggested status").lower()
+    if "red" in status:
+        status = "red"
+    elif "green" in status:
+        status = "green"
+    else:
+        status = "amber"
+    notes = row.get("Comments about status (Markdown allowed)")
+    filename = f"data/{package_name}.json"
+    try:
+        with open(filename, "r") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        data = {
+            "supported_versions": {},
+            "summary": None
+        }
+    if not data["summary"]:
+        # Try to fetch the summary from PyPI.
+        pypi_url = f"https://pypi.org/pypi/{package_name}/json"
+        pypi_response = requests.get(pypi_url)
+        if pypi_response.status_code == 200:
+            pypi_data = pypi_response.json()
+            data["summary"] = pypi_data["info"].get("summary", "")
+        else:
+            data["summary"] = ""
+    data["status"] = status
+    if notes:
+        data["notes"] = notes
+    data["updated_by"] = "Community contribution via Google Forms"
+    data["updated_at"] = timestamp.isoformat()
+    print(f"Updating package '{package_name}' with community status '{status}'")
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
+# Record when the script was last run.
+with open("last_run.json", "w") as f:
+    now = datetime.datetime.now(tz=datetime.timezone.utc).isoformat()
+    print(f"Recording last run time: {now}")
+    json.dump({"last_run": now}, f)
