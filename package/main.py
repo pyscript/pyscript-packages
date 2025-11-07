@@ -99,6 +99,7 @@ async def main():
     metadata_target = page["#metadata"][0]
     smoketest_target = page["#smoketest"][0]
     feedback_target = page["#feedback"][0]
+    smoketest_button = page["#smoketest-button"][0]
     package_name = get_package_name()
     if not package_name:
         target.innerHTML = "<h2>🤷 No package specified.</h2>"
@@ -147,15 +148,14 @@ async def main():
     <div>{notes_html}</div>
     """
 
-    if status == "amber":
-        # We can try a simple Pyodide import test for amber packages.
-        # Add a simple script to attempt the import.
-        # Note: This is a very basic test and may not cover all cases.
-        smoketest_target.append(h3(f"🔬 Pyodide <code>import {package_name}</code> check"))
-        smoketest_target.append(p("The script below will attempt to import the package in Pyodide. If successful, you'll see a confirmation message. If there are issues, error messages will appear in the output."))
-        smoketest_target.append(p("You can then add your own code to test the package further!"))
-        smoketest_target.append(p("Mouseover the editor, then press the ▶️ Run button to execute the test script. This may take a few seconds as Pyodide loads the package."))
-        code = f"""# Simple Pyodide import test for the {package_name} package.
+    # We can try a simple Pyodide import test for amber packages.
+    # Add a simple script to attempt the import.
+    # Note: This is a very basic test and may not cover all cases.
+    smoketest_target.append(h3(f"🔬 Pyodide <code>import {package_name}</code> check"))
+    smoketest_target.append(p("The script below will attempt to import the package in Pyodide. If successful, you'll see a confirmation message. If there are issues, error messages will appear in the output."))
+    smoketest_target.append(p("You can then add your own code to test the package further!"))
+    smoketest_target.append(p("Mouseover the editor, then press the ▶️ Run button to execute the test script. This may take a few seconds as Pyodide loads the package."))
+    code = f"""# Simple Pyodide import test for the {package_name} package.
 import micropip
 # Install the package via micropip.
 await micropip.install("{package_name}")
@@ -167,11 +167,11 @@ print("✅ Successfully imported {package_name}!")
 # Now add some code of your own to exercise and test the package!
 # Re-run the code and tell us what you find in the feedback form below. 💐
 """
-        editor = script(code, type="py-editor", id="test-script")
-        editor.setAttribute("config", '{"packages": ["micropip"]}')
-        smoketest_target.append(editor)
-        # Add a Google form for user feedback.
-        example_description = js.encodeURIComponent(f"""I attempted to import the `{package_name}` package in Pyodide. I used the following code:
+    editor = script(code, type="py-editor", id="test-script")
+    editor.setAttribute("config", '{"packages": ["micropip"]}')
+    smoketest_target.append(editor)
+    # Add a Google form for user feedback.
+    example_description = js.encodeURIComponent(f"""I attempted to import the `{package_name}` package in Pyodide. I used the following code:
 
 ```
 {code.strip()}
@@ -185,8 +185,22 @@ My experience was:
 
 <DESCRIBE YOUR EXPERIENCE HERE>
 """)
-        feedback_target.append(h3("📝 Feedback"))
-        feedback_target.append(p("Please help us improve the package support data by providing your feedback via this form. Let us know if the package worked, any issues you encountered, and any additional notes you'd like to share. Feel free to paste your code snippets or any error messages. Thank you! 🙏"))
-        feedback_target.append(iframe(src=f"https://docs.google.com/forms/d/e/1FAIpQLSdDhXu0h0BjTsMgjnvfW5P1YKnytOKxYrtC41o6fXizYkgnng/viewform?embedded=true&entry.1624544771={package_name}&entry.902804967={example_description}", width="100%", height="1100", frameborder="0", marginheight="0", marginwidth="0", id="feedback-form"))
+    feedback_target.append(h3("📝 Feedback"))
+    feedback_target.append(p("Please help us improve the package support data by providing your feedback via this form. Let us know if the package worked, any issues you encountered, and any additional notes you'd like to share. Feel free to paste your code snippets or any error messages. Thank you! 🙏"))
+    feedback_target.append(iframe(src=f"https://docs.google.com/forms/d/e/1FAIpQLSdDhXu0h0BjTsMgjnvfW5P1YKnytOKxYrtC41o6fXizYkgnng/viewform?embedded=true&entry.1624544771={package_name}&entry.902804967={example_description}", width="100%", height="1100", frameborder="0", marginheight="0", marginwidth="0", id="feedback-form"))
+
+    if status == "amber":
+        # Show the smoketest and feedback sections.
+        smoketest_target.style["display"] = "block"
+        feedback_target.style["display"] = "block"
+    else:
+        smoketest_button.style["display"] = "inline-block"
+
+    @when("click", smoketest_button)
+    def show_smoketest(event):
+        smoketest_target.style["display"] = "block"
+        feedback_target.style["display"] = "block"
+        smoketest_button.style["display"] = "none"
+
 
 await main()
