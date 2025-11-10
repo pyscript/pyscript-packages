@@ -31,17 +31,107 @@
         <main class="site-main">
             <div class="container">
                 <article class="help-content">
-                    <h1>Help & Documentation</h1>
+                    <h1>Help</h1>
+
+                    <p>Contents:</p>
+                    <ul>
+                        <li><a href="#what">What is this?</a></li>
+                        <li><a href="#how">How does it work?</a></li>
+                        <li><a href="#contribute">How do I contribute?</a></li>
+                        <li><a href="#api">Our API</a></li>
+                        <li><a href="#more-help">Where can I get more help?</a></li>
+                    </ul>
+
+                    <h2 id="what">What is this?</h2>
+
+                    <p>This site provides information about PyScript packages.</p>
+                    <p>Running Python in the context of a browser means certain assumptions made by packages running in traditional Python environments do not apply.
+                    This website aims to track and provide details about packages compatible with PyScript so developers can make informed decisions about
+                    which packages to use.</p>
+                    <p>The information provided through this website is community contributed and curated: you can help improve the data!</p>
+                    <p>For more information about PyScript itself, please visit the <a href="https://pyscript.net" target="_blank">PyScript website</a>.</p>
+
+                    <h2 id="how">How does it work?</h2>
+
+                    <img src="./find_package.gif" alt="Finding a package on the website."/>
+
+                    <p>On the front page, type in the name of the Python package you want to learn about and press Enter. You'll be taken to a page that indicates
+                    if the package is compatible with PyScript. This can be one of three states:</p>
+
+                    <ul>
+                        <li>❌ Red - Not Supported</li>
+                        <li>⚠️ Amber - Partial Support / Unknown</li>
+                        <li>✅ Green - Supported</li>
+                    </ul>
+
+                    <p>There may also be metadata to help you understand the package's compatibility and usage.</p>
+
+                    <h2 id="contribute">How do I contribute?</h2>
+
+                    <img src="./report_status.gif" alt="Reporting the status of a package on the website."/>
+
+                    <p>Contribute by reporting the status of packages you have tested with PyScript. This helps keep the information up-to-date and useful for
+                    everyone.</p>
+
+                    <p>If a package is in the amber (partial support / unknown) state, a fragment of code and a feedback form are provided to help gather more information.
+                    Run the provided code snippet in a PyScript environment to test the package's compatibility.</p>
                     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>After running the test, use the feedback form
+                    to report your findings.</p>
+
+                    <h2 id="api">Our API</h2>
+
+                    <p>The PyScript Packages website offers a simple API to access package information programmatically.</p>
                     
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Retrieve the status and metadata of packages in JSON format by making a GET request to the following endpoint:</p>
+
+                    <pre><code>
+GET /api/package/&lt;package_name&gt;.json
+                    </code></pre>
+
+                    <p>This will return a JSON object containing the following metadata (or respond with a 404 status code if the package is not found):</p>
+
+                    <ul>
+                        <li><strong>status</strong>: The support status of the package (e.g., "green", "amber", "red").</li>
+                        <li><strong>summary</strong>: The summary of the package from PyPI.</li>
+                        <li><strong>notes</strong>: Brief notes, in Markdown, about the package's compatibility with PyScript.</li>
+                        <li><strong>updated_by</strong>: The name or handle of the person who last updated this information.</li>
+                        <li><strong>updated_at</strong>: The ISO 8601 timestamp of when this information was last updated.</li>
+                    </ul>
+
+                    <p>For example, in Python, you can use the <code>requests</code> library to fetch such data about the <code>pandas</code> package:</p>
+
+                    <pre><code>import requests
+
+response = requests.get("https://pkg.pyscript.net/api/package/pandas.json")
+if response.status_code == 200:
+    package_data = response.json()
+    print(package_data)
+else:
+    print("Package not found or API error.")
+                    </code></pre>
+
+                    <p>If you wish to access data for all packages at once, you can use the following endpoint:</p>
+
+                    <pre><code>
+GET /api/all.json
+                    </code></pre>
+
+                    <p>Data about the top 100 packages is also available through this endpoint:</p>
+
+                    <pre><code>
+GET /api/top_100_pypi_packages.json
+                    </code></pre>
+
+                    <p>That's it!</p>
+
+                    <h2 id="more-help">Where can I get more help?</h2>
+
+                    <p>For more help about PyScript itself, please visit the <a href="https://pyscript.net" target="_blank">PyScript website</a> and especially pay
+                    attention to <a href="https://docs.pyscript.net/" target="_blank">our documentation</a>.</p>
+
+                    <p>For more interactive help, feel free to <a href="https://discord.gg/HxvBtukrg2" target="_blank">join our Discord community</a>.</p>
                     
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-                    
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
                 </article>
             </div>
         </main>

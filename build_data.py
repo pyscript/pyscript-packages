@@ -118,7 +118,7 @@ Pyodide version: package name (version)
         "updated_at": updated_at,
         "summary": summary,
     }
-    filename = f"data/{package_name}.json"
+    filename = os.path.join("api", "package", f"{package_name}.json")
     print(f"Writing data for package '{package_name}' to '{filename}'")
     with open(filename, "w") as f:
         json.dump(output, f, indent=4)
@@ -147,7 +147,7 @@ for entry in top100:
     downloads = entry.get("download_count", 0)
     # Check for support data
     try:
-        with open(f"data/{package_name}.json", "r") as f:
+        with open(os.path.join("api", "package", f"{package_name}.json"), "r") as f:
             support_data = json.load(f)
             status = support_data.get("status", "amber")
             desc = support_data.get("summary", "No summary available.")
@@ -171,7 +171,7 @@ for entry in top100:
     )
 
 # Write out the summary JSON file
-with open("top_100_pypi_packages.json", "w") as f:
+with open(os.path.join("api", "top_100_pypi_packages.json"), "w") as f:
     json.dump(summary, f, indent=4)
 print("Generated top_100_pypi_packages.json")
 
@@ -183,8 +183,8 @@ print("Processing community contributed package status updates...")
 
 
 # Discover when the script was last run to avoid overwriting newer data.
-if os.path.exists("last_run.json"):
-    with open("last_run.json", "r") as f:
+if os.path.exists(os.path.join("api", "last_run.json")):
+    with open(os.path.join("api", "last_run.json"), "r") as f:
         last_run_data = json.load(f)
     last_run_time = datetime.datetime.fromisoformat(
         last_run_data.get("last_run")
@@ -214,7 +214,7 @@ for row in reader:
     else:
         status = "amber"
     notes = row.get("Comments about status (Markdown allowed)")
-    filename = f"data/{package_name}.json"
+    filename = os.path.join("api", "package", f"{package_name}.json")
     try:
         with open(filename, "r") as f:
             data = json.load(f)
@@ -241,7 +241,21 @@ for row in reader:
         json.dump(data, f, indent=4)
 
 # Record when the script was last run.
-with open("last_run.json", "w") as f:
+with open(os.path.join("api", "last_run.json"), "w") as f:
     now = datetime.datetime.now(tz=datetime.timezone.utc).isoformat()
     print(f"Recording last run time: {now}")
     json.dump({"last_run": now}, f)
+
+
+# Generate a final all.json file in the API directory containing details of
+# all packages for easy access.
+all_packages = {}
+for filename in os.listdir(os.path.join("api", "package")):
+    if filename.endswith(".json"):
+        package_name = filename[:-5]
+        with open(os.path.join("api", "package", filename), "r") as f:
+            data = json.load(f)
+        all_packages[package_name] = data
+with open(os.path.join("api", "all.json"), "w") as f:
+    json.dump(all_packages, f, indent=4)
+print("Generated api/all.json")

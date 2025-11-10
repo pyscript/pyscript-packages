@@ -86,7 +86,7 @@ async def fetch_package_data(package_name):
     """
     Fetch package support data from the /data/<package_name>.json file.
     """
-    data_url = f"/data/{package_name}.json"
+    data_url = f"/api/package/{package_name}.json"
     return await get_json(data_url)
 
 async def main():
@@ -148,6 +148,13 @@ async def main():
     <div>{notes_html}</div>
     """
 
+
+    #######
+    #######
+    #######  TODO: Add PyScript and Pyodide version info, browser info, etc to the form.
+    #######
+    #######
+
     # We can try a simple Pyodide import test for amber packages.
     # Add a simple script to attempt the import.
     # Note: This is a very basic test and may not cover all cases.
@@ -156,6 +163,13 @@ async def main():
     smoketest_target.append(p("You can then add your own code to test the package further!"))
     smoketest_target.append(p("Mouseover the editor, then press the ▶️ Run button to execute the test script. This may take a few seconds as Pyodide loads the package."))
     code = f"""# Simple Pyodide import test for the {package_name} package.
+# Record the version of Pyodide being used.
+import sys
+print(f"Using {{sys.version}}")
+# Record the browser user agent.
+import js
+print(f"Browser user agent: {{js.navigator.userAgent}}")
+# Micropip is the package manager for Pyodide.
 import micropip
 # Install the package via micropip.
 await micropip.install("{package_name}")

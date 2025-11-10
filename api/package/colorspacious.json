@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"colorspacious\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"colorspacious\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `colorspacious (1.1.2)`\n* `latest`: `colorspacious (1.1.2)`\n* `0.29.0`: `colorspacious (1.1.2)`\n* `0.28.3`: `colorspacious (1.1.2)`\n* `0.28.2`: `colorspacious (1.1.2)`\n* `0.28.1`: `colorspacious (1.1.2)`\n* `0.28.0`: `colorspacious (1.1.2)`\n* `0.27.7`: `colorspacious (1.1.2)`\n* `0.27.6`: `colorspacious (1.1.2)`\n* `0.27.5`: `colorspacious (1.1.2)`\n* `0.27.4`: `colorspacious (1.1.2)`\n* `0.27.3`: `colorspacious (1.1.2)`\n* `0.27.2`: `colorspacious (1.1.2)`\n* `0.27.1`: `colorspacious (1.1.2)`\n* `0.27.0`: `colorspacious (1.1.2)`",
+    "supported_versions": {
+        "latest": "1.1.2",
+        "stable": "1.1.2",
+        "0.28.3": "1.1.2",
+        "0.28.2": "1.1.2",
+        "0.28.1": "1.1.2",
+        "0.28.0": "1.1.2",
+        "0.27.7": "1.1.2",
+        "0.27.6": "1.1.2",
+        "0.27.5": "1.1.2",
+        "0.27.4": "1.1.2",
+        "0.27.3": "1.1.2",
+        "0.27.2": "1.1.2",
+        "0.27.1": "1.1.2",
+        "0.27.0": "1.1.2",
+        "0.29.0": "1.1.2"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-10T13:32:51.838562+00:00",
+    "summary": "A powerful, accurate, and easy-to-use Python library for doing colorspace conversions"
+}

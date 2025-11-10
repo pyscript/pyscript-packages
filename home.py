@@ -7,7 +7,7 @@ PyScript support status.
 from pyscript import fetch
 from pyscript.web import page, a
 
-top100 = await fetch("/top_100_pypi_packages.json").json()
+top100 = await fetch("/api/top_100_pypi_packages.json").json()
 
 target = page["#top100"][0]
 

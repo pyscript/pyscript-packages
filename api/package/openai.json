@@ -1,0 +1,24 @@
+{
+    "status": "green",
+    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"openai\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"openai\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `openai (1.68.2)`\n* `latest`: `openai (1.68.2)`\n* `0.29.0`: `openai (1.68.2)`\n* `0.28.3`: `openai (1.68.2)`\n* `0.28.2`: `openai (1.68.2)`\n* `0.28.1`: `openai (1.68.2)`\n* `0.28.0`: `openai (1.68.2)`\n* `0.27.7`: `openai (1.68.2)`\n* `0.27.6`: `openai (1.68.2)`\n* `0.27.5`: `openai (1.68.2)`\n* `0.27.4`: `openai (1.68.2)`\n* `0.27.3`: `openai (1.68.2)`\n* `0.27.2`: `openai (1.68.2)`\n* `0.27.1`: `openai (1.68.2)`\n* `0.27.0`: `openai (1.68.2)`",
+    "supported_versions": {
+        "latest": "1.68.2",
+        "stable": "1.68.2",
+        "0.28.3": "1.68.2",
+        "0.28.2": "1.68.2",
+        "0.28.1": "1.68.2",
+        "0.28.0": "1.68.2",
+        "0.27.7": "1.68.2",
+        "0.27.6": "1.68.2",
+        "0.27.5": "1.68.2",
+        "0.27.4": "1.68.2",
+        "0.27.3": "1.68.2",
+        "0.27.2": "1.68.2",
+        "0.27.1": "1.68.2",
+        "0.27.0": "1.68.2",
+        "0.29.0": "1.68.2"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-10T13:32:51.838562+00:00",
+    "summary": "The official Python library for the openai API"
+}
