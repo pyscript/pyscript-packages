@@ -96,6 +96,8 @@ $ python -m http.server
 ```sh
 $ python build_data.py
 ```
+6. The `home.py` fragment is the PyScript code for the front page. The `/package/main.py`
+   fragment is the PyScript app for displaying specific package information.
 
 That's it! Feel free to create PR's via GitHub. Thank you! 💐
 

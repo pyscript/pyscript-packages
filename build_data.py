@@ -20,11 +20,11 @@ they are supported in Pyodide.
 Google Sheets document (published as CSV) and uses those to override the
 generated data files as needed.
 
-This is DELIBERATELY a simple script without much error handling or
+This is a DELIBERATELY simple script without much error handling or
 sophistication. It is intended to be run occasionally by hand to refresh
 the data files. Since this website is advertised as being "curated" this
 manual step is REQUIRED, so that we can review the changes before pushing
-them live.
+them live via a git based PR.
 """
 
 import requests

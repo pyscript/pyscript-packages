@@ -5,7 +5,7 @@ It does four things:
 
 1. Extracts the package name from the query string (e.g. `/package?package=<package_name>`).
 2. Grabs the package metadata from PyPI (e.g. https://pypi.org/pypi/<package_name>/json).
-3. Grabs the package support status from the /data/<package_name>.json file.
+3. Grabs the package support status from the /api/package/<package_name>.json file.
 4. If step 3 fails, it falls back to a default "amber" status and attempts to make a simple
    Pyodide import test for the package, along with an embedded Google form for user feedback.
 
@@ -147,14 +147,6 @@ async def main():
     <hr />
     <div>{notes_html}</div>
     """
-
-
-    #######
-    #######
-    #######  TODO: Add PyScript and Pyodide version info, browser info, etc to the form.
-    #######
-    #######
-
     # We can try a simple Pyodide import test for amber packages.
     # Add a simple script to attempt the import.
     # Note: This is a very basic test and may not cover all cases.
