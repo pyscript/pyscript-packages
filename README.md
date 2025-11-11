@@ -92,6 +92,10 @@ $ cd pyscript-packages
 $ python -m http.server
 ```
 4. Visit [localhost:8000](http://localhost:8000) to see the site working!
+5. To build and refresh the site's data, ensure you have `requests` installed and run:
+```sh
+$ python build_data.py
+```
 
 That's it! Feel free to create PR's via GitHub. Thank you! 💐
 
