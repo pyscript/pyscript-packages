@@ -86,7 +86,7 @@ async def fetch_package_data(package_name):
     """
     Fetch package support data from the /data/<package_name>.json file.
     """
-    data_url = f"/api/package/{package_name}.json"
+    data_url = f"./api/package/{package_name}.json"
     return await get_json(data_url)
 
 async def main():
