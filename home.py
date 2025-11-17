@@ -26,5 +26,5 @@ for pkg in top100["packages"]:
     {status_badge}
   </div>
   <p class="package-desc">{pkg["summary"]}</p>
-''', href=f"/package?package={pkg["package_name"]}", classes=["package-item", f"status-{status}"])
+''', href=f"./package?package={pkg["package_name"]}", classes=["package-item", f"status-{status}"])
     target.append(package_item)
