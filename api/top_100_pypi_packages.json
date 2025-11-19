@@ -112,7 +112,7 @@
         {
             "package_name": "s3fs",
             "downloads": 577870758,
-            "status": "amber",
+            "status": "red",
             "summary": "Convenient Filesystem interface over S3"
         },
         {
@@ -508,7 +508,7 @@
         {
             "package_name": "psutil",
             "downloads": 229581650,
-            "status": "amber",
+            "status": "red",
             "summary": "Cross-platform lib for process and system monitoring."
         },
         {

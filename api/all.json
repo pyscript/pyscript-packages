@@ -1,4 +1,220 @@
 {
+    "aiobotocore": {
+        "status": "red",
+        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and AWS services that are limited by the browser environment.",
+        "supported_versions": {},
+        "updated_by": "automated script",
+        "updated_at": "2025-11-06T12:36:40.981047+00:00",
+        "summary": "Async client for aws services using botocore and aiohttp"
+    },
+    "arrr": {
+        "status": "green",
+        "notes": "The arrr package has been tested with both Pyodide and Micropython environments and is confirmed to work seamlessly in both. It provides robust Piratical capabilities that are optimized for in-browser execution. \ud83c\udff4\u200d\u2620\ufe0f",
+        "updated_by": "Nicholas H.Tollervey",
+        "updated_at": "2025-10-23T12:00:00Z",
+        "supported_versions": {
+            "all": "tested and confirmed working in all recent Pyodide and Micropython versions."
+        }
+    },
+    "boto3": {
+        "status": "red",
+        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and AWS services that are limited by the browser environment.",
+        "supported_versions": {},
+        "updated_by": "automated script",
+        "updated_at": "2025-11-06T12:36:40.981047+00:00",
+        "summary": "The AWS SDK for Python"
+    },
+    "botocore": {
+        "status": "red",
+        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and AWS services that are limited by the browser environment.",
+        "supported_versions": {},
+        "updated_by": "automated script",
+        "updated_at": "2025-11-06T12:36:40.981047+00:00",
+        "summary": "Low-level, data-driven core of boto 3."
+    },
+    "cffi_example": {
+        "status": "green",
+        "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `cffi_example (0.1)`\n* `latest`: `cffi_example (0.1)`\n* `0.29.0`: `cffi_example (0.1)`\n* `0.28.3`: `cffi_example (0.1)`\n* `0.28.2`: `cffi_example (0.1)`\n* `0.28.1`: `cffi_example (0.1)`\n* `0.28.0`: `cffi_example (0.1)`\n* `0.27.7`: `cffi_example (0.1)`\n* `0.27.6`: `cffi_example (0.1)`\n* `0.27.5`: `cffi_example (0.1)`\n* `0.27.4`: `cffi_example (0.1)`\n* `0.27.3`: `cffi_example (0.1)`\n* `0.27.2`: `cffi_example (0.1)`\n* `0.27.1`: `cffi_example (0.1)`\n* `0.27.0`: `cffi_example (0.1)`",
+        "supported_versions": {
+            "latest": "0.1",
+            "stable": "0.1",
+            "0.28.3": "0.1",
+            "0.28.2": "0.1",
+            "0.28.1": "0.1",
+            "0.28.0": "0.1",
+            "0.27.7": "0.1",
+            "0.27.6": "0.1",
+            "0.27.5": "0.1",
+            "0.27.4": "0.1",
+            "0.27.3": "0.1",
+            "0.27.2": "0.1",
+            "0.27.1": "0.1",
+            "0.27.0": "0.1",
+            "0.29.0": "0.1"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-05T18:19:06.879369+00:00"
+    },
+    "grpcio-status": {
+        "status": "red",
+        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and Google services that are limited by the browser environment.",
+        "supported_versions": {},
+        "updated_by": "automated script",
+        "updated_at": "2025-11-06T12:36:40.981047+00:00",
+        "summary": "Reference package for GRPC Python status proto mapping."
+    },
+    "s3fs": {
+        "supported_versions": {},
+        "summary": "Convenient Filesystem interface over S3",
+        "status": "red",
+        "notes": "I attempted to import the `s3fs` package in Pyodide. I used the following code:\n\n```\n# Simple Pyodide import test for the s3fs package.\nimport micropip\n# Install the package via micropip.\nawait micropip.install(\"s3fs\")\n# Now try to import it!\nimport s3fs\n# If we reach this point, the import was successful.\nprint(\"\u00e2\u009c\u0085 Successfully imported s3fs!\")\n# If there was an error, it will be shown below in red.\n# Now add some code of your own to exercise and test the package!\n# Re-run the code and tell us what you find in the feedback form below. \u00f0\u009f\u0092\u0090\n```\n\nHere's a paste of the output:\n\n```\nError: Traceback (most recent call last):\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 597, in eval_code_async\n    await CodeRunner(\n    ...<9 lines>...\n    .run_async(globals, locals)\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 413, in run_async\n    await coroutine\n  File \"\", line 6, in \n  File \"/lib/python3.13/site-packages/s3fs/__init__.py\", line 1, in \n    from .core import S3FileSystem, S3File\n  File \"/lib/python3.13/site-packages/s3fs/core.py\", line 30, in \n    import aiobotocore.session\n  File \"/lib/python3.13/site-packages/aiobotocore/session.py\", line 1, in \n    from botocore import UNSIGNED, translate\n  File \"/lib/python3.13/site-packages/botocore/translate.py\", line 16, in \n    from botocore.utils import merge_dicts\n  File \"/lib/python3.13/site-packages/botocore/utils.py\", line 39, in \n    import botocore.httpsession\n  File \"/lib/python3.13/site-packages/botocore/httpsession.py\", line 23, in \n    from urllib3.util.ssl_ import (\n    ...<6 lines>...\n    )\nImportError: cannot import name 'ssl' from 'urllib3.util.ssl_' (/lib/python3.13/site-packages/urllib3/util/ssl_.py)\n```\n\nMy experience was: \n\nExpected SSL certificates in urllib3 supported by Pyodide appear to be incompatible. :-(\n",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-07T15:08:36+00:00"
+    },
+    "Jinja2": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"Jinja2\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"Jinja2\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `Jinja2 (3.1.6)`\n* `latest`: `Jinja2 (3.1.6)`\n* `0.29.0`: `Jinja2 (3.1.6)`\n* `0.28.3`: `Jinja2 (3.1.6)`\n* `0.28.2`: `Jinja2 (3.1.6)`\n* `0.28.1`: `Jinja2 (3.1.6)`\n* `0.28.0`: `Jinja2 (3.1.6)`\n* `0.27.7`: `Jinja2 (3.1.6)`\n* `0.27.6`: `Jinja2 (3.1.6)`\n* `0.27.5`: `Jinja2 (3.1.6)`\n* `0.27.4`: `Jinja2 (3.1.6)`\n* `0.27.3`: `Jinja2 (3.1.6)`\n* `0.27.2`: `Jinja2 (3.1.6)`\n* `0.27.1`: `Jinja2 (3.1.6)`\n* `0.27.0`: `Jinja2 (3.1.6)`",
+        "supported_versions": {
+            "latest": "3.1.6",
+            "stable": "3.1.6",
+            "0.28.3": "3.1.6",
+            "0.28.2": "3.1.6",
+            "0.28.1": "3.1.6",
+            "0.28.0": "3.1.6",
+            "0.27.7": "3.1.6",
+            "0.27.6": "3.1.6",
+            "0.27.5": "3.1.6",
+            "0.27.4": "3.1.6",
+            "0.27.3": "3.1.6",
+            "0.27.2": "3.1.6",
+            "0.27.1": "3.1.6",
+            "0.27.0": "3.1.6",
+            "0.29.0": "3.1.6"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "A very fast and expressive template engine."
+    },
+    "MarkupSafe": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"MarkupSafe\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"MarkupSafe\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `MarkupSafe (3.0.2)`\n* `latest`: `MarkupSafe (3.0.2)`\n* `0.29.0`: `MarkupSafe (3.0.2)`\n* `0.28.3`: `MarkupSafe (3.0.2)`\n* `0.28.2`: `MarkupSafe (3.0.2)`\n* `0.28.1`: `MarkupSafe (3.0.2)`\n* `0.28.0`: `MarkupSafe (3.0.2)`\n* `0.27.7`: `MarkupSafe (3.0.2)`\n* `0.27.6`: `MarkupSafe (3.0.2)`\n* `0.27.5`: `MarkupSafe (3.0.2)`\n* `0.27.4`: `MarkupSafe (3.0.2)`\n* `0.27.3`: `MarkupSafe (3.0.2)`\n* `0.27.2`: `MarkupSafe (3.0.2)`\n* `0.27.1`: `MarkupSafe (3.0.2)`\n* `0.27.0`: `MarkupSafe (3.0.2)`",
+        "supported_versions": {
+            "latest": "3.0.2",
+            "stable": "3.0.2",
+            "0.28.3": "3.0.2",
+            "0.28.2": "3.0.2",
+            "0.28.1": "3.0.2",
+            "0.28.0": "3.0.2",
+            "0.27.7": "3.0.2",
+            "0.27.6": "3.0.2",
+            "0.27.5": "3.0.2",
+            "0.27.4": "3.0.2",
+            "0.27.3": "3.0.2",
+            "0.27.2": "3.0.2",
+            "0.27.1": "3.0.2",
+            "0.27.0": "3.0.2",
+            "0.29.0": "3.0.2"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Safely add untrusted strings to HTML/XML markup."
+    },
+    "Pillow": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"Pillow\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"Pillow\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `Pillow (11.3.0)`\n* `latest`: `Pillow (11.3.0)`\n* `0.29.0`: `Pillow (11.3.0)`\n* `0.28.3`: `Pillow (11.3.0)`\n* `0.28.2`: `Pillow (11.3.0)`\n* `0.28.1`: `Pillow (11.3.0)`\n* `0.28.0`: `Pillow (11.3.0)`\n* `0.27.7`: `Pillow (11.3.0)`\n* `0.27.6`: `Pillow (11.3.0)`\n* `0.27.5`: `Pillow (11.3.0)`\n* `0.27.4`: `Pillow (11.3.0)`\n* `0.27.3`: `Pillow (11.3.0)`\n* `0.27.2`: `Pillow (11.3.0)`\n* `0.27.1`: `Pillow (11.3.0)`\n* `0.27.0`: `Pillow (11.3.0)`",
+        "supported_versions": {
+            "latest": "11.3.0",
+            "stable": "11.3.0",
+            "0.28.3": "11.3.0",
+            "0.28.2": "11.3.0",
+            "0.28.1": "11.3.0",
+            "0.28.0": "11.3.0",
+            "0.27.7": "11.3.0",
+            "0.27.6": "11.3.0",
+            "0.27.5": "11.3.0",
+            "0.27.4": "11.3.0",
+            "0.27.3": "11.3.0",
+            "0.27.2": "11.3.0",
+            "0.27.1": "11.3.0",
+            "0.27.0": "11.3.0",
+            "0.29.0": "11.3.0"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Python Imaging Library (fork)"
+    },
+    "PyMuPDF": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"PyMuPDF\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"PyMuPDF\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `PyMuPDF (1.26.3)`\n* `latest`: `PyMuPDF (1.26.3)`\n* `0.29.0`: `PyMuPDF (1.26.3)`\n* `0.28.3`: `PyMuPDF (1.26.3)`\n* `0.28.2`: `PyMuPDF (1.26.3)`\n* `0.28.1`: `PyMuPDF (1.26.3)`\n* `0.28.0`: `PyMuPDF (1.26.3)`\n* `0.27.7`: `PyMuPDF (1.26.3)`\n* `0.27.6`: `PyMuPDF (1.26.3)`\n* `0.27.5`: `PyMuPDF (1.26.3)`\n* `0.27.4`: `PyMuPDF (1.26.3)`\n* `0.27.3`: `PyMuPDF (1.26.3)`\n* `0.27.2`: `PyMuPDF (1.26.3)`\n* `0.27.1`: `PyMuPDF (1.26.3)`\n* `0.27.0`: `PyMuPDF (1.26.3)`",
+        "supported_versions": {
+            "latest": "1.26.3",
+            "stable": "1.26.3",
+            "0.28.3": "1.26.3",
+            "0.28.2": "1.26.3",
+            "0.28.1": "1.26.3",
+            "0.28.0": "1.26.3",
+            "0.27.7": "1.26.3",
+            "0.27.6": "1.26.3",
+            "0.27.5": "1.26.3",
+            "0.27.4": "1.26.3",
+            "0.27.3": "1.26.3",
+            "0.27.2": "1.26.3",
+            "0.27.1": "1.26.3",
+            "0.27.0": "1.26.3",
+            "0.29.0": "1.26.3"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "A high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents."
+    },
+    "Pygments": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"Pygments\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"Pygments\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `Pygments (2.19.1)`\n* `latest`: `Pygments (2.19.1)`\n* `0.29.0`: `Pygments (2.19.1)`\n* `0.28.3`: `Pygments (2.19.1)`\n* `0.28.2`: `Pygments (2.19.1)`\n* `0.28.1`: `Pygments (2.19.1)`\n* `0.28.0`: `Pygments (2.19.1)`\n* `0.27.7`: `Pygments (2.19.1)`\n* `0.27.6`: `Pygments (2.19.1)`\n* `0.27.5`: `Pygments (2.19.1)`\n* `0.27.4`: `Pygments (2.19.1)`\n* `0.27.3`: `Pygments (2.19.1)`\n* `0.27.2`: `Pygments (2.19.1)`\n* `0.27.1`: `Pygments (2.19.1)`\n* `0.27.0`: `Pygments (2.19.1)`",
+        "supported_versions": {
+            "latest": "2.19.1",
+            "stable": "2.19.1",
+            "0.28.3": "2.19.1",
+            "0.28.2": "2.19.1",
+            "0.28.1": "2.19.1",
+            "0.28.0": "2.19.1",
+            "0.27.7": "2.19.1",
+            "0.27.6": "2.19.1",
+            "0.27.5": "2.19.1",
+            "0.27.4": "2.19.1",
+            "0.27.3": "2.19.1",
+            "0.27.2": "2.19.1",
+            "0.27.1": "2.19.1",
+            "0.27.0": "2.19.1",
+            "0.29.0": "2.19.1"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Pygments is a syntax highlighting package written in Python."
+    },
+    "RobotRaconteur": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"RobotRaconteur\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"RobotRaconteur\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `RobotRaconteur (1.2.5)`\n* `latest`: `RobotRaconteur (1.2.5)`\n* `0.29.0`: `RobotRaconteur (1.2.6)`\n* `0.28.3`: `RobotRaconteur (1.2.5)`\n* `0.28.2`: `RobotRaconteur (1.2.5)`\n* `0.28.1`: `RobotRaconteur (1.2.5)`\n* `0.28.0`: `RobotRaconteur (1.2.5)`\n* `0.27.7`: `RobotRaconteur (1.2.5)`\n* `0.27.6`: `RobotRaconteur (1.2.5)`\n* `0.27.5`: `RobotRaconteur (1.2.5)`\n* `0.27.4`: `RobotRaconteur (1.2.5)`\n* `0.27.3`: `RobotRaconteur (1.2.5)`\n* `0.27.2`: `RobotRaconteur (1.2.5)`\n* `0.27.1`: `RobotRaconteur (1.2.5)`\n* `0.27.0`: `RobotRaconteur (1.2.5)`",
+        "supported_versions": {
+            "latest": "1.2.5",
+            "stable": "1.2.5",
+            "0.28.3": "1.2.5",
+            "0.28.2": "1.2.5",
+            "0.28.1": "1.2.5",
+            "0.28.0": "1.2.5",
+            "0.27.7": "1.2.5",
+            "0.27.6": "1.2.5",
+            "0.27.5": "1.2.5",
+            "0.27.4": "1.2.5",
+            "0.27.3": "1.2.5",
+            "0.27.2": "1.2.5",
+            "0.27.1": "1.2.5",
+            "0.27.0": "1.2.5",
+            "0.29.0": "1.2.6"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Robot Raconteur Python Library"
+    },
     "affine": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"affine\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"affine\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `affine (2.4.0)`\n* `latest`: `affine (2.4.0)`\n* `0.29.0`: `affine (2.4.0)`\n* `0.28.3`: `affine (2.4.0)`\n* `0.28.2`: `affine (2.4.0)`\n* `0.28.1`: `affine (2.4.0)`\n* `0.28.0`: `affine (2.4.0)`\n* `0.27.7`: `affine (2.4.0)`\n* `0.27.6`: `affine (2.4.0)`\n* `0.27.5`: `affine (2.4.0)`\n* `0.27.4`: `affine (2.4.0)`\n* `0.27.3`: `affine (2.4.0)`\n* `0.27.2`: `affine (2.4.0)`\n* `0.27.1`: `affine (2.4.0)`\n* `0.27.0`: `affine (2.4.0)`",
@@ -22,14 +238,6 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Matrices describing affine transformation of the plane"
-    },
-    "aiobotocore": {
-        "status": "red",
-        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and AWS services that are limited by the browser environment.",
-        "supported_versions": {},
-        "updated_by": "automated script",
-        "updated_at": "2025-11-06T12:36:40.981047+00:00",
-        "summary": "Async client for aws services using botocore and aiohttp"
     },
     "aiohappyeyeballs": {
         "status": "green",
@@ -247,15 +455,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Argon2 for Python"
     },
-    "arrr": {
-        "status": "green",
-        "notes": "The arrr package has been tested with both Pyodide and Micropython environments and is confirmed to work seamlessly in both. It provides robust Piratical capabilities that are optimized for in-browser execution. \ud83c\udff4\u200d\u2620\ufe0f",
-        "updated_by": "Nicholas H.Tollervey",
-        "updated_at": "2025-10-23T12:00:00Z",
-        "supported_versions": {
-            "all": "tested and confirmed working in all recent Pyodide and Micropython versions."
-        }
-    },
     "asciitree": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"asciitree\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"asciitree\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `asciitree (0.3.3)`\n* `latest`: `asciitree (0.3.3)`\n* `0.29.0`: `asciitree (0.3.3)`\n* `0.28.3`: `asciitree (0.3.3)`\n* `0.28.2`: `asciitree (0.3.3)`\n* `0.28.1`: `asciitree (0.3.3)`\n* `0.28.0`: `asciitree (0.3.3)`\n* `0.27.7`: `asciitree (0.3.3)`\n* `0.27.6`: `asciitree (0.3.3)`\n* `0.27.5`: `asciitree (0.3.3)`\n* `0.27.4`: `asciitree (0.3.3)`\n* `0.27.3`: `asciitree (0.3.3)`\n* `0.27.2`: `asciitree (0.3.3)`\n* `0.27.1`: `asciitree (0.3.3)`\n* `0.27.0`: `asciitree (0.3.3)`",
@@ -280,30 +479,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Draws ASCII trees."
     },
-    "astropy_iers_data": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"astropy_iers_data\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"astropy_iers_data\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `latest`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.29.0`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.3`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.2`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.1`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.0`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.7`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.6`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.5`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.4`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.3`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.2`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.1`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.0`: `astropy_iers_data (0.2025.3.10.0.29.26)`",
-        "supported_versions": {
-            "latest": "0.2025.3.10.0.29.26",
-            "stable": "0.2025.3.10.0.29.26",
-            "0.28.3": "0.2025.3.10.0.29.26",
-            "0.28.2": "0.2025.3.10.0.29.26",
-            "0.28.1": "0.2025.3.10.0.29.26",
-            "0.28.0": "0.2025.3.10.0.29.26",
-            "0.27.7": "0.2025.3.10.0.29.26",
-            "0.27.6": "0.2025.3.10.0.29.26",
-            "0.27.5": "0.2025.3.10.0.29.26",
-            "0.27.4": "0.2025.3.10.0.29.26",
-            "0.27.3": "0.2025.3.10.0.29.26",
-            "0.27.2": "0.2025.3.10.0.29.26",
-            "0.27.1": "0.2025.3.10.0.29.26",
-            "0.27.0": "0.2025.3.10.0.29.26",
-            "0.29.0": "0.2025.3.10.0.29.26"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "IERS Earth Rotation and Leap Second tables for the astropy core package"
-    },
     "astropy": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"astropy\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"astropy\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `astropy (7.0.1)`\n* `latest`: `astropy (7.0.1)`\n* `0.29.0`: `astropy (7.0.1)`\n* `0.28.3`: `astropy (7.0.1)`\n* `0.28.2`: `astropy (7.0.1)`\n* `0.28.1`: `astropy (7.0.1)`\n* `0.28.0`: `astropy (7.0.1)`\n* `0.27.7`: `astropy (7.0.1)`\n* `0.27.6`: `astropy (7.0.1)`\n* `0.27.5`: `astropy (7.0.1)`\n* `0.27.4`: `astropy (7.0.1)`\n* `0.27.3`: `astropy (7.0.1)`\n* `0.27.2`: `astropy (7.0.1)`\n* `0.27.1`: `astropy (7.0.1)`\n* `0.27.0`: `astropy (7.0.1)`",
@@ -327,6 +502,30 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Astronomy and astrophysics core library"
+    },
+    "astropy_iers_data": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"astropy_iers_data\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"astropy_iers_data\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `latest`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.29.0`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.3`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.2`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.1`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.28.0`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.7`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.6`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.5`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.4`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.3`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.2`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.1`: `astropy_iers_data (0.2025.3.10.0.29.26)`\n* `0.27.0`: `astropy_iers_data (0.2025.3.10.0.29.26)`",
+        "supported_versions": {
+            "latest": "0.2025.3.10.0.29.26",
+            "stable": "0.2025.3.10.0.29.26",
+            "0.28.3": "0.2025.3.10.0.29.26",
+            "0.28.2": "0.2025.3.10.0.29.26",
+            "0.28.1": "0.2025.3.10.0.29.26",
+            "0.28.0": "0.2025.3.10.0.29.26",
+            "0.27.7": "0.2025.3.10.0.29.26",
+            "0.27.6": "0.2025.3.10.0.29.26",
+            "0.27.5": "0.2025.3.10.0.29.26",
+            "0.27.4": "0.2025.3.10.0.29.26",
+            "0.27.3": "0.2025.3.10.0.29.26",
+            "0.27.2": "0.2025.3.10.0.29.26",
+            "0.27.1": "0.2025.3.10.0.29.26",
+            "0.27.0": "0.2025.3.10.0.29.26",
+            "0.29.0": "0.2025.3.10.0.29.26"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "IERS Earth Rotation and Leap Second tables for the astropy core package"
     },
     "asttokens": {
         "status": "green",
@@ -746,22 +945,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "The Boost::Histogram Python wrapper."
     },
-    "boto3": {
-        "status": "red",
-        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and AWS services that are limited by the browser environment.",
-        "supported_versions": {},
-        "updated_by": "automated script",
-        "updated_at": "2025-11-06T12:36:40.981047+00:00",
-        "summary": "The AWS SDK for Python"
-    },
-    "botocore": {
-        "status": "red",
-        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and AWS services that are limited by the browser environment.",
-        "supported_versions": {},
-        "updated_by": "automated script",
-        "updated_at": "2025-11-06T12:36:40.981047+00:00",
-        "summary": "Low-level, data-driven core of boto 3."
-    },
     "brotli": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"brotli\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"brotli\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `brotli (1.1.0)`\n* `latest`: `brotli (1.1.0)`\n* `0.29.0`: `brotli (1.1.0)`\n* `0.28.3`: `brotli (1.1.0)`\n* `0.28.2`: `brotli (1.1.0)`\n* `0.28.1`: `brotli (1.1.0)`\n* `0.28.0`: `brotli (1.1.0)`\n* `0.27.7`: `brotli (1.1.0)`\n* `0.27.6`: `brotli (1.1.0)`\n* `0.27.5`: `brotli (1.1.0)`\n* `0.27.4`: `brotli (1.1.0)`\n* `0.27.3`: `brotli (1.1.0)`\n* `0.27.2`: `brotli (1.1.0)`\n* `0.27.1`: `brotli (1.1.0)`\n* `0.27.0`: `brotli (1.1.0)`",
@@ -881,29 +1064,6 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Python package for providing Mozilla's CA Bundle."
-    },
-    "cffi_example": {
-        "status": "green",
-        "notes": "This package is officially supported in Pyodide.\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `cffi_example (0.1)`\n* `latest`: `cffi_example (0.1)`\n* `0.29.0`: `cffi_example (0.1)`\n* `0.28.3`: `cffi_example (0.1)`\n* `0.28.2`: `cffi_example (0.1)`\n* `0.28.1`: `cffi_example (0.1)`\n* `0.28.0`: `cffi_example (0.1)`\n* `0.27.7`: `cffi_example (0.1)`\n* `0.27.6`: `cffi_example (0.1)`\n* `0.27.5`: `cffi_example (0.1)`\n* `0.27.4`: `cffi_example (0.1)`\n* `0.27.3`: `cffi_example (0.1)`\n* `0.27.2`: `cffi_example (0.1)`\n* `0.27.1`: `cffi_example (0.1)`\n* `0.27.0`: `cffi_example (0.1)`",
-        "supported_versions": {
-            "latest": "0.1",
-            "stable": "0.1",
-            "0.28.3": "0.1",
-            "0.28.2": "0.1",
-            "0.28.1": "0.1",
-            "0.28.0": "0.1",
-            "0.27.7": "0.1",
-            "0.27.6": "0.1",
-            "0.27.5": "0.1",
-            "0.27.4": "0.1",
-            "0.27.3": "0.1",
-            "0.27.2": "0.1",
-            "0.27.1": "0.1",
-            "0.27.0": "0.1",
-            "0.29.0": "0.1"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-05T18:19:06.879369+00:00"
     },
     "cffi": {
         "status": "green",
@@ -1957,14 +2117,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "gmpy2 interface to GMP, MPFR, and MPC for Python 3.7+"
     },
-    "grpcio-status": {
-        "status": "red",
-        "notes": "This package is not currently supported in Pyodide. It likely never will be supported due to its dependencies on networking and Google services that are limited by the browser environment.",
-        "supported_versions": {},
-        "updated_by": "automated script",
-        "updated_at": "2025-11-06T12:36:40.981047+00:00",
-        "summary": "Reference package for GRPC Python status proto mapping."
-    },
     "gsw": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"gsw\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"gsw\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `gsw (3.6.19)`\n* `latest`: `gsw (3.6.19)`\n* `0.29.0`: `gsw (3.6.19)`\n* `0.28.3`: `gsw (3.6.19)`\n* `0.28.2`: `gsw (3.6.19)`\n* `0.28.1`: `gsw (3.6.19)`\n* `0.28.0`: `gsw (3.6.19)`\n* `0.27.7`: `gsw (3.6.19)`\n* `0.27.6`: `gsw (3.6.19)`\n* `0.27.5`: `gsw (3.6.19)`\n* `0.27.4`: `gsw (3.6.19)`\n* `0.27.3`: `gsw (3.6.19)`\n* `0.27.2`: `gsw (3.6.19)`\n* `0.27.1`: `gsw (3.6.19)`\n* `0.27.0`: `gsw (3.6.19)`",
@@ -2359,30 +2511,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "An autocompletion tool for Python that can be used for text editors."
     },
-    "Jinja2": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"Jinja2\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"Jinja2\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `Jinja2 (3.1.6)`\n* `latest`: `Jinja2 (3.1.6)`\n* `0.29.0`: `Jinja2 (3.1.6)`\n* `0.28.3`: `Jinja2 (3.1.6)`\n* `0.28.2`: `Jinja2 (3.1.6)`\n* `0.28.1`: `Jinja2 (3.1.6)`\n* `0.28.0`: `Jinja2 (3.1.6)`\n* `0.27.7`: `Jinja2 (3.1.6)`\n* `0.27.6`: `Jinja2 (3.1.6)`\n* `0.27.5`: `Jinja2 (3.1.6)`\n* `0.27.4`: `Jinja2 (3.1.6)`\n* `0.27.3`: `Jinja2 (3.1.6)`\n* `0.27.2`: `Jinja2 (3.1.6)`\n* `0.27.1`: `Jinja2 (3.1.6)`\n* `0.27.0`: `Jinja2 (3.1.6)`",
-        "supported_versions": {
-            "latest": "3.1.6",
-            "stable": "3.1.6",
-            "0.28.3": "3.1.6",
-            "0.28.2": "3.1.6",
-            "0.28.1": "3.1.6",
-            "0.28.0": "3.1.6",
-            "0.27.7": "3.1.6",
-            "0.27.6": "3.1.6",
-            "0.27.5": "3.1.6",
-            "0.27.4": "3.1.6",
-            "0.27.3": "3.1.6",
-            "0.27.2": "3.1.6",
-            "0.27.1": "3.1.6",
-            "0.27.0": "3.1.6",
-            "0.29.0": "3.1.6"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "A very fast and expressive template engine."
-    },
     "jiter": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"jiter\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"jiter\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `jiter (0.9.0)`\n* `latest`: `jiter (0.9.0)`\n* `0.29.0`: `jiter (0.9.0)`\n* `0.28.3`: `jiter (0.9.0)`\n* `0.28.2`: `jiter (0.9.0)`\n* `0.28.1`: `jiter (0.9.0)`\n* `0.28.0`: `jiter (0.9.0)`\n* `0.27.7`: `jiter (0.9.0)`\n* `0.27.6`: `jiter (0.9.0)`\n* `0.27.5`: `jiter (0.9.0)`\n* `0.27.4`: `jiter (0.9.0)`\n* `0.27.3`: `jiter (0.9.0)`\n* `0.27.2`: `jiter (0.9.0)`\n* `0.27.1`: `jiter (0.9.0)`\n* `0.27.0`: `jiter (0.9.0)`",
@@ -2547,30 +2675,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "No summary available."
     },
-    "lazy_loader": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"lazy_loader\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"lazy_loader\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `lazy_loader (0.4)`\n* `latest`: `lazy_loader (0.4)`\n* `0.29.0`: `lazy_loader (0.4)`\n* `0.28.3`: `lazy_loader (0.4)`\n* `0.28.2`: `lazy_loader (0.4)`\n* `0.28.1`: `lazy_loader (0.4)`\n* `0.28.0`: `lazy_loader (0.4)`\n* `0.27.7`: `lazy_loader (0.4)`\n* `0.27.6`: `lazy_loader (0.4)`\n* `0.27.5`: `lazy_loader (0.4)`\n* `0.27.4`: `lazy_loader (0.4)`\n* `0.27.3`: `lazy_loader (0.4)`\n* `0.27.2`: `lazy_loader (0.4)`\n* `0.27.1`: `lazy_loader (0.4)`\n* `0.27.0`: `lazy_loader (0.4)`",
-        "supported_versions": {
-            "latest": "0.4",
-            "stable": "0.4",
-            "0.28.3": "0.4",
-            "0.28.2": "0.4",
-            "0.28.1": "0.4",
-            "0.28.0": "0.4",
-            "0.27.7": "0.4",
-            "0.27.6": "0.4",
-            "0.27.5": "0.4",
-            "0.27.4": "0.4",
-            "0.27.3": "0.4",
-            "0.27.2": "0.4",
-            "0.27.1": "0.4",
-            "0.27.0": "0.4",
-            "0.29.0": "0.4"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Makes it easy to load subpackages and functions on demand."
-    },
     "lazy-object-proxy": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"lazy-object-proxy\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"lazy-object-proxy\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `lazy-object-proxy (1.10.0)`\n* `latest`: `lazy-object-proxy (1.10.0)`\n* `0.29.0`: `lazy-object-proxy (1.10.0)`\n* `0.28.3`: `lazy-object-proxy (1.10.0)`\n* `0.28.2`: `lazy-object-proxy (1.10.0)`\n* `0.28.1`: `lazy-object-proxy (1.10.0)`\n* `0.28.0`: `lazy-object-proxy (1.10.0)`\n* `0.27.7`: `lazy-object-proxy (1.10.0)`\n* `0.27.6`: `lazy-object-proxy (1.10.0)`\n* `0.27.5`: `lazy-object-proxy (1.10.0)`\n* `0.27.4`: `lazy-object-proxy (1.10.0)`\n* `0.27.3`: `lazy-object-proxy (1.10.0)`\n* `0.27.2`: `lazy-object-proxy (1.10.0)`\n* `0.27.1`: `lazy-object-proxy (1.10.0)`\n* `0.27.0`: `lazy-object-proxy (1.10.0)`",
@@ -2594,6 +2698,30 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "A fast and thorough lazy object proxy."
+    },
+    "lazy_loader": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"lazy_loader\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"lazy_loader\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `lazy_loader (0.4)`\n* `latest`: `lazy_loader (0.4)`\n* `0.29.0`: `lazy_loader (0.4)`\n* `0.28.3`: `lazy_loader (0.4)`\n* `0.28.2`: `lazy_loader (0.4)`\n* `0.28.1`: `lazy_loader (0.4)`\n* `0.28.0`: `lazy_loader (0.4)`\n* `0.27.7`: `lazy_loader (0.4)`\n* `0.27.6`: `lazy_loader (0.4)`\n* `0.27.5`: `lazy_loader (0.4)`\n* `0.27.4`: `lazy_loader (0.4)`\n* `0.27.3`: `lazy_loader (0.4)`\n* `0.27.2`: `lazy_loader (0.4)`\n* `0.27.1`: `lazy_loader (0.4)`\n* `0.27.0`: `lazy_loader (0.4)`",
+        "supported_versions": {
+            "latest": "0.4",
+            "stable": "0.4",
+            "0.28.3": "0.4",
+            "0.28.2": "0.4",
+            "0.28.1": "0.4",
+            "0.28.0": "0.4",
+            "0.27.7": "0.4",
+            "0.27.6": "0.4",
+            "0.27.5": "0.4",
+            "0.27.4": "0.4",
+            "0.27.3": "0.4",
+            "0.27.2": "0.4",
+            "0.27.1": "0.4",
+            "0.27.0": "0.4",
+            "0.29.0": "0.4"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Makes it easy to load subpackages and functions on demand."
     },
     "libcst": {
         "status": "green",
@@ -2714,30 +2842,6 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "LZ4 Bindings for Python"
-    },
-    "MarkupSafe": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"MarkupSafe\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"MarkupSafe\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `MarkupSafe (3.0.2)`\n* `latest`: `MarkupSafe (3.0.2)`\n* `0.29.0`: `MarkupSafe (3.0.2)`\n* `0.28.3`: `MarkupSafe (3.0.2)`\n* `0.28.2`: `MarkupSafe (3.0.2)`\n* `0.28.1`: `MarkupSafe (3.0.2)`\n* `0.28.0`: `MarkupSafe (3.0.2)`\n* `0.27.7`: `MarkupSafe (3.0.2)`\n* `0.27.6`: `MarkupSafe (3.0.2)`\n* `0.27.5`: `MarkupSafe (3.0.2)`\n* `0.27.4`: `MarkupSafe (3.0.2)`\n* `0.27.3`: `MarkupSafe (3.0.2)`\n* `0.27.2`: `MarkupSafe (3.0.2)`\n* `0.27.1`: `MarkupSafe (3.0.2)`\n* `0.27.0`: `MarkupSafe (3.0.2)`",
-        "supported_versions": {
-            "latest": "3.0.2",
-            "stable": "3.0.2",
-            "0.28.3": "3.0.2",
-            "0.28.2": "3.0.2",
-            "0.28.1": "3.0.2",
-            "0.28.0": "3.0.2",
-            "0.27.7": "3.0.2",
-            "0.27.6": "3.0.2",
-            "0.27.5": "3.0.2",
-            "0.27.4": "3.0.2",
-            "0.27.3": "3.0.2",
-            "0.27.2": "3.0.2",
-            "0.27.1": "3.0.2",
-            "0.27.0": "3.0.2",
-            "0.29.0": "3.0.2"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Safely add untrusted strings to HTML/XML markup."
     },
     "matplotlib-inline": {
         "status": "green",
@@ -3579,30 +3683,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Python interface for libheif library"
     },
-    "Pillow": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"Pillow\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"Pillow\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `Pillow (11.3.0)`\n* `latest`: `Pillow (11.3.0)`\n* `0.29.0`: `Pillow (11.3.0)`\n* `0.28.3`: `Pillow (11.3.0)`\n* `0.28.2`: `Pillow (11.3.0)`\n* `0.28.1`: `Pillow (11.3.0)`\n* `0.28.0`: `Pillow (11.3.0)`\n* `0.27.7`: `Pillow (11.3.0)`\n* `0.27.6`: `Pillow (11.3.0)`\n* `0.27.5`: `Pillow (11.3.0)`\n* `0.27.4`: `Pillow (11.3.0)`\n* `0.27.3`: `Pillow (11.3.0)`\n* `0.27.2`: `Pillow (11.3.0)`\n* `0.27.1`: `Pillow (11.3.0)`\n* `0.27.0`: `Pillow (11.3.0)`",
-        "supported_versions": {
-            "latest": "11.3.0",
-            "stable": "11.3.0",
-            "0.28.3": "11.3.0",
-            "0.28.2": "11.3.0",
-            "0.28.1": "11.3.0",
-            "0.28.0": "11.3.0",
-            "0.27.7": "11.3.0",
-            "0.27.6": "11.3.0",
-            "0.27.5": "11.3.0",
-            "0.27.4": "11.3.0",
-            "0.27.3": "11.3.0",
-            "0.27.2": "11.3.0",
-            "0.27.1": "11.3.0",
-            "0.27.0": "11.3.0",
-            "0.29.0": "11.3.0"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Python Imaging Library (fork)"
-    },
     "pkgconfig": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pkgconfig\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pkgconfig\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pkgconfig (1.5.5)`\n* `latest`: `pkgconfig (1.5.5)`\n* `0.29.0`: `pkgconfig (1.5.5)`\n* `0.28.3`: `pkgconfig (1.5.5)`\n* `0.28.2`: `pkgconfig (1.5.5)`\n* `0.28.1`: `pkgconfig (1.5.5)`\n* `0.28.0`: `pkgconfig (1.5.5)`\n* `0.27.7`: `pkgconfig (1.5.5)`\n* `0.27.6`: `pkgconfig (1.5.5)`\n* `0.27.5`: `pkgconfig (1.5.5)`\n* `0.27.4`: `pkgconfig (1.5.5)`\n* `0.27.3`: `pkgconfig (1.5.5)`\n* `0.27.2`: `pkgconfig (1.5.5)`\n* `0.27.1`: `pkgconfig (1.5.5)`\n* `0.27.0`: `pkgconfig (1.5.5)`",
@@ -3843,6 +3923,30 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Safely evaluate AST nodes without side effects"
     },
+    "py": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"py\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"py\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `py (1.11.0)`\n* `latest`: `py (1.11.0)`\n* `0.29.0`: `py (1.11.0)`\n* `0.28.3`: `py (1.11.0)`\n* `0.28.2`: `py (1.11.0)`\n* `0.28.1`: `py (1.11.0)`\n* `0.28.0`: `py (1.11.0)`\n* `0.27.7`: `py (1.11.0)`\n* `0.27.6`: `py (1.11.0)`\n* `0.27.5`: `py (1.11.0)`\n* `0.27.4`: `py (1.11.0)`\n* `0.27.3`: `py (1.11.0)`\n* `0.27.2`: `py (1.11.0)`\n* `0.27.1`: `py (1.11.0)`\n* `0.27.0`: `py (1.11.0)`",
+        "supported_versions": {
+            "latest": "1.11.0",
+            "stable": "1.11.0",
+            "0.28.3": "1.11.0",
+            "0.28.2": "1.11.0",
+            "0.28.1": "1.11.0",
+            "0.28.0": "1.11.0",
+            "0.27.7": "1.11.0",
+            "0.27.6": "1.11.0",
+            "0.27.5": "1.11.0",
+            "0.27.4": "1.11.0",
+            "0.27.3": "1.11.0",
+            "0.27.2": "1.11.0",
+            "0.27.1": "1.11.0",
+            "0.27.0": "1.11.0",
+            "0.29.0": "1.11.0"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "library with cross-python path, ini-parsing, io, code, log facilities"
+    },
     "pyclipper": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pyclipper\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pyclipper\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pyclipper (1.3.0.post6)`\n* `latest`: `pyclipper (1.3.0.post6)`\n* `0.29.0`: `pyclipper (1.3.0.post6)`\n* `0.28.3`: `pyclipper (1.3.0.post6)`\n* `0.28.2`: `pyclipper (1.3.0.post6)`\n* `0.28.1`: `pyclipper (1.3.0.post6)`\n* `0.28.0`: `pyclipper (1.3.0.post6)`\n* `0.27.7`: `pyclipper (1.3.0.post6)`\n* `0.27.6`: `pyclipper (1.3.0.post6)`\n* `0.27.5`: `pyclipper (1.3.0.post6)`\n* `0.27.4`: `pyclipper (1.3.0.post6)`\n* `0.27.3`: `pyclipper (1.3.0.post6)`\n* `0.27.2`: `pyclipper (1.3.0.post6)`\n* `0.27.1`: `pyclipper (1.3.0.post6)`\n* `0.27.0`: `pyclipper (1.3.0.post6)`",
@@ -3915,30 +4019,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Cryptographic library for Python"
     },
-    "pydantic_core": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pydantic_core\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pydantic_core\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pydantic_core (2.27.2)`\n* `latest`: `pydantic_core (2.27.2)`\n* `0.29.0`: `pydantic_core (2.27.2)`\n* `0.28.3`: `pydantic_core (2.27.2)`\n* `0.28.2`: `pydantic_core (2.27.2)`\n* `0.28.1`: `pydantic_core (2.27.2)`\n* `0.28.0`: `pydantic_core (2.27.2)`\n* `0.27.7`: `pydantic_core (2.27.2)`\n* `0.27.6`: `pydantic_core (2.27.2)`\n* `0.27.5`: `pydantic_core (2.27.2)`\n* `0.27.4`: `pydantic_core (2.27.2)`\n* `0.27.3`: `pydantic_core (2.27.2)`\n* `0.27.2`: `pydantic_core (2.27.2)`\n* `0.27.1`: `pydantic_core (2.27.2)`\n* `0.27.0`: `pydantic_core (2.27.2)`",
-        "supported_versions": {
-            "latest": "2.27.2",
-            "stable": "2.27.2",
-            "0.28.3": "2.27.2",
-            "0.28.2": "2.27.2",
-            "0.28.1": "2.27.2",
-            "0.28.0": "2.27.2",
-            "0.27.7": "2.27.2",
-            "0.27.6": "2.27.2",
-            "0.27.5": "2.27.2",
-            "0.27.4": "2.27.2",
-            "0.27.3": "2.27.2",
-            "0.27.2": "2.27.2",
-            "0.27.1": "2.27.2",
-            "0.27.0": "2.27.2",
-            "0.29.0": "2.27.2"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Core functionality for Pydantic validation and serialization"
-    },
     "pydantic": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pydantic\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pydantic\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pydantic (2.10.6)`\n* `latest`: `pydantic (2.10.6)`\n* `0.29.0`: `pydantic (2.10.6)`\n* `0.28.3`: `pydantic (2.10.6)`\n* `0.28.2`: `pydantic (2.10.6)`\n* `0.28.1`: `pydantic (2.10.6)`\n* `0.28.0`: `pydantic (2.10.6)`\n* `0.27.7`: `pydantic (2.10.6)`\n* `0.27.6`: `pydantic (2.10.6)`\n* `0.27.5`: `pydantic (2.10.6)`\n* `0.27.4`: `pydantic (2.10.6)`\n* `0.27.3`: `pydantic (2.10.6)`\n* `0.27.2`: `pydantic (2.10.6)`\n* `0.27.1`: `pydantic (2.10.6)`\n* `0.27.0`: `pydantic (2.10.6)`",
@@ -3962,6 +4042,30 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Data validation using Python type hints"
+    },
+    "pydantic_core": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pydantic_core\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pydantic_core\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pydantic_core (2.27.2)`\n* `latest`: `pydantic_core (2.27.2)`\n* `0.29.0`: `pydantic_core (2.27.2)`\n* `0.28.3`: `pydantic_core (2.27.2)`\n* `0.28.2`: `pydantic_core (2.27.2)`\n* `0.28.1`: `pydantic_core (2.27.2)`\n* `0.28.0`: `pydantic_core (2.27.2)`\n* `0.27.7`: `pydantic_core (2.27.2)`\n* `0.27.6`: `pydantic_core (2.27.2)`\n* `0.27.5`: `pydantic_core (2.27.2)`\n* `0.27.4`: `pydantic_core (2.27.2)`\n* `0.27.3`: `pydantic_core (2.27.2)`\n* `0.27.2`: `pydantic_core (2.27.2)`\n* `0.27.1`: `pydantic_core (2.27.2)`\n* `0.27.0`: `pydantic_core (2.27.2)`",
+        "supported_versions": {
+            "latest": "2.27.2",
+            "stable": "2.27.2",
+            "0.28.3": "2.27.2",
+            "0.28.2": "2.27.2",
+            "0.28.1": "2.27.2",
+            "0.28.0": "2.27.2",
+            "0.27.7": "2.27.2",
+            "0.27.6": "2.27.2",
+            "0.27.5": "2.27.2",
+            "0.27.4": "2.27.2",
+            "0.27.3": "2.27.2",
+            "0.27.2": "2.27.2",
+            "0.27.1": "2.27.2",
+            "0.27.0": "2.27.2",
+            "0.29.0": "2.27.2"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Core functionality for Pydantic validation and serialization"
     },
     "pyerfa": {
         "status": "green",
@@ -3996,30 +4100,6 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Python Game Development"
-    },
-    "Pygments": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"Pygments\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"Pygments\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `Pygments (2.19.1)`\n* `latest`: `Pygments (2.19.1)`\n* `0.29.0`: `Pygments (2.19.1)`\n* `0.28.3`: `Pygments (2.19.1)`\n* `0.28.2`: `Pygments (2.19.1)`\n* `0.28.1`: `Pygments (2.19.1)`\n* `0.28.0`: `Pygments (2.19.1)`\n* `0.27.7`: `Pygments (2.19.1)`\n* `0.27.6`: `Pygments (2.19.1)`\n* `0.27.5`: `Pygments (2.19.1)`\n* `0.27.4`: `Pygments (2.19.1)`\n* `0.27.3`: `Pygments (2.19.1)`\n* `0.27.2`: `Pygments (2.19.1)`\n* `0.27.1`: `Pygments (2.19.1)`\n* `0.27.0`: `Pygments (2.19.1)`",
-        "supported_versions": {
-            "latest": "2.19.1",
-            "stable": "2.19.1",
-            "0.28.3": "2.19.1",
-            "0.28.2": "2.19.1",
-            "0.28.1": "2.19.1",
-            "0.28.0": "2.19.1",
-            "0.27.7": "2.19.1",
-            "0.27.6": "2.19.1",
-            "0.27.5": "2.19.1",
-            "0.27.4": "2.19.1",
-            "0.27.3": "2.19.1",
-            "0.27.2": "2.19.1",
-            "0.27.1": "2.19.1",
-            "0.27.0": "2.19.1",
-            "0.29.0": "2.19.1"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Pygments is a syntax highlighting package written in Python."
     },
     "pyheif": {
         "status": "green",
@@ -4093,30 +4173,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Call stack profiler for Python. Shows you why your code is slow!"
     },
-    "py": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"py\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"py\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `py (1.11.0)`\n* `latest`: `py (1.11.0)`\n* `0.29.0`: `py (1.11.0)`\n* `0.28.3`: `py (1.11.0)`\n* `0.28.2`: `py (1.11.0)`\n* `0.28.1`: `py (1.11.0)`\n* `0.28.0`: `py (1.11.0)`\n* `0.27.7`: `py (1.11.0)`\n* `0.27.6`: `py (1.11.0)`\n* `0.27.5`: `py (1.11.0)`\n* `0.27.4`: `py (1.11.0)`\n* `0.27.3`: `py (1.11.0)`\n* `0.27.2`: `py (1.11.0)`\n* `0.27.1`: `py (1.11.0)`\n* `0.27.0`: `py (1.11.0)`",
-        "supported_versions": {
-            "latest": "1.11.0",
-            "stable": "1.11.0",
-            "0.28.3": "1.11.0",
-            "0.28.2": "1.11.0",
-            "0.28.1": "1.11.0",
-            "0.28.0": "1.11.0",
-            "0.27.7": "1.11.0",
-            "0.27.6": "1.11.0",
-            "0.27.5": "1.11.0",
-            "0.27.4": "1.11.0",
-            "0.27.3": "1.11.0",
-            "0.27.2": "1.11.0",
-            "0.27.1": "1.11.0",
-            "0.27.0": "1.11.0",
-            "0.29.0": "1.11.0"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "library with cross-python path, ini-parsing, io, code, log facilities"
-    },
     "pylimer-tools": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pylimer-tools\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pylimer-tools\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `0.29.0`: `pylimer-tools (0.3.11)`",
@@ -4126,30 +4182,6 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "A toolkit for handling bead-spring polymers and LAMMPS output in Python"
-    },
-    "PyMuPDF": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"PyMuPDF\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"PyMuPDF\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `PyMuPDF (1.26.3)`\n* `latest`: `PyMuPDF (1.26.3)`\n* `0.29.0`: `PyMuPDF (1.26.3)`\n* `0.28.3`: `PyMuPDF (1.26.3)`\n* `0.28.2`: `PyMuPDF (1.26.3)`\n* `0.28.1`: `PyMuPDF (1.26.3)`\n* `0.28.0`: `PyMuPDF (1.26.3)`\n* `0.27.7`: `PyMuPDF (1.26.3)`\n* `0.27.6`: `PyMuPDF (1.26.3)`\n* `0.27.5`: `PyMuPDF (1.26.3)`\n* `0.27.4`: `PyMuPDF (1.26.3)`\n* `0.27.3`: `PyMuPDF (1.26.3)`\n* `0.27.2`: `PyMuPDF (1.26.3)`\n* `0.27.1`: `PyMuPDF (1.26.3)`\n* `0.27.0`: `PyMuPDF (1.26.3)`",
-        "supported_versions": {
-            "latest": "1.26.3",
-            "stable": "1.26.3",
-            "0.28.3": "1.26.3",
-            "0.28.2": "1.26.3",
-            "0.28.1": "1.26.3",
-            "0.28.0": "1.26.3",
-            "0.27.7": "1.26.3",
-            "0.27.6": "1.26.3",
-            "0.27.5": "1.26.3",
-            "0.27.4": "1.26.3",
-            "0.27.3": "1.26.3",
-            "0.27.2": "1.26.3",
-            "0.27.1": "1.26.3",
-            "0.27.0": "1.26.3",
-            "0.29.0": "1.26.3"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "A high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents."
     },
     "pynacl": {
         "status": "green",
@@ -4391,30 +4423,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "A ``pytest`` fixture for benchmarking code. It will group the tests into rounds that are calibrated to the chosen timer."
     },
-    "pytest_httpx": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pytest_httpx\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pytest_httpx\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pytest_httpx (0.30.0)`\n* `latest`: `pytest_httpx (0.30.0)`\n* `0.29.0`: `pytest_httpx (0.30.0)`\n* `0.28.3`: `pytest_httpx (0.30.0)`\n* `0.28.2`: `pytest_httpx (0.30.0)`\n* `0.28.1`: `pytest_httpx (0.30.0)`\n* `0.28.0`: `pytest_httpx (0.30.0)`\n* `0.27.7`: `pytest_httpx (0.30.0)`\n* `0.27.6`: `pytest_httpx (0.30.0)`\n* `0.27.5`: `pytest_httpx (0.30.0)`\n* `0.27.4`: `pytest_httpx (0.30.0)`\n* `0.27.3`: `pytest_httpx (0.30.0)`\n* `0.27.2`: `pytest_httpx (0.30.0)`\n* `0.27.1`: `pytest_httpx (0.30.0)`\n* `0.27.0`: `pytest_httpx (0.30.0)`",
-        "supported_versions": {
-            "latest": "0.30.0",
-            "stable": "0.30.0",
-            "0.28.3": "0.30.0",
-            "0.28.2": "0.30.0",
-            "0.28.1": "0.30.0",
-            "0.28.0": "0.30.0",
-            "0.27.7": "0.30.0",
-            "0.27.6": "0.30.0",
-            "0.27.5": "0.30.0",
-            "0.27.4": "0.30.0",
-            "0.27.3": "0.30.0",
-            "0.27.2": "0.30.0",
-            "0.27.1": "0.30.0",
-            "0.27.0": "0.30.0",
-            "0.29.0": "0.30.0"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Send responses to httpx."
-    },
     "pytest": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pytest\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pytest\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pytest (8.3.5)`\n* `latest`: `pytest (8.3.5)`\n* `0.29.0`: `pytest (8.3.5)`\n* `0.28.3`: `pytest (8.3.5)`\n* `0.28.2`: `pytest (8.3.5)`\n* `0.28.1`: `pytest (8.3.5)`\n* `0.28.0`: `pytest (8.3.5)`\n* `0.27.7`: `pytest (8.3.5)`\n* `0.27.6`: `pytest (8.3.5)`\n* `0.27.5`: `pytest (8.3.5)`\n* `0.27.4`: `pytest (8.3.5)`\n* `0.27.3`: `pytest (8.3.5)`\n* `0.27.2`: `pytest (8.3.5)`\n* `0.27.1`: `pytest (8.3.5)`\n* `0.27.0`: `pytest (8.3.5)`",
@@ -4438,6 +4446,30 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "pytest: simple powerful testing with Python"
+    },
+    "pytest_httpx": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"pytest_httpx\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"pytest_httpx\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `pytest_httpx (0.30.0)`\n* `latest`: `pytest_httpx (0.30.0)`\n* `0.29.0`: `pytest_httpx (0.30.0)`\n* `0.28.3`: `pytest_httpx (0.30.0)`\n* `0.28.2`: `pytest_httpx (0.30.0)`\n* `0.28.1`: `pytest_httpx (0.30.0)`\n* `0.28.0`: `pytest_httpx (0.30.0)`\n* `0.27.7`: `pytest_httpx (0.30.0)`\n* `0.27.6`: `pytest_httpx (0.30.0)`\n* `0.27.5`: `pytest_httpx (0.30.0)`\n* `0.27.4`: `pytest_httpx (0.30.0)`\n* `0.27.3`: `pytest_httpx (0.30.0)`\n* `0.27.2`: `pytest_httpx (0.30.0)`\n* `0.27.1`: `pytest_httpx (0.30.0)`\n* `0.27.0`: `pytest_httpx (0.30.0)`",
+        "supported_versions": {
+            "latest": "0.30.0",
+            "stable": "0.30.0",
+            "0.28.3": "0.30.0",
+            "0.28.2": "0.30.0",
+            "0.28.1": "0.30.0",
+            "0.28.0": "0.30.0",
+            "0.27.7": "0.30.0",
+            "0.27.6": "0.30.0",
+            "0.27.5": "0.30.0",
+            "0.27.4": "0.30.0",
+            "0.27.3": "0.30.0",
+            "0.27.2": "0.30.0",
+            "0.27.1": "0.30.0",
+            "0.27.0": "0.30.0",
+            "0.29.0": "0.30.0"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Send responses to httpx."
     },
     "python-calamine": {
         "status": "green",
@@ -4928,30 +4960,6 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Online machine learning in Python"
-    },
-    "RobotRaconteur": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"RobotRaconteur\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"RobotRaconteur\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `RobotRaconteur (1.2.5)`\n* `latest`: `RobotRaconteur (1.2.5)`\n* `0.29.0`: `RobotRaconteur (1.2.6)`\n* `0.28.3`: `RobotRaconteur (1.2.5)`\n* `0.28.2`: `RobotRaconteur (1.2.5)`\n* `0.28.1`: `RobotRaconteur (1.2.5)`\n* `0.28.0`: `RobotRaconteur (1.2.5)`\n* `0.27.7`: `RobotRaconteur (1.2.5)`\n* `0.27.6`: `RobotRaconteur (1.2.5)`\n* `0.27.5`: `RobotRaconteur (1.2.5)`\n* `0.27.4`: `RobotRaconteur (1.2.5)`\n* `0.27.3`: `RobotRaconteur (1.2.5)`\n* `0.27.2`: `RobotRaconteur (1.2.5)`\n* `0.27.1`: `RobotRaconteur (1.2.5)`\n* `0.27.0`: `RobotRaconteur (1.2.5)`",
-        "supported_versions": {
-            "latest": "1.2.5",
-            "stable": "1.2.5",
-            "0.28.3": "1.2.5",
-            "0.28.2": "1.2.5",
-            "0.28.1": "1.2.5",
-            "0.28.0": "1.2.5",
-            "0.27.7": "1.2.5",
-            "0.27.6": "1.2.5",
-            "0.27.5": "1.2.5",
-            "0.27.4": "1.2.5",
-            "0.27.3": "1.2.5",
-            "0.27.2": "1.2.5",
-            "0.27.1": "1.2.5",
-            "0.27.0": "1.2.5",
-            "0.29.0": "1.2.6"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Robot Raconteur Python Library"
     },
     "rpds-py": {
         "status": "green",
@@ -5755,30 +5763,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "tiktoken is a fast BPE tokeniser for use with OpenAI's models"
     },
-    "tomli": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tomli\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tomli\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tomli (2.2.1)`\n* `latest`: `tomli (2.2.1)`\n* `0.29.0`: `tomli (2.2.1)`\n* `0.28.3`: `tomli (2.2.1)`\n* `0.28.2`: `tomli (2.2.1)`\n* `0.28.1`: `tomli (2.2.1)`\n* `0.28.0`: `tomli (2.2.1)`\n* `0.27.7`: `tomli (2.2.1)`\n* `0.27.6`: `tomli (2.2.1)`\n* `0.27.5`: `tomli (2.2.1)`\n* `0.27.4`: `tomli (2.2.1)`\n* `0.27.3`: `tomli (2.2.1)`\n* `0.27.2`: `tomli (2.2.1)`\n* `0.27.1`: `tomli (2.2.1)`\n* `0.27.0`: `tomli (2.2.1)`",
-        "supported_versions": {
-            "latest": "2.2.1",
-            "stable": "2.2.1",
-            "0.28.3": "2.2.1",
-            "0.28.2": "2.2.1",
-            "0.28.1": "2.2.1",
-            "0.28.0": "2.2.1",
-            "0.27.7": "2.2.1",
-            "0.27.6": "2.2.1",
-            "0.27.5": "2.2.1",
-            "0.27.4": "2.2.1",
-            "0.27.3": "2.2.1",
-            "0.27.2": "2.2.1",
-            "0.27.1": "2.2.1",
-            "0.27.0": "2.2.1",
-            "0.29.0": "2.2.1"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "A lil' TOML parser"
-    },
     "tomli-w": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tomli-w\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tomli-w\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tomli-w (1.2.0)`\n* `latest`: `tomli-w (1.2.0)`\n* `0.29.0`: `tomli-w (1.2.0)`\n* `0.28.3`: `tomli-w (1.2.0)`\n* `0.28.2`: `tomli-w (1.2.0)`\n* `0.28.1`: `tomli-w (1.2.0)`\n* `0.28.0`: `tomli-w (1.2.0)`\n* `0.27.7`: `tomli-w (1.2.0)`\n* `0.27.6`: `tomli-w (1.2.0)`\n* `0.27.5`: `tomli-w (1.2.0)`\n* `0.27.4`: `tomli-w (1.2.0)`\n* `0.27.3`: `tomli-w (1.2.0)`\n* `0.27.2`: `tomli-w (1.2.0)`\n* `0.27.1`: `tomli-w (1.2.0)`\n* `0.27.0`: `tomli-w (1.2.0)`",
@@ -5802,6 +5786,30 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "A lil' TOML writer"
+    },
+    "tomli": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tomli\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tomli\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tomli (2.2.1)`\n* `latest`: `tomli (2.2.1)`\n* `0.29.0`: `tomli (2.2.1)`\n* `0.28.3`: `tomli (2.2.1)`\n* `0.28.2`: `tomli (2.2.1)`\n* `0.28.1`: `tomli (2.2.1)`\n* `0.28.0`: `tomli (2.2.1)`\n* `0.27.7`: `tomli (2.2.1)`\n* `0.27.6`: `tomli (2.2.1)`\n* `0.27.5`: `tomli (2.2.1)`\n* `0.27.4`: `tomli (2.2.1)`\n* `0.27.3`: `tomli (2.2.1)`\n* `0.27.2`: `tomli (2.2.1)`\n* `0.27.1`: `tomli (2.2.1)`\n* `0.27.0`: `tomli (2.2.1)`",
+        "supported_versions": {
+            "latest": "2.2.1",
+            "stable": "2.2.1",
+            "0.28.3": "2.2.1",
+            "0.28.2": "2.2.1",
+            "0.28.1": "2.2.1",
+            "0.28.0": "2.2.1",
+            "0.27.7": "2.2.1",
+            "0.27.6": "2.2.1",
+            "0.27.5": "2.2.1",
+            "0.27.4": "2.2.1",
+            "0.27.3": "2.2.1",
+            "0.27.2": "2.2.1",
+            "0.27.1": "2.2.1",
+            "0.27.0": "2.2.1",
+            "0.29.0": "2.2.1"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "A lil' TOML parser"
     },
     "toolz": {
         "status": "green",
@@ -5947,30 +5955,6 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Java grammar for tree-sitter"
     },
-    "tree-sitter": {
-        "status": "green",
-        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tree-sitter\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tree-sitter\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tree-sitter (0.23.2)`\n* `latest`: `tree-sitter (0.23.2)`\n* `0.29.0`: `tree-sitter (0.23.2)`\n* `0.28.3`: `tree-sitter (0.23.2)`\n* `0.28.2`: `tree-sitter (0.23.2)`\n* `0.28.1`: `tree-sitter (0.23.2)`\n* `0.28.0`: `tree-sitter (0.23.2)`\n* `0.27.7`: `tree-sitter (0.23.2)`\n* `0.27.6`: `tree-sitter (0.23.2)`\n* `0.27.5`: `tree-sitter (0.23.2)`\n* `0.27.4`: `tree-sitter (0.23.2)`\n* `0.27.3`: `tree-sitter (0.23.2)`\n* `0.27.2`: `tree-sitter (0.23.2)`\n* `0.27.1`: `tree-sitter (0.23.2)`\n* `0.27.0`: `tree-sitter (0.23.2)`",
-        "supported_versions": {
-            "latest": "0.23.2",
-            "stable": "0.23.2",
-            "0.28.3": "0.23.2",
-            "0.28.2": "0.23.2",
-            "0.28.1": "0.23.2",
-            "0.28.0": "0.23.2",
-            "0.27.7": "0.23.2",
-            "0.27.6": "0.23.2",
-            "0.27.5": "0.23.2",
-            "0.27.4": "0.23.2",
-            "0.27.3": "0.23.2",
-            "0.27.2": "0.23.2",
-            "0.27.1": "0.23.2",
-            "0.27.0": "0.23.2",
-            "0.29.0": "0.23.2"
-        },
-        "updated_by": "automated script",
-        "updated_at": "2025-11-10T13:32:51.838562+00:00",
-        "summary": "Python bindings to the Tree-sitter parsing library"
-    },
     "tree-sitter-python": {
         "status": "green",
         "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tree-sitter-python\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tree-sitter-python\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tree-sitter-python (0.23.4)`\n* `latest`: `tree-sitter-python (0.23.4)`\n* `0.29.0`: `tree-sitter-python (0.23.4)`\n* `0.28.3`: `tree-sitter-python (0.23.4)`\n* `0.28.2`: `tree-sitter-python (0.23.4)`\n* `0.28.1`: `tree-sitter-python (0.23.4)`\n* `0.28.0`: `tree-sitter-python (0.23.4)`\n* `0.27.7`: `tree-sitter-python (0.23.4)`\n* `0.27.6`: `tree-sitter-python (0.23.4)`\n* `0.27.5`: `tree-sitter-python (0.23.4)`\n* `0.27.4`: `tree-sitter-python (0.23.4)`\n* `0.27.3`: `tree-sitter-python (0.23.4)`\n* `0.27.2`: `tree-sitter-python (0.23.4)`\n* `0.27.1`: `tree-sitter-python (0.23.4)`\n* `0.27.0`: `tree-sitter-python (0.23.4)`",
@@ -5994,6 +5978,30 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Python grammar for tree-sitter"
+    },
+    "tree-sitter": {
+        "status": "green",
+        "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tree-sitter\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tree-sitter\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tree-sitter (0.23.2)`\n* `latest`: `tree-sitter (0.23.2)`\n* `0.29.0`: `tree-sitter (0.23.2)`\n* `0.28.3`: `tree-sitter (0.23.2)`\n* `0.28.2`: `tree-sitter (0.23.2)`\n* `0.28.1`: `tree-sitter (0.23.2)`\n* `0.28.0`: `tree-sitter (0.23.2)`\n* `0.27.7`: `tree-sitter (0.23.2)`\n* `0.27.6`: `tree-sitter (0.23.2)`\n* `0.27.5`: `tree-sitter (0.23.2)`\n* `0.27.4`: `tree-sitter (0.23.2)`\n* `0.27.3`: `tree-sitter (0.23.2)`\n* `0.27.2`: `tree-sitter (0.23.2)`\n* `0.27.1`: `tree-sitter (0.23.2)`\n* `0.27.0`: `tree-sitter (0.23.2)`",
+        "supported_versions": {
+            "latest": "0.23.2",
+            "stable": "0.23.2",
+            "0.28.3": "0.23.2",
+            "0.28.2": "0.23.2",
+            "0.28.1": "0.23.2",
+            "0.28.0": "0.23.2",
+            "0.27.7": "0.23.2",
+            "0.27.6": "0.23.2",
+            "0.27.5": "0.23.2",
+            "0.27.4": "0.23.2",
+            "0.27.3": "0.23.2",
+            "0.27.2": "0.23.2",
+            "0.27.1": "0.23.2",
+            "0.27.0": "0.23.2",
+            "0.29.0": "0.23.2"
+        },
+        "updated_by": "automated script",
+        "updated_at": "2025-11-10T13:32:51.838562+00:00",
+        "summary": "Python bindings to the Tree-sitter parsing library"
     },
     "tskit": {
         "status": "green",
@@ -6533,12 +6541,12 @@
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "Zstandard bindings for Python"
     },
-    "s3fs": {
+    "psutil": {
         "supported_versions": {},
-        "summary": "Convenient Filesystem interface over S3",
+        "summary": "Cross-platform lib for process and system monitoring.",
         "status": "red",
-        "notes": "I attempted to import the `s3fs` package in Pyodide. I used the following code:\n\n```\n# Simple Pyodide import test for the s3fs package.\nimport micropip\n# Install the package via micropip.\nawait micropip.install(\"s3fs\")\n# Now try to import it!\nimport s3fs\n# If we reach this point, the import was successful.\nprint(\"\u00e2\u009c\u0085 Successfully imported s3fs!\")\n# If there was an error, it will be shown below in red.\n# Now add some code of your own to exercise and test the package!\n# Re-run the code and tell us what you find in the feedback form below. \u00f0\u009f\u0092\u0090\n```\n\nHere's a paste of the output:\n\n```\nError: Traceback (most recent call last):\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 597, in eval_code_async\n    await CodeRunner(\n    ...<9 lines>...\n    .run_async(globals, locals)\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 413, in run_async\n    await coroutine\n  File \"\", line 6, in \n  File \"/lib/python3.13/site-packages/s3fs/__init__.py\", line 1, in \n    from .core import S3FileSystem, S3File\n  File \"/lib/python3.13/site-packages/s3fs/core.py\", line 30, in \n    import aiobotocore.session\n  File \"/lib/python3.13/site-packages/aiobotocore/session.py\", line 1, in \n    from botocore import UNSIGNED, translate\n  File \"/lib/python3.13/site-packages/botocore/translate.py\", line 16, in \n    from botocore.utils import merge_dicts\n  File \"/lib/python3.13/site-packages/botocore/utils.py\", line 39, in \n    import botocore.httpsession\n  File \"/lib/python3.13/site-packages/botocore/httpsession.py\", line 23, in \n    from urllib3.util.ssl_ import (\n    ...<6 lines>...\n    )\nImportError: cannot import name 'ssl' from 'urllib3.util.ssl_' (/lib/python3.13/site-packages/urllib3/util/ssl_.py)\n```\n\nMy experience was: \n\nExpected SSL certificates in urllib3 supported by Pyodide appear to be incompatible. :-(\n",
+        "notes": "I attempted to import the `psutil` package in Pyodide. I used the following code:\n\n```\n# Simple Pyodide import test for the psutil package.\n# Record the version of Pyodide being used.\nimport sys\nprint(f\"Using {sys.version}\")\n# Record the browser user agent.\nimport js\nprint(f\"Browser user agent: {js.navigator.userAgent}\")\n# Micropip is the package manager for Pyodide.\nimport micropip\n# Install the package via micropip.\nawait micropip.install(\"psutil\")\n# Now try to import it!\nimport psutil\n# If we reach this point, the import was successful.\nprint(\"\u00e2\u009c\u0085 Successfully imported psutil!\")\n# If there was an error, it will be shown below in red.\n# Now add some code of your own to exercise and test the package!\n# Re-run the code and tell us what you find in the feedback form below. \u00f0\u009f\u0092\u0090\n```\n\nHere's a paste of the output:\n\nUsing 3.13.2 (main, Oct 20 2025, 18:07:39) [Clang 21.0.0git (https:/github.com/llvm/llvm-project 2f05451198e2f222ec66cec489\nBrowser user agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\nError: Traceback (most recent call last):\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 597, in eval_code_async\n    await CodeRunner(\n    ...<9 lines>...\n    .run_async(globals, locals)\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 413, in run_async\n    await coroutine\n  File \"\", line 11, in \n  File \"/lib/python3.13/site-packages/micropip/package_manager.py\", line 205, in install\n    await transaction.gather_requirements(requirements)\n  File \"/lib/python3.13/site-packages/micropip/transaction.py\", line 74, in gather_requirements\n    await asyncio.gather(*requirement_promises)\n  File \"/lib/python3.13/site-packages/micropip/transaction.py\", line 90, in add_requirement\n    return await self.add_requirement_inner(as_req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/lib/python3.13/site-packages/micropip/transaction.py\", line 221, in add_requirement_inner\n    await self._add_requirement_from_package_index(req)\n  File \"/lib/python3.13/site-packages/micropip/transaction.py\", line 277, in _add_requirement_from_package_index\n    wheel = find_wheel(metadata, req)\n  File \"/lib/python3.13/site-packages/micropip/transaction.py\", line 414, in find_wheel\n    raise ValueError(\n    ...<4 lines>...\n    )\nValueError: Can't find a pure Python 3 wheel for 'psutil'.\nSee: https://pyodide.org/en/stable/usage/faq.html#why-can-t-micropip-find-a-pure-python-wheel-for-a-package\nYou can use `await micropip.install(..., keep_going=True)` to get a list of all packages with missing wheels.\n\nMy experience was: \n\nNot working",
         "updated_by": "Community contribution via Google Forms",
-        "updated_at": "2025-11-07T15:08:36+00:00"
+        "updated_at": "2025-11-19T07:26:03+00:00"
     }
 }
