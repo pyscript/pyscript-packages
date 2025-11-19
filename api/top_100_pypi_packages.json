@@ -436,7 +436,7 @@
         {
             "package_name": "pyarrow",
             "downloads": 253232741,
-            "status": "amber",
+            "status": "green",
             "summary": "Python library for Apache Arrow"
         },
         {

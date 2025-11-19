@@ -1,9 +1,10 @@
 {
     "status": "green",
-    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"packaging\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"packaging\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `packaging (24.2)`\n* `latest`: `packaging (24.2)`\n* `0.29.0`: `packaging (24.2)`\n* `0.28.3`: `packaging (24.2)`\n* `0.28.2`: `packaging (24.2)`\n* `0.28.1`: `packaging (24.2)`\n* `0.28.0`: `packaging (24.2)`\n* `0.27.7`: `packaging (24.2)`\n* `0.27.6`: `packaging (24.2)`\n* `0.27.5`: `packaging (24.2)`\n* `0.27.4`: `packaging (24.2)`\n* `0.27.3`: `packaging (24.2)`\n* `0.27.2`: `packaging (24.2)`\n* `0.27.1`: `packaging (24.2)`\n* `0.27.0`: `packaging (24.2)`",
+    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"packaging\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"packaging\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `packaging (24.2)`\n* `latest`: `packaging (24.2)`\n* `0.29.0`: `packaging (24.2)`\n* `0.28.3`: `packaging (24.2)`\n* `0.28.2`: `packaging (24.2)`\n* `0.28.1`: `packaging (24.2)`\n* `0.28.0`: `packaging (24.2)`\n* `0.27.7`: `packaging (24.2)`\n* `0.27.6`: `packaging (24.2)`\n* `0.27.5`: `packaging (24.2)`\n* `0.27.4`: `packaging (24.2)`\n* `0.27.3`: `packaging (24.2)`\n* `0.27.2`: `packaging (24.2)`\n* `0.27.1`: `packaging (23.2)`\n* `0.27.0`: `packaging (23.2)`",
     "supported_versions": {
         "latest": "24.2",
         "stable": "24.2",
+        "0.29.0": "24.2",
         "0.28.3": "24.2",
         "0.28.2": "24.2",
         "0.28.1": "24.2",
@@ -14,9 +15,8 @@
         "0.27.4": "24.2",
         "0.27.3": "24.2",
         "0.27.2": "24.2",
-        "0.27.1": "24.2",
-        "0.27.0": "24.2",
-        "0.29.0": "24.2"
+        "0.27.1": "23.2",
+        "0.27.0": "23.2"
     },
     "updated_by": "automated script",
     "updated_at": "2025-11-10T13:32:51.838562+00:00",

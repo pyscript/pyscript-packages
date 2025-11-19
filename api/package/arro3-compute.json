@@ -1,0 +1,17 @@
+{
+    "status": "green",
+    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"arro3-compute\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"arro3-compute\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `0.27.7`: `arro3-compute (0.4.1)`\n* `0.27.6`: `arro3-compute (0.4.1)`\n* `0.27.5`: `arro3-compute (0.4.1)`\n* `0.27.4`: `arro3-compute (0.4.1)`\n* `0.27.3`: `arro3-compute (0.4.1)`\n* `0.27.2`: `arro3-compute (0.4.1)`\n* `0.27.1`: `arro3-compute (0.4.1)`\n* `0.27.0`: `arro3-compute (0.4.1)`",
+    "supported_versions": {
+        "0.27.7": "0.4.1",
+        "0.27.6": "0.4.1",
+        "0.27.5": "0.4.1",
+        "0.27.4": "0.4.1",
+        "0.27.3": "0.4.1",
+        "0.27.2": "0.4.1",
+        "0.27.1": "0.4.1",
+        "0.27.0": "0.4.1"
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-10T13:32:51.838562+00:00",
+    "summary": "No summary available."
+}

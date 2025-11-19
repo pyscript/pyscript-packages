@@ -1,22 +1,14 @@
 {
     "status": "green",
-    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"donfig\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"donfig\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `donfig (0.8.1.post1)`\n* `latest`: `donfig (0.8.1.post1)`\n* `0.29.0`: `donfig (0.8.1.post1)`\n* `0.28.3`: `donfig (0.8.1.post1)`\n* `0.28.2`: `donfig (0.8.1.post1)`\n* `0.28.1`: `donfig (0.8.1.post1)`\n* `0.28.0`: `donfig (0.8.1.post1)`\n* `0.27.7`: `donfig (0.8.1.post1)`\n* `0.27.6`: `donfig (0.8.1.post1)`\n* `0.27.5`: `donfig (0.8.1.post1)`\n* `0.27.4`: `donfig (0.8.1.post1)`\n* `0.27.3`: `donfig (0.8.1.post1)`\n* `0.27.2`: `donfig (0.8.1.post1)`\n* `0.27.1`: `donfig (0.8.1.post1)`\n* `0.27.0`: `donfig (0.8.1.post1)`",
+    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"donfig\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"donfig\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `donfig (0.8.1.post1)`\n* `latest`: `donfig (0.8.1.post1)`\n* `0.29.0`: `donfig (0.8.1.post1)`\n* `0.28.3`: `donfig (0.8.1.post1)`\n* `0.28.2`: `donfig (0.8.1.post1)`\n* `0.28.1`: `donfig (0.8.1.post1)`\n* `0.28.0`: `donfig (0.8.1.post1)`",
     "supported_versions": {
         "latest": "0.8.1.post1",
         "stable": "0.8.1.post1",
+        "0.29.0": "0.8.1.post1",
         "0.28.3": "0.8.1.post1",
         "0.28.2": "0.8.1.post1",
         "0.28.1": "0.8.1.post1",
-        "0.28.0": "0.8.1.post1",
-        "0.27.7": "0.8.1.post1",
-        "0.27.6": "0.8.1.post1",
-        "0.27.5": "0.8.1.post1",
-        "0.27.4": "0.8.1.post1",
-        "0.27.3": "0.8.1.post1",
-        "0.27.2": "0.8.1.post1",
-        "0.27.1": "0.8.1.post1",
-        "0.27.0": "0.8.1.post1",
-        "0.29.0": "0.8.1.post1"
+        "0.28.0": "0.8.1.post1"
     },
     "updated_by": "automated script",
     "updated_at": "2025-11-10T13:32:51.838562+00:00",
