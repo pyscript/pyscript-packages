@@ -9,7 +9,7 @@ On the site's front page is a list of the most popular Python packages on PyPI
 (collected via https://pypistats.org/), along with an indication via RAG
 (red/amber/green 🚦) of the package's status for use with PyScript. A red status
 🟥 means the package is not, or cannot be supported by PyScript, an amber status
-🟨 means either the status of PyScript support is unknown or requires adjustment,
+🟨 means the status of PyScript support is unknown,
 and a green status 🟩 means the package is supported by PyScript. Clicking on
 the package takes you to the page for that package with more details.
 
@@ -48,6 +48,7 @@ This will return a JSON object containing the following metadata (or respond wit
 * *status*: The support status of the package (e.g., "green", "amber", "red").
 * *summary*: The summary of the package from PyPI.
 * *notes*: Brief notes, in Markdown, about the package's compatibility with PyScript.
+* *pyodide_versions*: A description of Pyodide/PyScript version support for each version of the package.
 * *updated_by*: The name or handle of the person who last updated this information.
 * *updated_at*: The ISO 8601 timestamp of when this information was last updated.
 
@@ -57,7 +58,7 @@ For example, in Python, you can use the `requests` library to fetch such data ab
 ```
 import requests
 
-response = requests.get("https://pkg.pyscript.net/api/package/pandas.json")
+response = requests.get("https://pyscript.github.io/pyscript-packages/api/package/pandas.json")
 if response.status_code == 200:
     package_data = response.json()
     print(package_data)
@@ -68,13 +69,13 @@ else:
 If you wish to access data for all packages at once, you can use the following endpoint:
 
 ```
-GET /api/all.json
+GET api/all.json
 ```
 
 Data about the top 100 packages is also available through this endpoint:
 
 ```
-GET /api/top_100_pypi_packages.json
+GET api/top_100_pypi_packages.json
 ```
 
 ## Developer Setup

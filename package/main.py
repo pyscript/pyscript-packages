@@ -128,7 +128,7 @@ async def main():
         }
     status_values = {
         "red": "❌ Red - Not Supported",
-        "amber": "⚠️ Amber - Partial Support / Unknown",
+        "amber": "⚠️ Amber - Unknown Support",
         "green": "✅ Green - Supported",
     }
     status = package_data.get("status", "amber")
