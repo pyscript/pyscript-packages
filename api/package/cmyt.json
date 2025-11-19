@@ -1,22 +1,59 @@
 {
     "status": "green",
-    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"cmyt\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"cmyt\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `cmyt (2.0.2)`\n* `latest`: `cmyt (2.0.2)`\n* `0.29.0`: `cmyt (2.0.2)`\n* `0.28.3`: `cmyt (2.0.2)`\n* `0.28.2`: `cmyt (2.0.2)`\n* `0.28.1`: `cmyt (2.0.2)`\n* `0.28.0`: `cmyt (2.0.2)`\n* `0.27.7`: `cmyt (2.0.0)`\n* `0.27.6`: `cmyt (2.0.0)`\n* `0.27.5`: `cmyt (2.0.0)`\n* `0.27.4`: `cmyt (2.0.0)`\n* `0.27.3`: `cmyt (2.0.0)`\n* `0.27.2`: `cmyt (2.0.0)`\n* `0.27.1`: `cmyt (2.0.0)`\n* `0.27.0`: `cmyt (2.0.0)`",
-    "supported_versions": {
-        "latest": "2.0.2",
-        "stable": "2.0.2",
-        "0.29.0": "2.0.2",
-        "0.28.3": "2.0.2",
-        "0.28.2": "2.0.2",
-        "0.28.1": "2.0.2",
-        "0.28.0": "2.0.2",
-        "0.27.7": "2.0.0",
-        "0.27.6": "2.0.0",
-        "0.27.5": "2.0.0",
-        "0.27.4": "2.0.0",
-        "0.27.3": "2.0.0",
-        "0.27.2": "2.0.0",
-        "0.27.1": "2.0.0",
-        "0.27.0": "2.0.0"
+    "notes": "Great news! The package `cmyt` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"cmyt\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"cmyt\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.0: cmyt (2.0.2) ([PyScript 2025.11.1](https://pyscript.net/releases/2025.11.1/))\n* 0.28.3: cmyt (2.0.2)\n* 0.28.2: cmyt (2.0.2)\n* 0.28.1: cmyt (2.0.2) ([PyScript 2025.8.1](https://pyscript.net/releases/2025.8.1/))\n* 0.28.0: cmyt (2.0.2)\n* 0.27.7: cmyt (2.0.0) ([PyScript 2025.7.3](https://pyscript.net/releases/2025.7.3/))\n* 0.27.6: cmyt (2.0.0) ([PyScript 2025.5.1](https://pyscript.net/releases/2025.5.1/))\n* 0.27.5: cmyt (2.0.0)\n* 0.27.4: cmyt (2.0.0)\n* 0.27.3: cmyt (2.0.0) ([PyScript 2025.3.1](https://pyscript.net/releases/2025.3.1/))\n* 0.27.2: cmyt (2.0.0) ([PyScript 2025.2.4](https://pyscript.net/releases/2025.2.4/))\n* 0.27.1: cmyt (2.0.0)\n* 0.27.0: cmyt (2.0.0)",
+    "pyodide_versions": {
+        "0.29.0": {
+            "package_version": "2.0.2",
+            "pyscript_version": "2025.11.1"
+        },
+        "0.28.3": {
+            "package_version": "2.0.2",
+            "pyscript_version": "unknown"
+        },
+        "0.28.2": {
+            "package_version": "2.0.2",
+            "pyscript_version": "unknown"
+        },
+        "0.28.1": {
+            "package_version": "2.0.2",
+            "pyscript_version": "2025.8.1"
+        },
+        "0.28.0": {
+            "package_version": "2.0.2",
+            "pyscript_version": "unknown"
+        },
+        "0.27.7": {
+            "package_version": "2.0.0",
+            "pyscript_version": "2025.7.3"
+        },
+        "0.27.6": {
+            "package_version": "2.0.0",
+            "pyscript_version": "2025.5.1"
+        },
+        "0.27.5": {
+            "package_version": "2.0.0",
+            "pyscript_version": "unknown"
+        },
+        "0.27.4": {
+            "package_version": "2.0.0",
+            "pyscript_version": "unknown"
+        },
+        "0.27.3": {
+            "package_version": "2.0.0",
+            "pyscript_version": "2025.3.1"
+        },
+        "0.27.2": {
+            "package_version": "2.0.0",
+            "pyscript_version": "2025.2.4"
+        },
+        "0.27.1": {
+            "package_version": "2.0.0",
+            "pyscript_version": "unknown"
+        },
+        "0.27.0": {
+            "package_version": "2.0.0",
+            "pyscript_version": "unknown"
+        }
     },
     "updated_by": "automated script",
     "updated_at": "2025-11-10T13:32:51.838562+00:00",

@@ -42,6 +42,31 @@ import os
 from io import StringIO
 
 
+PYSCRIPT_PYODIDE_MAP = {
+  "2024.10.1": "0.26.2",
+  "2024.10.2": "0.26.3",
+  "2024.11.1": "0.26.4",
+  "2025.2.1": "0.26.4",
+  "2025.2.2": "0.27.2",
+  "2025.2.3": "0.27.2",
+  "2025.2.4": "0.27.2",
+  "2025.3.1": "0.27.3",
+  "2025.5.1": "0.27.6",
+  "2025.7.1": "0.27.7",
+  "2025.7.2": "0.27.7",
+  "2025.7.3": "0.27.7",
+  "2025.8.1": "0.28.1",
+  "2025.10.1": "0.29.0",
+  "2025.10.2": "0.29.0",
+  "2025.10.3": "0.29.0",
+  "2025.11.1": "0.29.0"
+}
+
+PYODIDE_PYSCRIPT_MAP = {
+  v: k for k, v in PYSCRIPT_PYODIDE_MAP.items()
+}
+
+
 #############################################
 # Step 1: Process community contributed package status updates.
 #############################################
@@ -124,16 +149,25 @@ package_data = response.json()
 # To hold the per-package data to later be turned into JSON files.
 packages = {}
 
+# Get the latest release of Pyodide.
+latest_release = max([k for k in package_data.keys() if k not in {"latest", "stable"}])
+print(f"Latest Pyodide release detected: {latest_release}")
+
 # Iterate over the releases of Pyodide
 for release, package_list in package_data.items():
     print(f"Processing release: {release}")
+    if release in {"latest", "stable"}:
+        continue
     for package_name, version in package_list.items():
         print(f"  Processing package: {package_name}")
         if package_name not in packages:
             packages[package_name] = {}
         # Add the supported version of this package for the given release of
         # Pyodide.
-        packages[package_name][release] = version
+        packages[package_name][release] = {
+            "package_version": version,
+            "pyscript_version": PYODIDE_PYSCRIPT_MAP.get(release, "unknown")
+        }
 
 
 updated_by = "automated script"
@@ -160,12 +194,20 @@ for package_name, data in packages.items():
             print(
                 f"No changes in supported versions for package '{package_name}'. Skipping."
             )
-            continue
+            notes = ""
+            #continue
         else:
             print(
                 f"Changes detected in supported Pyodide versions for package '{package_name}'. Updating."
             )
             notes = ""  # Reset notes to repopulate with updated info.
+    # Check if the latest release of Pyodide supports this package.
+    has_latest = True
+    if latest_release not in data:
+        print(
+            f"Warning: Latest Pyodide release '{latest_release}' does not support package '{package_name}'. Warning added to notes."
+        )
+        has_latest = False
     # Fetch the package summary from PyPI
     response = requests.get(f"https://pypi.org/pypi/{package_name}/json")
     if response.status_code != 200:
@@ -182,9 +224,11 @@ for package_name, data in packages.items():
         summary = "No summary available."
     pyodide_versions = [f"`{version}`" for version in data.keys()]
     if not notes:
-        notes = f"""This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).
-
-To use it in PyScript simply add it to the `packages` section of your TOML configuration like this:
+        if has_latest:
+            header = f"Great news! The package `{package_name}` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\n"
+        else:
+            header = f"⚠️ The package `{package_name}` has been supported in previous versions of Pyodide, but is not supported in the latest Pyodide release (used by default in PyScript). Supported versions of Pyodide and PyScript are listed below, and details of how to pin PyScript to use a specific version of Pyodide can be [found here](https://docs.pyscript.net/2025.11.1/user-guide/configuration/#interpreter).\n\n"
+        notes = header + f"""To use it in PyScript simply add it to the `packages` section of your TOML configuration like this:
 
 ```
 packages = ["{package_name}" ]
@@ -202,18 +246,17 @@ Read more about using packages in PyScript [in our documentation](https://docs.p
 
 Specifically, the following versions of the package are available for the following Pyodide releases:
 
-Pyodide version: package name (version)
+Pyodide version: package name (version) (PyScript Version)
 """
-        notes += "\n".join(
-            [
-                f"* `{k}`: `{package_name} ({data[k]})`"
-                for k in sorted(data.keys(), reverse=True)
-            ]
-        )
+        for k in sorted(data.keys(), reverse=True):
+            notes += f"\n* {k}: {package_name} ({data[k]['package_version']})"
+            pyscript_version = data[k]["pyscript_version"]
+            if pyscript_version != "unknown":
+                notes += f" ([PyScript {pyscript_version}](https://pyscript.net/releases/{pyscript_version}/))"
     output = {
         "status": "green",
         "notes": notes,
-        "supported_versions": data,
+        "pyodide_versions": data,
         "updated_by": updated_by,
         "updated_at": updated_at,
         "summary": summary,

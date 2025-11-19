@@ -1,22 +1,59 @@
 {
     "status": "green",
-    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"multidict\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"multidict\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `multidict (6.6.4)`\n* `latest`: `multidict (6.6.4)`\n* `0.29.0`: `multidict (6.6.4)`\n* `0.28.3`: `multidict (6.6.3)`\n* `0.28.2`: `multidict (6.6.3)`\n* `0.28.1`: `multidict (6.6.3)`\n* `0.28.0`: `multidict (6.5.0)`\n* `0.27.7`: `multidict (6.0.5)`\n* `0.27.6`: `multidict (6.0.5)`\n* `0.27.5`: `multidict (6.0.5)`\n* `0.27.4`: `multidict (6.0.5)`\n* `0.27.3`: `multidict (6.0.5)`\n* `0.27.2`: `multidict (6.0.5)`\n* `0.27.1`: `multidict (6.0.5)`\n* `0.27.0`: `multidict (6.0.5)`",
-    "supported_versions": {
-        "latest": "6.6.4",
-        "stable": "6.6.4",
-        "0.29.0": "6.6.4",
-        "0.28.3": "6.6.3",
-        "0.28.2": "6.6.3",
-        "0.28.1": "6.6.3",
-        "0.28.0": "6.5.0",
-        "0.27.7": "6.0.5",
-        "0.27.6": "6.0.5",
-        "0.27.5": "6.0.5",
-        "0.27.4": "6.0.5",
-        "0.27.3": "6.0.5",
-        "0.27.2": "6.0.5",
-        "0.27.1": "6.0.5",
-        "0.27.0": "6.0.5"
+    "notes": "Great news! The package `multidict` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"multidict\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"multidict\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.0: multidict (6.6.4) ([PyScript 2025.11.1](https://pyscript.net/releases/2025.11.1/))\n* 0.28.3: multidict (6.6.3)\n* 0.28.2: multidict (6.6.3)\n* 0.28.1: multidict (6.6.3) ([PyScript 2025.8.1](https://pyscript.net/releases/2025.8.1/))\n* 0.28.0: multidict (6.5.0)\n* 0.27.7: multidict (6.0.5) ([PyScript 2025.7.3](https://pyscript.net/releases/2025.7.3/))\n* 0.27.6: multidict (6.0.5) ([PyScript 2025.5.1](https://pyscript.net/releases/2025.5.1/))\n* 0.27.5: multidict (6.0.5)\n* 0.27.4: multidict (6.0.5)\n* 0.27.3: multidict (6.0.5) ([PyScript 2025.3.1](https://pyscript.net/releases/2025.3.1/))\n* 0.27.2: multidict (6.0.5) ([PyScript 2025.2.4](https://pyscript.net/releases/2025.2.4/))\n* 0.27.1: multidict (6.0.5)\n* 0.27.0: multidict (6.0.5)",
+    "pyodide_versions": {
+        "0.29.0": {
+            "package_version": "6.6.4",
+            "pyscript_version": "2025.11.1"
+        },
+        "0.28.3": {
+            "package_version": "6.6.3",
+            "pyscript_version": "unknown"
+        },
+        "0.28.2": {
+            "package_version": "6.6.3",
+            "pyscript_version": "unknown"
+        },
+        "0.28.1": {
+            "package_version": "6.6.3",
+            "pyscript_version": "2025.8.1"
+        },
+        "0.28.0": {
+            "package_version": "6.5.0",
+            "pyscript_version": "unknown"
+        },
+        "0.27.7": {
+            "package_version": "6.0.5",
+            "pyscript_version": "2025.7.3"
+        },
+        "0.27.6": {
+            "package_version": "6.0.5",
+            "pyscript_version": "2025.5.1"
+        },
+        "0.27.5": {
+            "package_version": "6.0.5",
+            "pyscript_version": "unknown"
+        },
+        "0.27.4": {
+            "package_version": "6.0.5",
+            "pyscript_version": "unknown"
+        },
+        "0.27.3": {
+            "package_version": "6.0.5",
+            "pyscript_version": "2025.3.1"
+        },
+        "0.27.2": {
+            "package_version": "6.0.5",
+            "pyscript_version": "2025.2.4"
+        },
+        "0.27.1": {
+            "package_version": "6.0.5",
+            "pyscript_version": "unknown"
+        },
+        "0.27.0": {
+            "package_version": "6.0.5",
+            "pyscript_version": "unknown"
+        }
     },
     "updated_by": "automated script",
     "updated_at": "2025-11-10T13:32:51.838562+00:00",

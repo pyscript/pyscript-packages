@@ -1,22 +1,59 @@
 {
     "status": "green",
-    "notes": "This package is [officially supported in Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html).\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tree-sitter-go\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tree-sitter-go\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version)\n* `stable`: `tree-sitter-go (0.23.3)`\n* `latest`: `tree-sitter-go (0.23.3)`\n* `0.29.0`: `tree-sitter-go (0.23.3)`\n* `0.28.3`: `tree-sitter-go (0.23.3)`\n* `0.28.2`: `tree-sitter-go (0.23.3)`\n* `0.28.1`: `tree-sitter-go (0.23.3)`\n* `0.28.0`: `tree-sitter-go (0.23.3)`\n* `0.27.7`: `tree-sitter-go (0.23.3)`\n* `0.27.6`: `tree-sitter-go (0.23.3)`\n* `0.27.5`: `tree-sitter-go (0.23.3)`\n* `0.27.4`: `tree-sitter-go (0.23.3)`\n* `0.27.3`: `tree-sitter-go (0.23.3)`\n* `0.27.2`: `tree-sitter-go (0.23.3)`\n* `0.27.1`: `tree-sitter-go (0.23.3)`\n* `0.27.0`: `tree-sitter-go (0.23.3)`",
-    "supported_versions": {
-        "latest": "0.23.3",
-        "stable": "0.23.3",
-        "0.28.3": "0.23.3",
-        "0.28.2": "0.23.3",
-        "0.28.1": "0.23.3",
-        "0.28.0": "0.23.3",
-        "0.27.7": "0.23.3",
-        "0.27.6": "0.23.3",
-        "0.27.5": "0.23.3",
-        "0.27.4": "0.23.3",
-        "0.27.3": "0.23.3",
-        "0.27.2": "0.23.3",
-        "0.27.1": "0.23.3",
-        "0.27.0": "0.23.3",
-        "0.29.0": "0.23.3"
+    "notes": "Great news! The package `tree-sitter-go` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"tree-sitter-go\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"tree-sitter-go\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.0: tree-sitter-go (0.23.3) ([PyScript 2025.11.1](https://pyscript.net/releases/2025.11.1/))\n* 0.28.3: tree-sitter-go (0.23.3)\n* 0.28.2: tree-sitter-go (0.23.3)\n* 0.28.1: tree-sitter-go (0.23.3) ([PyScript 2025.8.1](https://pyscript.net/releases/2025.8.1/))\n* 0.28.0: tree-sitter-go (0.23.3)\n* 0.27.7: tree-sitter-go (0.23.3) ([PyScript 2025.7.3](https://pyscript.net/releases/2025.7.3/))\n* 0.27.6: tree-sitter-go (0.23.3) ([PyScript 2025.5.1](https://pyscript.net/releases/2025.5.1/))\n* 0.27.5: tree-sitter-go (0.23.3)\n* 0.27.4: tree-sitter-go (0.23.3)\n* 0.27.3: tree-sitter-go (0.23.3) ([PyScript 2025.3.1](https://pyscript.net/releases/2025.3.1/))\n* 0.27.2: tree-sitter-go (0.23.3) ([PyScript 2025.2.4](https://pyscript.net/releases/2025.2.4/))\n* 0.27.1: tree-sitter-go (0.23.3)\n* 0.27.0: tree-sitter-go (0.23.3)",
+    "pyodide_versions": {
+        "0.29.0": {
+            "package_version": "0.23.3",
+            "pyscript_version": "2025.11.1"
+        },
+        "0.28.3": {
+            "package_version": "0.23.3",
+            "pyscript_version": "unknown"
+        },
+        "0.28.2": {
+            "package_version": "0.23.3",
+            "pyscript_version": "unknown"
+        },
+        "0.28.1": {
+            "package_version": "0.23.3",
+            "pyscript_version": "2025.8.1"
+        },
+        "0.28.0": {
+            "package_version": "0.23.3",
+            "pyscript_version": "unknown"
+        },
+        "0.27.7": {
+            "package_version": "0.23.3",
+            "pyscript_version": "2025.7.3"
+        },
+        "0.27.6": {
+            "package_version": "0.23.3",
+            "pyscript_version": "2025.5.1"
+        },
+        "0.27.5": {
+            "package_version": "0.23.3",
+            "pyscript_version": "unknown"
+        },
+        "0.27.4": {
+            "package_version": "0.23.3",
+            "pyscript_version": "unknown"
+        },
+        "0.27.3": {
+            "package_version": "0.23.3",
+            "pyscript_version": "2025.3.1"
+        },
+        "0.27.2": {
+            "package_version": "0.23.3",
+            "pyscript_version": "2025.2.4"
+        },
+        "0.27.1": {
+            "package_version": "0.23.3",
+            "pyscript_version": "unknown"
+        },
+        "0.27.0": {
+            "package_version": "0.23.3",
+            "pyscript_version": "unknown"
+        }
     },
     "updated_by": "automated script",
     "updated_at": "2025-11-10T13:32:51.838562+00:00",
