@@ -190,12 +190,11 @@ for package_name, data in packages.items():
     if os.path.exists(filename):
         with open(filename, "r") as f:
             existing_data = json.load(f)
-        if existing_data.get("supported_versions", {}) == data:
+        if existing_data.get("pyodide_versions", {}) == data:
             print(
                 f"No changes in supported versions for package '{package_name}'. Skipping."
             )
-            notes = ""
-            #continue
+            continue
         else:
             print(
                 f"Changes detected in supported Pyodide versions for package '{package_name}'. Updating."
