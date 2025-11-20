@@ -81,15 +81,15 @@
 
                     <h2 id="api">Our API</h2>
 
-                    <p>The PyScript Packages website offers a simple API to access package information programmatically.</p>
+                    <p>The PyScript Packages website offers a simple <a href="https://www.seancdavis.com/posts/lets-talk-about-static-apis/" target="_blank">static API</a> to access package information programmatically.</p>
                     
                     <p>Retrieve the status and metadata of packages in JSON format by making a GET request to the following endpoint:</p>
 
                     <pre><code>
-GET /api/package/&lt;package_name&gt;.json
+GET api/package/&lt;package_name&gt;.json
                     </code></pre>
 
-                    <p>This will return a JSON object containing the following metadata (or respond with a 404 status code if the package is not found):</p>
+                    <p>This will return a JSON object containing the following metadata (or respond with a 404 status code if the package's status is unknown):</p>
 
                     <ul>
                         <li><strong>status</strong>: The support status of the package (e.g., "green", "amber", "red").</li>
@@ -115,13 +115,13 @@ else:
                     <p>If you wish to access data for all packages at once, you can use the following endpoint:</p>
 
                     <pre><code>
-GET /api/all.json
+GET api/all.json
                     </code></pre>
 
                     <p>Data about the top 100 packages is also available through this endpoint:</p>
 
                     <pre><code>
-GET /api/top_100_pypi_packages.json
+GET api/top_100_pypi_packages.json
                     </code></pre>
 
                     <p>That's it!</p>

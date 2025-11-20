@@ -34,26 +34,35 @@ This page will display three possible states:
 
 ## API
 
-The PyScript Packages website offers a simple API to access package information programmatically.
+The PyScript Packages website offers a simple 
+[static API](https://www.seancdavis.com/posts/lets-talk-about-static-apis/) to 
+access package information programmatically.
                     
-Retrieve the status and metadata of packages in JSON format by making a GET request to the following endpoint:
+Retrieve the status and metadata of packages in JSON format by making a GET
+request to the following endpoint:
 
 ```
 GET /api/package/<package_name>.json
 ```
 
-This will return a JSON object containing the following metadata (or respond with a 404 status code if the package is not found):
+This will return a JSON object containing the following metadata (or respond 
+with a 404 status code if the package is not found):
 
 
 * *status*: The support status of the package (e.g., "green", "amber", "red").
 * *summary*: The summary of the package from PyPI.
-* *notes*: Brief notes, in Markdown, about the package's compatibility with PyScript.
-* *pyodide_versions*: A description of Pyodide/PyScript version support for each version of the package.
-* *updated_by*: The name or handle of the person who last updated this information.
-* *updated_at*: The ISO 8601 timestamp of when this information was last updated.
+* *notes*: Brief notes, in Markdown, about the package's compatibility with 
+  PyScript.
+* *pyodide_versions*: A description of Pyodide/PyScript version support for 
+  each version of the package.
+* *updated_by*: The name or handle of the person who last updated this
+  information.
+* *updated_at*: The ISO 8601 timestamp of when this information was last
+  updated.
 
 
-For example, in Python, you can use the `requests` library to fetch such data about the `pandas` package:
+For example, in Python, you can use the `requests` library to fetch such data
+about the `pandas` package:
 
 ```
 import requests
@@ -66,7 +75,8 @@ else:
     print("Package not found or API error.")
 ```
 
-If you wish to access data for all packages at once, you can use the following endpoint:
+If you wish to access data for all packages at once, you can use the following
+endpoint:
 
 ```
 GET api/all.json
