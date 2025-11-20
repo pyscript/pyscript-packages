@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "A very fast and expressive template engine.",
+    "status": "green",
+    "notes": "The following code was used to confirm jinja2 works with PyScript:\n\n```\nfrom jinja2 import Environment, DictLoader, select_autoescape\n\nloader = DictLoader({\n    \"base.html\": \"\"\"\n<html>\n<head>\n    <title>{% block title %}{% endblock %}\n</head>\n<body>\n{% block content %}{% endblock %}\n</body>\n\"\"\",\n    \"index.html\": \"\"\"\n{% extends \"base.html\" %}\n{% block title %}Members{% endblock %}\n{% block content %}\n  <ul>\n  {% for user in users %}\n    <li><a href=\"{{ user.url }}\">{{ user.username }}</a></li>\n  {% endfor %}\n  </ul>\n{% endblock %}\n\"\"\",\n})\nenv = Environment(\n    loader=loader,\n    autoescape=select_autoescape()\n)\ntemplate = env.get_template(\"index.html\")\nusers = [\n    {\"url\": \"https://pyscript.net/\", \"username\": \"PyScript\"},\n    {\"url\": \"https://anaconda.com/\", \"username\": \"Anaconda\"},\n    {\"url\": \"https://pyodide.org/\", \"username\": \"Pyodide\"},\n    {\"url\": \"https://micropython.org\", \"username\": \"MicroPython\"}\n]\nprint(template.render(users=users))\n```",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:37:53+00:00"
+}

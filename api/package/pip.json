@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "The PyPA recommended tool for installing Python packages.",
+    "status": "red",
+    "notes": "Pyodide and PyScript use an alternative tool called `micropip` for installing packages from PyPI.\n\nIt *is* possible to install and download `pip` in PyScript... but it won't work properly.\n\nPlease [use micropip](https://micropip.pyodide.org/en/stable/index.html) as a replacement.\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:05:07+00:00"
+}

@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Safely add untrusted strings to HTML/XML markup.",
+    "status": "green",
+    "notes": "This package was checked to work in PyScript with the following example code from the project's own documentation:\n\n```\nfrom markupsafe import Markup, escape\nprint(escape(\"<script>alert(document.cookie);</script>\"))\nprint(Markup(\"<strong>Hello</strong>\"))\nprint(escape(Markup(\"<strong>Hello</strong>\")))\ntemplate = Markup(\"Hello <em>{name}</em>\")\nprint(template.format(name='\"World\"'))\n```\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:08:22+00:00"
+}

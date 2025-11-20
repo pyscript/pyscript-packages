@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Read metadata from Python packages",
+    "status": "green",
+    "notes": "The following code (assuming `arrr` is installed in the PyScript project) was used to confirm this package works:\n\n```\nfrom importlib.metadata import metadata\n\nmeta = metadata(\"arrr\")\n\nprint(\"Name:\", meta[\"Name\"])\nprint(\"Version:\", meta[\"Version\"])\nprint(\"Author:\", meta.get(\"Author\"))\nprint(\"Summary:\", meta.get(\"Summary\"))\n```",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:46:11+00:00"
+}

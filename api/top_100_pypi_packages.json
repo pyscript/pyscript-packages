@@ -88,7 +88,7 @@
         {
             "package_name": "s3transfer",
             "downloads": 636058537,
-            "status": "amber",
+            "status": "red",
             "summary": "An Amazon S3 Transfer Manager"
         },
         {
@@ -160,13 +160,13 @@
         {
             "package_name": "pydantic-core",
             "downloads": 438959282,
-            "status": "amber",
+            "status": "green",
             "summary": "Core functionality for Pydantic validation and serialization"
         },
         {
             "package_name": "pip",
             "downloads": 436844893,
-            "status": "amber",
+            "status": "red",
             "summary": "The PyPA recommended tool for installing Python packages."
         },
         {
@@ -178,13 +178,13 @@
         {
             "package_name": "markupsafe",
             "downloads": 408100875,
-            "status": "amber",
+            "status": "green",
             "summary": "Safely add untrusted strings to HTML/XML markup."
         },
         {
             "package_name": "jmespath",
             "downloads": 396748602,
-            "status": "amber",
+            "status": "green",
             "summary": "JSON Matching Expressions"
         },
         {
@@ -196,7 +196,7 @@
         {
             "package_name": "rsa",
             "downloads": 386498570,
-            "status": "amber",
+            "status": "green",
             "summary": "Pure-Python RSA implementation"
         },
         {
@@ -220,7 +220,7 @@
         {
             "package_name": "pygments",
             "downloads": 378953112,
-            "status": "amber",
+            "status": "green",
             "summary": "Pygments is a syntax highlighting package written in Python."
         },
         {
@@ -232,7 +232,7 @@
         {
             "package_name": "jinja2",
             "downloads": 368674977,
-            "status": "amber",
+            "status": "green",
             "summary": "A very fast and expressive template engine."
         },
         {
@@ -244,7 +244,7 @@
         {
             "package_name": "importlib-metadata",
             "downloads": 363826951,
-            "status": "amber",
+            "status": "green",
             "summary": "Read metadata from Python packages"
         },
         {

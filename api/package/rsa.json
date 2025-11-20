@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Pure-Python RSA implementation",
+    "status": "green",
+    "notes": "**THIS PACKAGE IS NO LONGER MAINTAINED**\n\n(See the [package's documentation](https://stuvel.eu/software/rsa/) for details)\n\nThis package was superficially tested with example code from the package's documentation.\n\n```\nimport rsa\n\n(pubkey, privkey) = rsa.newkeys(512)\nprint(\"Public: \", pubkey)\nprint(\"Private: \", privkey)\n\nmessage = 'hello Bob!'.encode('utf8')\ncrypto = rsa.encrypt(message, pubkey)\nprint(crypto)\nmessage = rsa.decrypt(crypto, privkey)\nprint(message)\n```\n\nHowever, the documentation mentions the `poolsize=8` argument when calling `rsa.newkeys`. This is supposed to spawn new parallel processes to speed up key generation. **Because of browser imposed limitations, this will not work**. ",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:19:39+00:00"
+}

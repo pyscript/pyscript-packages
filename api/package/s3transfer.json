@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "An Amazon S3 Transfer Manager",
+    "status": "red",
+    "notes": "This package *can* be installed in Pyodide. However, the publisher (Amazon) states that:\n\n> This project is not currently GA. If you are planning to use this code in production, make sure to lock to a minor version as interfaces may break from minor version to minor version. For a basic, stable interface of s3transfer, try the interfaces exposed in boto3.\n\nSince boto3 related functionality requires features not provided by the browser, you won't be able to use this package properly.\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:01:01+00:00"
+}

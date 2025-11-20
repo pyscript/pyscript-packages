@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "JSON Matching Expressions",
+    "status": "green",
+    "notes": "This package was tested with examples from the project's documentation:\n\n```\nimport jmespath\npath = jmespath.search('foo.bar', {'foo': {'bar': 'baz'}})\nprint(path)\nexpression = jmespath.compile('foo.bar')\nprint(expression.search({'foo': {'bar': 'baz'}}))\n```",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:12:45+00:00"
+}

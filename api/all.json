@@ -16119,5 +16119,77 @@
         "updated_by": "automated script",
         "updated_at": "2025-11-10T13:32:51.838562+00:00",
         "summary": "An implementation of chunked, compressed, N-dimensional arrays for Python"
+    },
+    "s3transfer": {
+        "supported_versions": {},
+        "summary": "An Amazon S3 Transfer Manager",
+        "status": "red",
+        "notes": "This package *can* be installed in Pyodide. However, the publisher (Amazon) states that:\n\n> This project is not currently GA. If you are planning to use this code in production, make sure to lock to a minor version as interfaces may break from minor version to minor version. For a basic, stable interface of s3transfer, try the interfaces exposed in boto3.\n\nSince boto3 related functionality requires features not provided by the browser, you won't be able to use this package properly.\n",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:01:01+00:00"
+    },
+    "pydantic-core": {
+        "supported_versions": {},
+        "summary": "Core functionality for Pydantic validation and serialization",
+        "status": "green",
+        "notes": "The following example (drawn from the documentation for this project) has been shown to work in Pyodide:\n\n```\nfrom pydantic_core import SchemaValidator, ValidationError\n\n\nv = SchemaValidator(\n    {\n        'type': 'typed-dict',\n        'fields': {\n            'name': {\n                'type': 'typed-dict-field',\n                'schema': {\n                    'type': 'str',\n                },\n            },\n            'age': {\n                'type': 'typed-dict-field',\n                'schema': {\n                    'type': 'int',\n                    'ge': 18,\n                },\n            },\n            'is_developer': {\n                'type': 'typed-dict-field',\n                'schema': {\n                    'type': 'default',\n                    'schema': {'type': 'bool'},\n                    'default': True,\n                },\n            },\n        },\n    }\n)\n\nr1 = v.validate_python({'name': 'Samuel', 'age': 35})\nassert r1 == {'name': 'Samuel', 'age': 35, 'is_developer': True}\n\n# pydantic-core can also validate JSON directly\nr2 = v.validate_json('{\"name\": \"Samuel\", \"age\": 35}')\nassert r1 == r2\n\ntry:\n    v.validate_python({'name': 'Samuel', 'age': 11})\nexcept ValidationError as e:\n    print(e)\n    \"\"\"\n    1 validation error for model\n    age\n      Input should be greater than or equal to 18\n      [type=greater_than_equal, context={ge: 18}, input_value=11, input_type=int]\n    \"\"\"\n```\n",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:03:11+00:00"
+    },
+    "pip": {
+        "supported_versions": {},
+        "summary": "The PyPA recommended tool for installing Python packages.",
+        "status": "red",
+        "notes": "Pyodide and PyScript use an alternative tool called `micropip` for installing packages from PyPI.\n\nIt *is* possible to install and download `pip` in PyScript... but it won't work properly.\n\nPlease [use micropip](https://micropip.pyodide.org/en/stable/index.html) as a replacement.\n",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:05:07+00:00"
+    },
+    "markupsafe": {
+        "supported_versions": {},
+        "summary": "Safely add untrusted strings to HTML/XML markup.",
+        "status": "green",
+        "notes": "This package was checked to work in PyScript with the following example code from the project's own documentation:\n\n```\nfrom markupsafe import Markup, escape\nprint(escape(\"<script>alert(document.cookie);</script>\"))\nprint(Markup(\"<strong>Hello</strong>\"))\nprint(escape(Markup(\"<strong>Hello</strong>\")))\ntemplate = Markup(\"Hello <em>{name}</em>\")\nprint(template.format(name='\"World\"'))\n```\n",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:08:22+00:00"
+    },
+    "jmespath": {
+        "supported_versions": {},
+        "summary": "JSON Matching Expressions",
+        "status": "green",
+        "notes": "This package was tested with examples from the project's documentation:\n\n```\nimport jmespath\npath = jmespath.search('foo.bar', {'foo': {'bar': 'baz'}})\nprint(path)\nexpression = jmespath.compile('foo.bar')\nprint(expression.search({'foo': {'bar': 'baz'}}))\n```",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:12:45+00:00"
+    },
+    "rsa": {
+        "supported_versions": {},
+        "summary": "Pure-Python RSA implementation",
+        "status": "green",
+        "notes": "**THIS PACKAGE IS NO LONGER MAINTAINED**\n\n(See the [package's documentation](https://stuvel.eu/software/rsa/) for details)\n\nThis package was superficially tested with example code from the package's documentation.\n\n```\nimport rsa\n\n(pubkey, privkey) = rsa.newkeys(512)\nprint(\"Public: \", pubkey)\nprint(\"Private: \", privkey)\n\nmessage = 'hello Bob!'.encode('utf8')\ncrypto = rsa.encrypt(message, pubkey)\nprint(crypto)\nmessage = rsa.decrypt(crypto, privkey)\nprint(message)\n```\n\nHowever, the documentation mentions the `poolsize=8` argument when calling `rsa.newkeys`. This is supposed to spawn new parallel processes to speed up key generation. **Because of browser imposed limitations, this will not work**. ",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:19:39+00:00"
+    },
+    "pygments": {
+        "supported_versions": {},
+        "summary": "Pygments is a syntax highlighting package written in Python.",
+        "status": "green",
+        "notes": "The following code, taken from examples in the project's documentation, was shown to work:\n\n```\nfrom pygments import highlight\nfrom pygments.lexers import PythonLexer\nfrom pygments.formatters import HtmlFormatter\n\ncode = 'print \"Hello World\"'\nprint(highlight(code, PythonLexer(), HtmlFormatter()))\nprint(HtmlFormatter().get_style_defs('.highlight'))\n```",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:25:14+00:00"
+    },
+    "jinja2": {
+        "supported_versions": {},
+        "summary": "A very fast and expressive template engine.",
+        "status": "green",
+        "notes": "The following code was used to confirm jinja2 works with PyScript:\n\n```\nfrom jinja2 import Environment, DictLoader, select_autoescape\n\nloader = DictLoader({\n    \"base.html\": \"\"\"\n<html>\n<head>\n    <title>{% block title %}{% endblock %}\n</head>\n<body>\n{% block content %}{% endblock %}\n</body>\n\"\"\",\n    \"index.html\": \"\"\"\n{% extends \"base.html\" %}\n{% block title %}Members{% endblock %}\n{% block content %}\n  <ul>\n  {% for user in users %}\n    <li><a href=\"{{ user.url }}\">{{ user.username }}</a></li>\n  {% endfor %}\n  </ul>\n{% endblock %}\n\"\"\",\n})\nenv = Environment(\n    loader=loader,\n    autoescape=select_autoescape()\n)\ntemplate = env.get_template(\"index.html\")\nusers = [\n    {\"url\": \"https://pyscript.net/\", \"username\": \"PyScript\"},\n    {\"url\": \"https://anaconda.com/\", \"username\": \"Anaconda\"},\n    {\"url\": \"https://pyodide.org/\", \"username\": \"Pyodide\"},\n    {\"url\": \"https://micropython.org\", \"username\": \"MicroPython\"}\n]\nprint(template.render(users=users))\n```",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:37:53+00:00"
+    },
+    "importlib-metadata": {
+        "supported_versions": {},
+        "summary": "Read metadata from Python packages",
+        "status": "green",
+        "notes": "The following code (assuming `arrr` is installed in the PyScript project) was used to confirm this package works:\n\n```\nfrom importlib.metadata import metadata\n\nmeta = metadata(\"arrr\")\n\nprint(\"Name:\", meta[\"Name\"])\nprint(\"Version:\", meta[\"Version\"])\nprint(\"Author:\", meta.get(\"Author\"))\nprint(\"Summary:\", meta.get(\"Summary\"))\n```",
+        "updated_by": "Community contribution via Google Forms",
+        "updated_at": "2025-11-20T15:46:11+00:00"
     }
 }

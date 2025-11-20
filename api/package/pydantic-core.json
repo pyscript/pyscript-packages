@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Core functionality for Pydantic validation and serialization",
+    "status": "green",
+    "notes": "The following example (drawn from the documentation for this project) has been shown to work in Pyodide:\n\n```\nfrom pydantic_core import SchemaValidator, ValidationError\n\n\nv = SchemaValidator(\n    {\n        'type': 'typed-dict',\n        'fields': {\n            'name': {\n                'type': 'typed-dict-field',\n                'schema': {\n                    'type': 'str',\n                },\n            },\n            'age': {\n                'type': 'typed-dict-field',\n                'schema': {\n                    'type': 'int',\n                    'ge': 18,\n                },\n            },\n            'is_developer': {\n                'type': 'typed-dict-field',\n                'schema': {\n                    'type': 'default',\n                    'schema': {'type': 'bool'},\n                    'default': True,\n                },\n            },\n        },\n    }\n)\n\nr1 = v.validate_python({'name': 'Samuel', 'age': 35})\nassert r1 == {'name': 'Samuel', 'age': 35, 'is_developer': True}\n\n# pydantic-core can also validate JSON directly\nr2 = v.validate_json('{\"name\": \"Samuel\", \"age\": 35}')\nassert r1 == r2\n\ntry:\n    v.validate_python({'name': 'Samuel', 'age': 11})\nexcept ValidationError as e:\n    print(e)\n    \"\"\"\n    1 validation error for model\n    age\n      Input should be greater than or equal to 18\n      [type=greater_than_equal, context={ge: 18}, input_value=11, input_type=int]\n    \"\"\"\n```\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:03:11+00:00"
+}

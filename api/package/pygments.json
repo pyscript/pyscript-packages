@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Pygments is a syntax highlighting package written in Python.",
+    "status": "green",
+    "notes": "The following code, taken from examples in the project's documentation, was shown to work:\n\n```\nfrom pygments import highlight\nfrom pygments.lexers import PythonLexer\nfrom pygments.formatters import HtmlFormatter\n\ncode = 'print \"Hello World\"'\nprint(highlight(code, PythonLexer(), HtmlFormatter()))\nprint(HtmlFormatter().get_style_defs('.highlight'))\n```",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T15:25:14+00:00"
+}
