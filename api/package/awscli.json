@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Universal Command Line Environment for AWS.",
+    "status": "red",
+    "notes": "While this module will install in PyScript, it is actually a command line tool for AWS and so won't work in the browser.\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T19:17:14+00:00"
+}

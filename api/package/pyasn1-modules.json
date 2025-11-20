@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "A collection of ASN.1-based protocols modules",
+    "status": "green",
+    "notes": "A pure Python package that works as expected with the pyasn1 package.",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T21:01:29+00:00"
+}

@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "A platform independent file lock.",
+    "status": "green",
+    "notes": "The description of the package reads:\n\n> This package contains a single module, which implements a platform independent file lock in Python, which provides a simple way of inter-process communication.\n\nSince PyScript doesn't provide subprocess capabilities, the use of this module is uncertain.\n\nHowever, the following example code from the package's tutorial successfully completes:\n\n```\nimport os\nfrom filelock import Timeout, FileLock\n\nfile_path = \"high_ground.txt\"\nlock_path = \"high_ground.txt.lock\"\n\nlock = FileLock(lock_path, timeout=1)\n\n\nwith lock:\n    if not os.path.exists(file_path):\n        with open(file_path, \"w\") as f:\n            f.write(\"Hello there!\")\n# here, all processes can see consistent content in the file\n\nlock.acquire()\ntry:\n    if not os.path.exists(file_path):\n        with open(file_path, \"w\") as f:\n            f.write(\"General Kenobi!\")\nfinally:\n    lock.release()\n# here, all processes can see consistent content in the file\n\n@lock\ndef decorated():\n    print(\"You're a decorated Jedi!\")\n\n\ndecorated()\n```",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T18:35:46+00:00"
+}

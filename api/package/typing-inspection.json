@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Runtime typing introspection tools",
+    "status": "green",
+    "notes": "This simple smoke test was used to confirm the module works in PyScript:\n\n```\nfrom typing_extensions import Literal, get_origin\nfrom typing_inspection.typing_objects import is_literal\n\nprint(is_literal(get_origin(Literal[1, 2])))  # True\n```\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T19:16:08+00:00"
+}

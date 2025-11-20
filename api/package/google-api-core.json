@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Google API client core library",
+    "status": "red",
+    "notes": "After installing the module and following the simplest of authorisation instructions from the project's documentation we encountered import errors:\n\n```\nfrom google.cloud import datastore\nclient = datastore.Client()\n\nError: Traceback (most recent call last):\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 597, in eval_code_async\n    await CodeRunner(\n    ...<9 lines>...\n    .run_async(globals, locals)\n  File \"/lib/python313.zip/_pyodide/_base.py\", line 413, in run_async\n    await coroutine\n  File \"\", line 18, in \nImportError: cannot import name 'datastore' from 'google.cloud' (unknown location)\n```\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T18:55:34+00:00"
+}

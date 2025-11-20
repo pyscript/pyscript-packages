@@ -256,13 +256,13 @@
         {
             "package_name": "pyasn1",
             "downloads": 347281745,
-            "status": "amber",
+            "status": "green",
             "summary": "Pure-Python implementation of ASN.1 types and DER/BER/CER codecs (X.208)"
         },
         {
             "package_name": "zipp",
             "downloads": 335636021,
-            "status": "amber",
+            "status": "green",
             "summary": "Backport of pathlib-compatible object wrapper for zip files"
         },
         {
@@ -274,13 +274,13 @@
         {
             "package_name": "filelock",
             "downloads": 322057862,
-            "status": "amber",
+            "status": "green",
             "summary": "A platform independent file lock."
         },
         {
             "package_name": "wheel",
             "downloads": 315874883,
-            "status": "amber",
+            "status": "green",
             "summary": "A built-package format for Python"
         },
         {
@@ -292,19 +292,19 @@
         {
             "package_name": "google-api-core",
             "downloads": 305477511,
-            "status": "amber",
+            "status": "red",
             "summary": "Google API client core library"
         },
         {
             "package_name": "colorama",
             "downloads": 302010400,
-            "status": "amber",
+            "status": "green",
             "summary": "Cross-platform colored terminal text."
         },
         {
             "package_name": "typing-inspection",
             "downloads": 299790260,
-            "status": "amber",
+            "status": "green",
             "summary": "Runtime typing introspection tools"
         },
         {
@@ -316,7 +316,7 @@
         {
             "package_name": "awscli",
             "downloads": 296648047,
-            "status": "amber",
+            "status": "red",
             "summary": "Universal Command Line Environment for AWS."
         },
         {
@@ -352,7 +352,7 @@
         {
             "package_name": "pyasn1-modules",
             "downloads": 279107161,
-            "status": "amber",
+            "status": "green",
             "summary": "A collection of ASN.1-based protocols modules"
         },
         {

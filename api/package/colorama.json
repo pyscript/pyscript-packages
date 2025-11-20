@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Cross-platform colored terminal text.",
+    "status": "green",
+    "notes": "Tested this module works with the terminal feature of PyScript like this:\n\n```\n<script type=\"py\" config='{\"packages\": [\"colorama\"]}'terminal worker>\nimport code\n\ncode.interact()\n</script>\n```\n\nThen in the terminal, the following examples from the module's documentation worked as expected:\n\n```\nfrom colorama import Fore, Back, Style\nprint(Fore.RED + 'some red text')\nprint(Back.GREEN + 'and with a green background')\nprint(Style.DIM + 'and in dim text')\nprint(Style.RESET_ALL)\nprint('back to normal now')\n```",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2025-11-20T19:09:26+00:00"
+}
