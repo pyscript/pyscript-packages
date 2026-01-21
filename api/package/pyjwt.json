@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "JSON Web Token implementation in Python",
+    "status": "green",
+    "notes": "I used the example from the [PyJWT docs](https://pyjwt.readthedocs.io/en/stable/) to ensure it works:\n\n```python\nimport jwt  # Note, this is not the same as the package name.\n# If we reach this point, the import was successful.\nprint(\"\u00e2\u009c\u0085 Successfully imported pyjwt!\")\nencoded = jwt.encode({\"some\": \"payload\"}, \"secret\", algorithm=\"HS256\")\nprint(encoded)\njwt.decode(encoded, \"secret\", algorithms=[\"HS256\"])\n```\n\n**Please note: you need to ensure the `ssl` package is also installed for PyJWT to work.**\n",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2026-01-21T11:59:32+00:00"
+}

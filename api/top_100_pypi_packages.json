@@ -316,7 +316,7 @@
         {
             "package_name": "pyjwt",
             "downloads": 310954268,
-            "status": "amber",
+            "status": "green",
             "summary": "JSON Web Token implementation in Python"
         },
         {
