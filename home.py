@@ -4,8 +4,27 @@ A script for the home page of the PyScript Packages site.
 It fetches the top 100 PyPI packages and displays them with their
 PyScript support status.
 """
+import js
 from pyscript import fetch
 from pyscript.web import page, a
+
+def get_package_name():
+    """
+    Extract the package name from the query string.
+
+    Package names are case insensitive, so we convert to lowercase.
+    """
+    query_string = js.window.location.search
+    url_params = js.URLSearchParams.new(query_string)
+    package_name = url_params.get("q")
+    if package_name:
+        return package_name.strip().lower()
+    return None
+
+package_name = get_package_name()
+
+if package_name:
+    js.window.location.replace(f"./package?package={package_name}")
 
 top100 = await fetch("./api/top_100_pypi_packages.json").json()
 
