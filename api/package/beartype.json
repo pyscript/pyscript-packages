@@ -1,0 +1,8 @@
+{
+    "supported_versions": {},
+    "summary": "Unbearably fast near-real-time pure-Python runtime-static type-checker.",
+    "status": "green",
+    "notes": "I attempted to import the `beartype` package in Pyodide. I used the following code:\n\n```\n# Simple Pyodide import test for the beartype package.\n# Record the version of Pyodide being used.\nimport sys\nprint(f\"Using {sys.version}\")\n# Record the browser user agent.\nimport js\nprint(f\"Browser user agent: {js.navigator.userAgent}\")\n# Micropip is the package manager for Pyodide.\nimport micropip\n# Install the package via micropip.\nawait micropip.install(\"beartype\")\n# Now try to import it!\nimport beartype\n# If we reach this point, the import was successful.\nprint(\"\u00e2\u009c\u0085 Successfully imported beartype!\")\n# If there was an error, it will be shown below in red.\n# Now add some code of your own to exercise and test the package!\n# Re-run the code and tell us what you find in the feedback form below. \u00f0\u009f\u0092\u0090\n```\n\nHere's a paste of the output:\n\nUsing 3.13.2 (main, Oct 20 2025, 18:07:39) [Clang 21.0.0git (https:/github.com/llvm/llvm-project 2f05451198e2f222ec66cec489\nBrowser user agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\n\u00e2\u009c\u0085 Successfully imported beartype!\n\nMy experience was: \n\nI use the package for a few weeks and, it works perfectly well and is extremely useful.",
+    "updated_by": "Community contribution via Google Forms",
+    "updated_at": "2026-01-20T14:49:39+00:00"
+}

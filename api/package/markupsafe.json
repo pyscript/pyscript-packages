@@ -1,8 +1,69 @@
 {
-    "supported_versions": {},
-    "summary": "Safely add untrusted strings to HTML/XML markup.",
     "status": "green",
-    "notes": "This package was checked to work in PyScript with the following example code from the project's own documentation:\n\n```\nfrom markupsafe import Markup, escape\nprint(escape(\"<script>alert(document.cookie);</script>\"))\nprint(Markup(\"<strong>Hello</strong>\"))\nprint(escape(Markup(\"<strong>Hello</strong>\")))\ntemplate = Markup(\"Hello <em>{name}</em>\")\nprint(template.format(name='\"World\"'))\n```\n",
+    "notes": "Great news! The package `markupsafe` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"markupsafe\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"markupsafe\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.2: markupsafe (3.0.2)\n* 0.29.1: markupsafe (3.0.2) ([PyScript 2026.1.1](https://pyscript.net/releases/2026.1.1/))\n* 0.29.0: markupsafe (3.0.2) ([PyScript 2025.11.1](https://pyscript.net/releases/2025.11.1/))\n* 0.28.3: markupsafe (3.0.2)\n* 0.28.2: markupsafe (3.0.2)\n* 0.28.1: markupsafe (3.0.2) ([PyScript 2025.8.1](https://pyscript.net/releases/2025.8.1/))\n* 0.28.0: markupsafe (3.0.2)\n* 0.27.7: markupsafe (2.1.5) ([PyScript 2025.7.3](https://pyscript.net/releases/2025.7.3/))\n* 0.27.6: markupsafe (2.1.5) ([PyScript 2025.5.1](https://pyscript.net/releases/2025.5.1/))\n* 0.27.5: markupsafe (2.1.5)\n* 0.27.4: markupsafe (2.1.5)\n* 0.27.3: markupsafe (2.1.5) ([PyScript 2025.3.1](https://pyscript.net/releases/2025.3.1/))\n* 0.27.2: markupsafe (2.1.5) ([PyScript 2025.2.4](https://pyscript.net/releases/2025.2.4/))\n* 0.27.1: markupsafe (2.1.5)\n* 0.27.0: markupsafe (2.1.5)",
+    "pyodide_versions": {
+        "0.29.2": {
+            "package_version": "3.0.2",
+            "pyscript_version": "unknown"
+        },
+        "0.29.1": {
+            "package_version": "3.0.2",
+            "pyscript_version": "2026.1.1"
+        },
+        "0.29.0": {
+            "package_version": "3.0.2",
+            "pyscript_version": "2025.11.1"
+        },
+        "0.28.3": {
+            "package_version": "3.0.2",
+            "pyscript_version": "unknown"
+        },
+        "0.28.2": {
+            "package_version": "3.0.2",
+            "pyscript_version": "unknown"
+        },
+        "0.28.1": {
+            "package_version": "3.0.2",
+            "pyscript_version": "2025.8.1"
+        },
+        "0.28.0": {
+            "package_version": "3.0.2",
+            "pyscript_version": "unknown"
+        },
+        "0.27.7": {
+            "package_version": "2.1.5",
+            "pyscript_version": "2025.7.3"
+        },
+        "0.27.6": {
+            "package_version": "2.1.5",
+            "pyscript_version": "2025.5.1"
+        },
+        "0.27.5": {
+            "package_version": "2.1.5",
+            "pyscript_version": "unknown"
+        },
+        "0.27.4": {
+            "package_version": "2.1.5",
+            "pyscript_version": "unknown"
+        },
+        "0.27.3": {
+            "package_version": "2.1.5",
+            "pyscript_version": "2025.3.1"
+        },
+        "0.27.2": {
+            "package_version": "2.1.5",
+            "pyscript_version": "2025.2.4"
+        },
+        "0.27.1": {
+            "package_version": "2.1.5",
+            "pyscript_version": "unknown"
+        },
+        "0.27.0": {
+            "package_version": "2.1.5",
+            "pyscript_version": "unknown"
+        }
+    },
     "updated_by": "Community contribution via Google Forms",
-    "updated_at": "2025-11-20T15:08:22+00:00"
+    "updated_at": "2025-11-20T15:08:22+00:00",
+    "summary": "Safely add untrusted strings to HTML/XML markup."
 }

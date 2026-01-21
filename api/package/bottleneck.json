@@ -1,0 +1,13 @@
+{
+    "status": "green",
+    "notes": "Great news! The package `bottleneck` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"bottleneck\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"bottleneck\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.2: bottleneck (1.6.0)",
+    "pyodide_versions": {
+        "0.29.2": {
+            "package_version": "1.6.0",
+            "pyscript_version": "unknown"
+        }
+    },
+    "updated_by": "automated script",
+    "updated_at": "2025-11-10T13:32:51.838562+00:00",
+    "summary": "Fast NumPy array functions written in C"
+}

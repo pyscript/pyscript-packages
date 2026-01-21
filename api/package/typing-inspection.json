@@ -1,8 +1,13 @@
 {
-    "supported_versions": {},
-    "summary": "Runtime typing introspection tools",
     "status": "green",
-    "notes": "This simple smoke test was used to confirm the module works in PyScript:\n\n```\nfrom typing_extensions import Literal, get_origin\nfrom typing_inspection.typing_objects import is_literal\n\nprint(is_literal(get_origin(Literal[1, 2])))  # True\n```\n",
+    "notes": "Great news! The package `typing-inspection` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"typing-inspection\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"typing-inspection\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.2: typing-inspection (0.4.2)",
+    "pyodide_versions": {
+        "0.29.2": {
+            "package_version": "0.4.2",
+            "pyscript_version": "unknown"
+        }
+    },
     "updated_by": "Community contribution via Google Forms",
-    "updated_at": "2025-11-20T19:16:08+00:00"
+    "updated_at": "2025-11-20T19:16:08+00:00",
+    "summary": "Runtime typing introspection tools"
 }

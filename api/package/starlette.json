@@ -1,7 +1,15 @@
 {
     "status": "green",
-    "notes": "Great news! The package `starlette` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"starlette\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"starlette\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.0: starlette (0.47.2) ([PyScript 2025.11.1](https://pyscript.net/releases/2025.11.1/))",
+    "notes": "Great news! The package `starlette` is [officially supported](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) in the latest Pyodide release used by PyScript.\n\nTo use it in PyScript simply add it to the `packages` section of your TOML configuration like this:\n\n```\npackages = [\"starlette\" ]\n```\n\nOr if you're using a JSON configuration, like this:\n\n```\n{\n    packages: [\"starlette\"]\n }\n```\n\nRead more about using packages in PyScript [in our documentation](https://docs.pyscript.net/latest/user-guide/configuration/#packages).\n\nSpecifically, the following versions of the package are available for the following Pyodide releases:\n\nPyodide version: package name (version) (PyScript Version)\n\n* 0.29.2: starlette (0.47.2)\n* 0.29.1: starlette (0.47.2) ([PyScript 2026.1.1](https://pyscript.net/releases/2026.1.1/))\n* 0.29.0: starlette (0.47.2) ([PyScript 2025.11.1](https://pyscript.net/releases/2025.11.1/))",
     "pyodide_versions": {
+        "0.29.2": {
+            "package_version": "0.47.2",
+            "pyscript_version": "unknown"
+        },
+        "0.29.1": {
+            "package_version": "0.47.2",
+            "pyscript_version": "2026.1.1"
+        },
         "0.29.0": {
             "package_version": "0.47.2",
             "pyscript_version": "2025.11.1"
