@@ -108,7 +108,12 @@ async def main():
         return
     pypi_metadata = await fetch_pypi_metadata(package_name)
     if not pypi_metadata:
-        target.innerHTML = f"<h2>🤷 Package '{package_name}' not found on PyPI.</h2>"
+        target.innerHTML = f"""<h2>🤷 Package '{package_name}' not found on PyPI.</h2>
+<p>Please check the package name and try again.</p>
+
+<p>(Here are the <a href="https://pyodide.org/en/stable/usage/packages-in-pyodide.html" target="_blank">packages currently available in Pyodide</a> 📦 or, alternatively, you can try searching for the package on <a href="https://pypi.org/search/?q={package_name}" target="_blank">PyPI</a> 🔍.)</p>
+
+        """
         return
     # Remove the loading text.
     loading_text.remove()
