@@ -67,7 +67,7 @@ about the `pandas` package:
 ```
 import requests
 
-response = requests.get("https://pyscript.github.io/pyscript-packages/api/package/pandas.json")
+response = requests.get("https://packages.pyscript.net/api/package/pandas.json")
 if response.status_code == 200:
     package_data = response.json()
     print(package_data)
@@ -92,11 +92,11 @@ GET api/top_100_pypi_packages.json
 
 This is a very simple static website.
 
-1. Fork the project found at: https://github.com/pyscript/pyscript-packages
+1. Fork the project found at: https://github.com/pyscript/packages
 2. Clone *your* fork of the repository, and change into the resulting directory:
 ```sh
-$ git clone git@github.com:<YOUR_USERNAME>/pyscript-packages.git
-$ cd pyscript-packages
+$ git clone git@github.com:<YOUR_USERNAME>/packages.git
+$ cd packages
 ```
 3. Start a local server:
 ```sh

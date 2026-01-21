@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Help - PyScript Packages</title>
         <link rel="stylesheet" href="../styles.css" />
-        <link rel="stylesheet" href="https://pyscript.net/releases/2025.10.3/core.css" />
-        <script type="module" src="https://pyscript.net/releases/2025.10.3/core.js"></script>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2026.1.1/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2026.1.1/core.js"></script>
     </head>
     <body>
         <header class="site-header">
@@ -106,7 +106,7 @@ GET api/package/&lt;package_name&gt;.json
 
                     <pre><code>import requests
 
-response = requests.get("https://pyscript.github.io/pyscript-packages/api/package/pandas.json")
+response = requests.get("https://packages.pyscript.net/api/package/pandas.json")
 if response.status_code == 200:
     package_data = response.json()
     print(package_data)
