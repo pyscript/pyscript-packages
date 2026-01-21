@@ -59,7 +59,8 @@ PYSCRIPT_PYODIDE_MAP = {
   "2025.10.1": "0.29.0",
   "2025.10.2": "0.29.0",
   "2025.10.3": "0.29.0",
-  "2025.11.1": "0.29.0"
+  "2025.11.1": "0.29.0",
+  "2026.1.1": "0.29.1",
 }
 
 PYODIDE_PYSCRIPT_MAP = {
@@ -174,6 +175,9 @@ updated_by = "automated script"
 updated_at = datetime.datetime.now(tz=datetime.timezone.utc).isoformat()
 # Write out the per-package JSON files
 for package_name, data in packages.items():
+    # Package names are case insensitive, so we convert to lowercase.
+    package_name = package_name.lower()
+    print(f"Processing package data for: {package_name}")
     # Check if the package already has a JSON file (possibly updated by
     # community contributions) and preserve any existing notes.
     filename = os.path.join("api", "package", f"{package_name}.json")

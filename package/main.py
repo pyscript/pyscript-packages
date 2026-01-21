@@ -43,12 +43,14 @@ async def load_js_modules():
 def get_package_name():
     """
     Extract the package name from the query string.
+
+    Package names are case insensitive, so we convert to lowercase.
     """
     query_string = js.window.location.search
     url_params = js.URLSearchParams.new(query_string)
     package_name = url_params.get("package")
     if package_name:
-        return package_name.strip()
+        return package_name.strip().lower()
     return None
 
 
@@ -94,12 +96,12 @@ async def main():
     Main function to handle the package support check.
     """
     await load_js_modules()
-    target = page["#app"][0]
-    loading_text = page["#loading-text"][0]
-    metadata_target = page["#metadata"][0]
-    smoketest_target = page["#smoketest"][0]
-    feedback_target = page["#feedback"][0]
-    smoketest_button = page["#smoketest-button"][0]
+    target = page["#app"]
+    loading_text = page["#loading-text"]
+    metadata_target = page["#metadata"]
+    smoketest_target = page["#smoketest"]
+    feedback_target = page["#feedback"]
+    smoketest_button = page["#smoketest-button"]
     package_name = get_package_name()
     if not package_name:
         target.innerHTML = "<h2>🤷 No package specified.</h2>"
