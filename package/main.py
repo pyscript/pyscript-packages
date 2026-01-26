@@ -200,7 +200,7 @@ My experience was:
 """)
     feedback_target.append(h3("📝 Feedback"))
     feedback_target.append(p("Please help us improve the package support data by providing your feedback via this form. Let us know if the package worked, any issues you encountered, and any additional notes you'd like to share. Feel free to paste your code snippets or any error messages. Thank you! 🙏"))
-    feedback_target.append(iframe(src=f"https://docs.google.com/forms/d/e/1FAIpQLSdDhXu0h0BjTsMgjnvfW5P1YKnytOKxYrtC41o6fXizYkgnng/viewform?embedded=true&entry.1624544771={package_name}&entry.902804967={example_description}", width="100%", height="1100", frameborder="0", marginheight="0", marginwidth="0", id="feedback-form"))
+    feedback_target.append(iframe(src=f"https://docs.google.com/forms/d/e/1FAIpQLSdDhXu0h0BjTsMgjnvfW5P1YKnytOKxYrtC41o6fXizYkgnng/viewform?embedded=true&entry.1624544771={package_name}&entry.902804967={example_description}", width="100%", height="1100", frameborder="0", marginheight="0", marginwidth="0", id="feedback-form", credentialless="true"))
 
     if status == "amber":
         # Show the smoketest and feedback sections.
